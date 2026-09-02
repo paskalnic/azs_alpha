@@ -12,8 +12,10 @@ l'API GitHub : aucun CMS ni aucune base de données externe n'est utilisé.
 4. GitHub prévient Netlify, qui reconstruit et republie le site.
 
 Les médias sont déposés dans `public/media/`. Les formats JPG, PNG, WebP, GIF,
-MP4 et WebM sont acceptés jusqu'à 4 Mo. Le jeton GitHub est conservé dans
-`sessionStorage` et disparaît à la fermeture de l'onglet.
+MP4 et WebM sont acceptés jusqu'à 4 Mo. Le certificat Qualiopi peut être déposé
+en PDF depuis « Coordonnées et identité » et vit dans `public/documents/`. Le
+jeton GitHub est conservé dans `sessionStorage` et disparaît à la fermeture de
+l'onglet.
 
 ## Développement
 

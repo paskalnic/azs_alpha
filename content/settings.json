@@ -25,6 +25,9 @@
   "certification": {
     "name": "Qualiopi",
     "scope": "Actions de formation",
-    "label": "Certification qualité délivrée au titre de la catégorie : actions de formation."
+    "label": "Certification qualité délivrée au titre de la catégorie : actions de formation.",
+    "number": "",
+    "validUntil": "",
+    "document": null
   }
 }

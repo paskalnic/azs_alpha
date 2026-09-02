@@ -34,12 +34,31 @@ export default function QualityPage() {
               <h1 className="mb-5 mt-3 max-w-[16ch]">{QUALITY.title}</h1>
               <p className="lead">{QUALITY.intro}</p>
             </Reveal>
-            <Reveal className="flex items-center gap-5 rounded-[var(--radius)] border border-rule bg-paper p-6 shadow-[var(--shadow-soft)]">
+            <Reveal className="flex items-start gap-5 rounded-[var(--radius)] border border-rule bg-paper p-6 shadow-[var(--shadow-soft)]">
               <QualiopiBadge label={SITE.certification.name} />
-              <p className="text-[.92rem] text-muted">
-                <b className="text-ink">Certifié {SITE.certification.name}</b> au titre des actions
-                de formation. {SITE.certification.label}
-              </p>
+              <div>
+                <p className="text-[.92rem] text-muted">
+                  <b className="text-ink">Certifié {SITE.certification.name}</b> au titre des actions
+                  de formation. {SITE.certification.label}
+                </p>
+                {(SITE.certification.number || SITE.certification.validUntil) && (
+                  <p className="mt-2 text-[.8rem] text-muted">
+                    {SITE.certification.number && <>Certificat n° {SITE.certification.number}</>}
+                    {SITE.certification.number && SITE.certification.validUntil && <> · </>}
+                    {SITE.certification.validUntil && <>Valable jusqu’au {SITE.certification.validUntil}</>}
+                  </p>
+                )}
+                {SITE.certification.document && (
+                  <a
+                    href={SITE.certification.document}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-ghost mt-4"
+                  >
+                    Consulter le certificat officiel (PDF)
+                  </a>
+                )}
+              </div>
             </Reveal>
           </div>
 

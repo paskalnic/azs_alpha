@@ -1,4 +1,5 @@
 import MediaField from './MediaField';
+import DocumentField from './DocumentField';
 
 /**
  * Rendu récursif d'un champ, d'après sa déclaration au schéma.
@@ -75,6 +76,9 @@ export default function Field({ field, value, onChange, client, idPath = field.n
 
     case 'media':
       return <MediaField field={field} value={value} onChange={set} client={client} />;
+
+    case 'document':
+      return <DocumentField field={field} value={value} onChange={set} client={client} />;
 
     case 'object': {
       const empty = field.nullable && (value === null || value === undefined);
