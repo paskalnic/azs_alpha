@@ -1,0 +1,15 @@
+/* Styles du back-office.
+   Les jetons sont ceux du site public : l'interface d'édition parle la même
+   langue visuelle que ce qu'elle produit. Le Preflight de Tailwind est ici
+   importé — contrairement au site, il n'y a aucune feuille existante à
+   préserver, et le reset évite d'avoir à neutraliser les styles natifs. */
+
+@import "tailwindcss";
+@import "../../src/styles/theme.css";
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+h1, h2, h3, legend {
+  font-family: var(--font-display), system-ui, sans-serif;
+}
