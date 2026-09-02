@@ -217,10 +217,13 @@ export const landingData = {
     legalNotice: `${SITE.name} — SIRET à compléter · NDA à compléter`,
     legalNavLabel: 'Liens légaux',
     legalLinks: [
-      { label: 'Mentions légales', href: '#' },
-      { label: 'CGV', href: '#' },
-      { label: 'Confidentialité', href: '#' },
-      { label: 'Règlement intérieur', href: '#' },
+      { label: 'Mentions légales', href: '/mentions-legales/' },
+      { label: 'CGV particuliers', href: '/conditions-generales-de-vente-aux-particuliers/' },
+      { label: 'CGV professionnels', href: '/conditions-generales-de-vente-aux-professionnels/' },
+      { label: 'CGU', href: '/conditions-generales-dutilisation/' },
+      { label: 'Confidentialité', href: '/politique-de-confidentialite/' },
+      { label: 'Cookies', href: '/utilisation-des-cookies/' },
+      { label: 'Règlement intérieur', href: '/reglement-interieur/' },
     ],
   },
 

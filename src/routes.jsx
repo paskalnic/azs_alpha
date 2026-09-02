@@ -6,7 +6,9 @@ import CatalogPage from './pages/CatalogPage';
 import QualityPage from './pages/QualityPage';
 import ResultsPage from './pages/ResultsPage';
 import ContactPage from './pages/ContactPage';
+import LegalPage from './pages/LegalPage';
 import { FORMATIONS, CATEGORIES } from './data/formations';
+import { LEGAL_PAGES } from './data/legalPages';
 
 /**
  * Table de routage — source de vérité unique, lue par le routeur,
@@ -66,6 +68,14 @@ export const routes = [
     path: formation.path,
     element: <FormationPage formation={formation} />,
     sitemap: { priority: 0.7, changefreq: 'yearly' },
+  })),
+
+  ...LEGAL_PAGES.map((page) => ({
+    path: page.path,
+    element: <LegalPage page={page} />,
+    /* Indexables — ces mentions doivent rester accessibles — mais en
+       priorité basse : ce n'est pas sur elles qu'on veut être trouvé. */
+    sitemap: { priority: 0.3, changefreq: 'yearly' },
   })),
 
   { path: '*', element: <NotFoundPage />, sitemap: false },
