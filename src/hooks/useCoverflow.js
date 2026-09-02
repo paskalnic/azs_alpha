@@ -16,7 +16,7 @@ export function useCoverflow(count, titles = []) {
 
   const posRef = useRef(0);       // position courante (fractionnaire pendant le drag)
   const stepRef = useRef(220);    // décalage horizontal px par carte
-  const dragRef = useRef({ dragging: false, startX: 0, startPos: 0, moved: false });
+  const dragRef = useRef({ dragging: false, startX: 0, startPos: 0, moved: false, pointerId: null });
 
   const [active, setActive] = useState(0);
   const [liveMessage, setLiveMessage] = useState('');
@@ -146,15 +146,26 @@ export function useCoverflow(count, titles = []) {
   );
 
   /* — drag (souris + tactile) via Pointer Events — */
+  /**
+   * La capture du pointeur n'est PAS posée ici.
+   *
+   * Tant qu'elle est active, le navigateur adresse l'événement `click` à
+   * l'élément capteur plutôt qu'à la cible réelle : capturer dès l'appui
+   * empêchait donc les liens des cartes de fonctionner. On ne capture qu'au
+   * premier mouvement, une fois qu'il s'agit bien d'un glissement.
+   */
   const onPointerDown = useCallback(
     (e) => {
       if (!enabled) return;
       if (e.button != null && e.button !== 0) return;
-      dragRef.current = { dragging: true, startX: e.clientX, startPos: posRef.current, moved: false };
+      dragRef.current = {
+        dragging: true,
+        startX: e.clientX,
+        startPos: posRef.current,
+        moved: false,
+        pointerId: e.pointerId,
+      };
       rootRef.current?.classList.add('dragging');
-      try {
-        stageRef.current?.setPointerCapture(e.pointerId);
-      } catch (_) { /* ignore */ }
     },
     [enabled],
   );
@@ -164,7 +175,15 @@ export function useCoverflow(count, titles = []) {
       const d = dragRef.current;
       if (!d.dragging) return;
       const dx = e.clientX - d.startX;
-      if (Math.abs(dx) > 4) d.moved = true;
+      if (!d.moved && Math.abs(dx) > 4) {
+        d.moved = true;
+        // glissement avéré : on capture pour continuer à suivre le pointeur
+        // même s'il sort du conteneur
+        try {
+          stageRef.current?.setPointerCapture(d.pointerId);
+        } catch (_) { /* ignore */ }
+      }
+      if (!d.moved) return;
       posRef.current = d.startPos - dx / stepRef.current;
       render();
     },
@@ -176,6 +195,11 @@ export function useCoverflow(count, titles = []) {
     if (!d.dragging) return;
     d.dragging = false;
     rootRef.current?.classList.remove('dragging');
+    try {
+      if (d.pointerId != null && stageRef.current?.hasPointerCapture(d.pointerId)) {
+        stageRef.current.releasePointerCapture(d.pointerId);
+      }
+    } catch (_) { /* ignore */ }
     snapTo(posRef.current, d.moved);
     // réarme le garde-clic juste après (laisse passer le clic annulé)
     setTimeout(() => {
@@ -183,22 +207,47 @@ export function useCoverflow(count, titles = []) {
     }, 0);
   }, [snapTo]);
 
-  /** clic sur une carte latérale = la ramener au centre */
+  /**
+   * Empêche un glissement de se conclure en navigation : relâcher la souris
+   * sur le lien de la carte active déclencherait sinon un clic.
+   */
   const onCardClick = useCallback(
-    (i) => (e) => {
+    () => (e) => {
+      if (!enabled) return;
+      if (dragRef.current.moved) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    },
+    [enabled],
+  );
+
+  /**
+   * Recentrage au clic sur une carte latérale.
+   *
+   * Ces cartes sont repoussées à translateZ négatif : en profondeur, elles
+   * passent derrière le plan du conteneur, qui intercepte donc les clics à
+   * leur place. On ne peut pas se fier au test de survol — on déduit
+   * l'intention du côté cliqué par rapport au centre.
+   */
+  const onStageClick = useCallback(
+    (e) => {
       if (!enabled) return;
       if (dragRef.current.moved) {
         e.preventDefault();
         e.stopPropagation();
         return;
       }
-      if (i !== active) {
-        e.preventDefault();
-        snapTo(i, true);
-      }
-      // carte active : on laisse le lien `.more` fonctionner normalement
+      // la carte active est au premier plan : ses liens doivent agir normalement
+      if (e.target.closest?.('.dom.is-active')) return;
+
+      const rect = stageRef.current?.getBoundingClientRect();
+      if (!rect) return;
+      const dx = e.clientX - (rect.left + rect.width / 2);
+      if (Math.abs(dx) < 24) return;
+      go(dx > 0 ? 1 : -1);
     },
-    [enabled, active, snapTo],
+    [enabled, go],
   );
 
   return {
@@ -216,6 +265,7 @@ export function useCoverflow(count, titles = []) {
       onKeyDown,
       onPointerDown,
       onPointerMove,
+      onClick: onStageClick,
       onPointerUp: endDrag,
       onPointerCancel: endDrag,
       onPointerLeave: endDrag,

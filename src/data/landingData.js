@@ -111,7 +111,12 @@ export const landingData = {
         icon: '🗣️',
         title: 'Anglais',
         description: 'Du TOEIC à la conversation courante, en individuel ou en groupe.',
-        bullets: ['Préparation au TOEIC', 'Anglais tourisme', 'Communication courante', 'Anglais général, tous niveaux'],
+        bullets: [
+          'Préparation au TOEIC',
+          'Anglais tourisme',
+          'Communication courante',
+          'Anglais général, en individuel ou en groupe',
+        ],
         cta: { label: 'Voir les formations en anglais →', href: '/formation-anglais/' },
       },
       {
@@ -120,7 +125,12 @@ export const landingData = {
         icon: '✍️',
         title: 'Français',
         description: "Remise à niveau, écrits professionnels et lutte contre l'illettrisme.",
-        bullets: ["Lutte contre l'illettrisme", 'Remise à niveau en français', 'Maîtriser ses écrits pro', "Correction d'écrits"],
+        bullets: [
+          "Lutte contre l'illettrisme",
+          'Remise à niveau en français',
+          'Maîtriser les écrits professionnels',
+          'Certification Le Robert incluse',
+        ],
         cta: { label: 'Voir les formations en français →', href: '/formation-francais/' },
       },
       {
@@ -129,7 +139,12 @@ export const landingData = {
         icon: '🤝',
         title: 'Accueil',
         description: 'La relation client au comptoir comme au téléphone, en secteur touristique.',
-        bullets: ['Accueil physique', 'Accueil téléphonique', 'Posture et communication orale', 'Compétences du tourisme'],
+        bullets: [
+          'Accueil physique',
+          'Accueil téléphonique',
+          'Posture et relation client',
+          'En intra-entreprise, dans vos locaux',
+        ],
         cta: { label: "Voir les formations à l'accueil →", href: '/formation-en-accueil/' },
       },
     ],
