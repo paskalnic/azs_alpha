@@ -1,23 +1,33 @@
-import Header from './Header';
-import Hero from './Hero';
-import ProofBar from './ProofBar';
-import PromiseSection from './PromiseSection';
-import Formations from './Formations';
-import WhyBento from './WhyBento';
-import Testimonial from './Testimonial';
-import Financement from './Financement';
-import FinalCta from './FinalCta';
-import Footer from './Footer';
-import MobileDock from './MobileDock';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import ProofBar from '../components/ProofBar';
+import PromiseSection from '../components/PromiseSection';
+import Formations from '../components/Formations';
+import WhyBento from '../components/WhyBento';
+import Testimonial from '../components/Testimonial';
+import Financement from '../components/Financement';
+import FinalCta from '../components/FinalCta';
+import Footer from '../components/Footer';
+import MobileDock from '../components/MobileDock';
 import { landingData as defaultData } from '../data/landingData';
+import { useHead } from '../seo/HeadProvider';
+import { organizationLd } from '../seo/jsonld';
+import { SITE } from '../site.config';
 
 /**
  * Page complète. Tout le contenu vient de `data` ; `data.disposition`
  * ('split' | 'full-screen') pilote la mise en page du hero.
  * `disposition` en prop permet de surcharger ponctuellement la donnée.
  */
-export default function LandingPage({ data = defaultData, disposition }) {
+export default function HomePage({ data = defaultData, disposition }) {
   const layout = disposition ?? data.disposition ?? 'split';
+
+  useHead({
+    path: '/',
+    title: SITE.name,
+    description: SITE.description,
+    jsonLd: organizationLd(),
+  });
 
   return (
     <div className={`landing landing--${layout}`} data-disposition={layout}>

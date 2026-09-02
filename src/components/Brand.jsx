@@ -1,6 +1,8 @@
+import SmartLink from './SmartLink';
+
 /** Logo + nom + baseline. Utilisé dans l'en-tête et le pied de page. */
 export default function Brand({ brand, as = 'a', className = '', style }) {
-  const Tag = as;
+  const Tag = as === 'a' ? SmartLink : as;
   const linkProps =
     as === 'a' ? { href: brand.href, 'aria-label': brand.ariaLabel } : {};
 

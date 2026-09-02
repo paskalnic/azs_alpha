@@ -39,7 +39,7 @@ export default function Hero({ hero, disposition = 'split' }) {
 
         {showVisual && (
           <Reveal className="hero-visual">
-            <PhotoCard photo={hero.photo} caption={hero.caption} chips={hero.chips} />
+            <PhotoCard media={hero.media} caption={hero.caption} chips={hero.chips} />
           </Reveal>
         )}
       </div>

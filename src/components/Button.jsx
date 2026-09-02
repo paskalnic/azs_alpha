@@ -1,3 +1,5 @@
+import SmartLink from './SmartLink';
+
 /**
  * Bouton / lien d'action. `variant` : 'primary' | 'ghost'. `size` : 'lg' | undefined.
  * Rend un <a> si `href` est fourni, sinon un <button>.
@@ -18,9 +20,9 @@ export default function Button({
 
   if (href) {
     return (
-      <a href={href} className={classes} {...rest}>
+      <SmartLink href={href} className={classes} {...rest}>
         {content}
-      </a>
+      </SmartLink>
     );
   }
   return (

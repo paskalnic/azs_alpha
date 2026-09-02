@@ -1,4 +1,5 @@
 import Brand from './Brand';
+import SmartLink from './SmartLink';
 import QualiopiBadge from './QualiopiBadge';
 
 /**
@@ -59,9 +60,9 @@ export default function Footer({ brand, footer }) {
             <ul className="flex list-none flex-col gap-[.6rem]">
               {footer.links.items.map((l) => (
                 <li key={l.label}>
-                  <a href={l.href} className="text-foot-link hover:text-white">
+                  <SmartLink href={l.href} className="text-foot-link hover:text-white">
                     {l.label}
-                  </a>
+                  </SmartLink>
                 </li>
               ))}
             </ul>

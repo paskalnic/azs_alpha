@@ -1,9 +1,7 @@
-import { useState } from 'react';
+import MediaSlot from './MediaSlot';
 
-/** Carte photo flottante du hero, avec repli visuel si l'image ne charge pas. */
-export default function PhotoCard({ photo, caption, chips = [] }) {
-  const [failed, setFailed] = useState(false);
-
+/** Carte photo flottante du hero. Le visuel est un emplacement piloté par les données. */
+export default function PhotoCard({ media, caption, chips = [] }) {
   return (
     <div className="photo-card">
       {chips
@@ -12,17 +10,8 @@ export default function PhotoCard({ photo, caption, chips = [] }) {
           <Chip key={`tl-${i}`} {...c} />
         ))}
 
-      <div className={`frame${failed ? ' noimg' : ''}`}>
-        {!failed && (
-          <img
-            src={photo.src}
-            alt={photo.alt}
-            loading="eager"
-            width={photo.width}
-            height={photo.height}
-            onError={() => setFailed(true)}
-          />
-        )}
+      <div className="frame">
+        <MediaSlot media={media} />
       </div>
 
       <div className="caption">

@@ -98,9 +98,41 @@ a.btn:focus-visible, button:focus-visible, a:focus-visible{outline:3px solid var
 .nav-links a{color:var(--muted); transition:color .15s}
 .nav-links a:hover{color:var(--ink)}
 .nav-cta{display:none}
+
+/* — bouton menu (mobile) — */
+.nav-burger{
+  display:inline-grid; place-items:center; width:44px; height:44px; flex-shrink:0;
+  background:transparent; border:0; cursor:pointer; border-radius:12px;
+}
+.nav-burger:hover{background:rgba(30,136,196,.1)}
+.nav-burger-icon{display:grid; gap:5px; width:22px}
+.nav-burger-icon span{
+  display:block; height:2px; border-radius:2px; background:var(--ink);
+  transition:transform .22s ease, opacity .18s ease;
+}
+.nav-burger-icon.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger-icon.is-open span:nth-child(2){opacity:0}
+.nav-burger-icon.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* — panneau déroulant (mobile) — */
+.nav-panel{
+  border-top:1px solid var(--rule); background:var(--cream);
+  padding:1.1rem clamp(1.15rem,4vw,2.5rem) 1.5rem;
+  display:flex; flex-direction:column; gap:1.1rem;
+  max-height:calc(100dvh - 70px); overflow-y:auto;
+}
+.nav-panel nav{display:flex; flex-direction:column}
+.nav-panel nav a{
+  padding:.85rem 0; font-family:var(--display); font-weight:600; font-size:1.15rem;
+  color:var(--ink); border-bottom:1px solid var(--rule);
+}
+.nav-panel nav a:hover{color:var(--coral-ink)}
+
 @media(min-width:860px){
   .nav-links{display:flex}
   .nav-cta{display:inline-flex}
+  .nav-burger{display:none}
+  .nav-panel{display:none}
 }
 
 /* ── HERO ───────────────────────────────────────────────── */
@@ -146,11 +178,7 @@ a.btn:focus-visible, button:focus-visible, a:focus-visible{outline:3px solid var
   display:grid; place-items:center;
 }
 .photo-card .frame img{width:100%; height:100%; object-fit:cover; grid-area:1/1}
-.photo-card .frame.noimg{background:linear-gradient(150deg,var(--coral),var(--sun))}
-.photo-card .frame.noimg::after{
-  content:"AZS"; font-family:var(--display); font-weight:800; font-size:2.4rem;
-  color:#fff; letter-spacing:.04em; opacity:.92;
-}
+/* Le contenu du cadre est un emplacement média piloté par les données (MediaSlot.jsx). */
 .photo-card .caption{padding:.95rem .6rem .35rem; display:flex; align-items:center; justify-content:space-between; gap:.5rem}
 .photo-card .caption b{font-family:var(--display); font-size:1.02rem}
 .photo-card .caption span{font-size:.82rem; color:var(--muted)}
@@ -245,6 +273,10 @@ section{position:relative}
 .dom:hover .more{gap:.7rem}
 
 /* --- AMÉLIORATION : coverflow 3D (activé par JS via .is-cf) --- */
+/* Les cartes latérales sont décalées en 3D hors de la zone visible : on les
+   découpe au bord du conteneur, faute de quoi elles élargissent le document
+   et provoquent un débordement horizontal sur mobile. */
+.is-cf{overflow-x:clip}
 .is-cf .dom-grid{
   display:block; position:relative; perspective:1600px; transform-style:preserve-3d;
   height:var(--cf-h, 460px); margin-inline:auto; touch-action:pan-y;

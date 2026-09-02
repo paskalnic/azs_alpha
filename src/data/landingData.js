@@ -1,3 +1,5 @@
+import { SITE, formatAddress } from '../site.config';
+
 /**
  * Contenu de la landing page AZS Alpha Formations.
  * Tous les textes, liens et images sont ici : aucun contenu en dur dans les composants.
@@ -6,19 +8,16 @@
  * rendu via le composant <RichText>.
  */
 
-export const CONTACT = {
-  email: 'azs.alphaformations@gmail.com',
-  phone: '0690 75 72 26',
-  phoneHref: 'tel:+590690757226',
-  quoteHref: 'mailto:azs.alphaformations@gmail.com?subject=Demande%20de%20devis',
-};
+/* Les coordonnées vivent dans site.config.js : un seul endroit à modifier,
+   et le JSON-LD, le pied de page et les CTA restent cohérents entre eux. */
+export const CONTACT = SITE.contact;
 
 export const landingData = {
   /* 'split' (2 colonnes, maquette d'origine) | 'full-screen' (hero centré pleine hauteur) */
   disposition: 'split',
 
   brand: {
-    href: '#top',
+    href: '/',
     ariaLabel: 'AZS Alpha Formations, accueil',
     name: 'AZS Alpha Formations',
     tagline: 'Centre de formation · Guadeloupe',
@@ -27,12 +26,12 @@ export const landingData = {
   nav: {
     ariaLabel: 'Navigation principale',
     links: [
-      { label: 'Formations', href: '#formations' },
-      { label: 'Pourquoi nous', href: '#pourquoi' },
-      { label: 'Financement', href: '#financement' },
-      { label: 'Contact', href: '#contact' },
+      { label: 'Formations', href: '/nos-formations/' },
+      { label: 'Financement', href: '/#financement' },
+      { label: 'Qualité', href: '/nos-engagements-qualite/' },
+      { label: 'Contact', href: '/contact/' },
     ],
-    cta: { label: 'Demander un devis', href: '#contact' },
+    cta: { label: 'Demander un devis', href: '/contact/' },
   },
 
   hero: {
@@ -44,14 +43,18 @@ export const landingData = {
     ],
     lead: "Formations en anglais, français et techniques d'accueil, en individuel ou en petit groupe. Un accompagnement humain, du premier appel jusqu'à votre attestation.",
     actions: [
-      { label: 'Demander un devis gratuit', href: '#contact', variant: 'primary', size: 'lg' },
-      { label: 'Voir les formations', href: '#formations', variant: 'ghost', size: 'lg' },
+      { label: 'Demander un devis gratuit', href: '/#contact', variant: 'primary', size: 'lg' },
+      { label: 'Voir les formations', href: '/nos-formations/', variant: 'ghost', size: 'lg' },
     ],
-    photo: {
-      src: 'https://azsalphaformations.com/wp-content/uploads/2024/11/Photo-AZSAF-768x1365.jpg',
-      alt: "Axelle Zigault Urie, formatrice et fondatrice d'AZS Alpha Formations",
-      width: 768,
-      height: 1365,
+    /* Emplacement média : volontairement vide. Renseigner `src` (image, GIF
+       ou vidéo) depuis le back-office suffira à remplir la zone. */
+    media: {
+      id: 'hero-portrait',
+      kind: 'image',
+      src: null,
+      alt: '',
+      label: 'Portrait de la formatrice',
+      eager: true,
     },
     caption: { name: 'Axelle Zigault Urie', role: 'Formatrice & fondatrice' },
     chips: [
@@ -109,7 +112,7 @@ export const landingData = {
         title: 'Anglais',
         description: 'Du TOEIC à la conversation courante, en individuel ou en groupe.',
         bullets: ['Préparation au TOEIC', 'Anglais tourisme', 'Communication courante', 'Anglais général, tous niveaux'],
-        cta: { label: 'Discuter de mon objectif →', href: '#contact' },
+        cta: { label: 'Voir les formations en anglais →', href: '/formation-anglais/' },
       },
       {
         id: 'francais',
@@ -118,7 +121,7 @@ export const landingData = {
         title: 'Français',
         description: "Remise à niveau, écrits professionnels et lutte contre l'illettrisme.",
         bullets: ["Lutte contre l'illettrisme", 'Remise à niveau en français', 'Maîtriser ses écrits pro', "Correction d'écrits"],
-        cta: { label: 'Discuter de mon objectif →', href: '#contact' },
+        cta: { label: 'Voir les formations en français →', href: '/formation-francais/' },
       },
       {
         id: 'accueil',
@@ -127,7 +130,7 @@ export const landingData = {
         title: 'Accueil',
         description: 'La relation client au comptoir comme au téléphone, en secteur touristique.',
         bullets: ['Accueil physique', 'Accueil téléphonique', 'Posture et communication orale', 'Compétences du tourisme'],
-        cta: { label: 'Discuter de mon objectif →', href: '#contact' },
+        cta: { label: "Voir les formations à l'accueil →", href: '/formation-en-accueil/' },
       },
     ],
   },
@@ -185,31 +188,33 @@ export const landingData = {
   },
 
   footer: {
-    description: "Formations en langues et techniques d'accueil, certifiées Qualiopi, à Baie-Mahault.",
+    description: `Formations en langues et techniques d'accueil, certifiées Qualiopi, à ${SITE.address.city}.`,
     qualiopi: {
       badge: 'Qualiopi',
-      text: 'Certification qualité délivrée au titre de la catégorie : actions de formation.',
+      text: SITE.certification.label,
     },
     contact: {
       title: 'Contact',
       lines: [
-        { label: 'Adresse', value: 'ZAC de Dothémare, 97122 Baie-Mahault' },
+        { label: 'Adresse', value: formatAddress(SITE.address) },
         { label: 'Tél.', value: CONTACT.phone, href: CONTACT.phoneHref },
         { label: 'E-mail', value: CONTACT.email, href: `mailto:${CONTACT.email}`, wrap: true },
-        { label: 'Horaires', value: 'Lun–jeu 8h–16h30 · Ven 8h–13h' },
+        { label: 'Horaires', value: CONTACT.hours },
       ],
     },
     links: {
       title: 'Formations',
       items: [
-        { label: 'Anglais', href: '#formations' },
-        { label: 'Français & écrits', href: '#formations' },
-        { label: 'Accueil professionnel', href: '#formations' },
-        { label: 'Financement', href: '#financement' },
-        { label: 'Demander un devis', href: '#contact' },
+        { label: 'Anglais', href: '/formation-anglais/' },
+        { label: 'Français & écrits', href: '/formation-francais/' },
+        { label: 'Accueil professionnel', href: '/formation-en-accueil/' },
+        { label: 'Financement', href: '/#financement' },
+        { label: 'Nos engagements qualité', href: '/nos-engagements-qualite/' },
+        { label: 'Nos résultats', href: '/nos-resultats/' },
+        { label: 'Contact', href: '/contact/' },
       ],
     },
-    legalNotice: 'AZS Alpha Formations — SIRET à compléter · NDA à compléter',
+    legalNotice: `${SITE.name} — SIRET à compléter · NDA à compléter`,
     legalNavLabel: 'Liens légaux',
     legalLinks: [
       { label: 'Mentions légales', href: '#' },
@@ -223,7 +228,7 @@ export const landingData = {
     ariaLabel: 'Actions rapides',
     actions: [
       { label: '📞 Appeler', href: CONTACT.phoneHref, variant: 'ghost' },
-      { label: 'Demander un devis', href: '#contact', variant: 'primary' },
+      { label: 'Demander un devis', href: '/contact/', variant: 'primary' },
     ],
   },
 };
