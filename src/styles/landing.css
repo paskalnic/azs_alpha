@@ -1,0 +1,405 @@
+/* ──────────────────────────────────────────────────────────
+   AZS ALPHA FORMATIONS — Landing page
+   Style : "soft-organic pastel", calibré premium.
+   ────────────────────────────────────────────────────────── */
+
+:root{
+  /* Les valeurs vivent dans le bloc @theme de index.css (tokens Tailwind).
+     On les ré-expose ici sous les noms courts utilisés par cette feuille. */
+  --cream:var(--color-cream);
+  --cream-2:var(--color-cream-2);
+  --coral:var(--color-coral);
+  --coral-ink:var(--color-coral-ink);
+  --teal:var(--color-teal);
+  --teal-deep:var(--color-teal-deep);
+  --mint:var(--color-mint);
+  --sun:var(--color-sun);
+  --amber:var(--color-amber);
+
+  --ink:var(--color-ink);
+  --muted:var(--color-muted);
+  --paper:var(--color-paper);
+  --rule:var(--color-rule);
+  --ghost:var(--color-ghost);
+
+  --display:var(--font-display);
+  --body:var(--font-body);
+
+  --radius:var(--radius-card);
+  --radius-lg:var(--radius-card-lg);
+  --shadow:0 24px 60px -28px rgba(18,62,92,.38);
+  --shadow-soft:0 14px 40px -22px rgba(18,62,92,.28);
+  --maxw:1160px;
+
+  --tile-bd:rgba(18,48,62,.16);  /* couleur des bordures bento */
+}
+
+*,*::before,*::after{box-sizing:border-box; margin:0; padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--body); color:var(--ink); background:var(--cream);
+  line-height:1.65; -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%; display:block}
+a{color:inherit; text-decoration:none}
+
+.wrap{max-width:var(--maxw); margin-inline:auto; padding-inline:clamp(1.15rem,4vw,2.5rem)}
+
+/* — Typo — */
+h1,h2,h3{font-family:var(--display); line-height:1.05; letter-spacing:-.02em; color:var(--ink); font-weight:600}
+h1{font-size:clamp(2.5rem,1.6rem + 4vw,4.6rem); font-weight:700}
+h2{font-size:clamp(1.9rem,1.4rem + 2.2vw,3rem)}
+h3{font-size:clamp(1.15rem,1rem + .6vw,1.4rem)}
+.eyebrow{
+  font-size:.76rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--coral-ink);
+}
+.lead{font-size:clamp(1.05rem,1rem + .35vw,1.28rem); color:var(--muted); max-width:52ch}
+
+/* — Boutons — */
+.btn{
+  display:inline-flex; align-items:center; gap:.6rem; cursor:pointer;
+  font-family:var(--body); font-weight:700; font-size:1rem;
+  padding:.95rem 1.6rem; border-radius:999px; border:2px solid transparent;
+  min-height:52px; transition:transform .18s, box-shadow .18s, background .18s, color .18s, border-color .18s;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--coral),var(--sun)); color:#fff;
+  border-color:var(--teal-deep);
+  box-shadow:0 0 0 3px rgba(30,136,196,.18), 0 12px 26px -14px rgba(18,62,92,.6);
+}
+.btn-primary:hover{
+  transform:translateY(-2px); filter:brightness(.97);
+  box-shadow:0 0 0 4px rgba(30,136,196,.26), 0 18px 32px -14px rgba(18,62,92,.65);
+}
+.btn-ghost{background:var(--paper); color:var(--coral-ink); border-color:var(--coral)}
+.btn-ghost:hover{border-color:var(--teal); color:var(--teal); transform:translateY(-2px)}
+.btn-lg{padding:1.1rem 2rem; font-size:1.05rem; min-height:58px}
+a.btn:focus-visible, button:focus-visible, a:focus-visible{outline:3px solid var(--teal); outline-offset:3px; border-radius:6px}
+
+/* — Blobs organiques (décor) — */
+.blob{position:absolute; z-index:0; pointer-events:none; filter:blur(.5px)}
+/* NB : nommée `deco-ring` et non `ring` — `ring` est un utilitaire Tailwind
+   (box-shadow) qui, vivant dans la couche `utilities`, écraserait cette règle. */
+.deco-ring{position:absolute; z-index:0; pointer-events:none; border:1.5px solid rgba(30,136,196,.35); border-radius:50%}
+
+/* ── EN-TÊTE ────────────────────────────────────────────── */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(244,250,253,.85); backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.nav{display:flex; align-items:center; justify-content:space-between; gap:1rem; padding-block:.85rem}
+.brand{display:flex; align-items:center; gap:.6rem; font-family:var(--display); font-weight:700; font-size:1.12rem; letter-spacing:-.01em}
+.brand .dot{width:30px; height:30px; border-radius:50% 50% 50% 12px; background:linear-gradient(135deg,var(--coral),var(--sun)); flex-shrink:0}
+.brand small{display:block; font-family:var(--body); font-weight:500; font-size:.68rem; letter-spacing:.06em; color:var(--muted); text-transform:uppercase}
+.nav-links{display:none; gap:1.9rem; font-weight:600; font-size:.95rem}
+.nav-links a{color:var(--muted); transition:color .15s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{display:none}
+@media(min-width:860px){
+  .nav-links{display:flex}
+  .nav-cta{display:inline-flex}
+}
+
+/* ── HERO ───────────────────────────────────────────────── */
+.hero{position:relative; padding-block:clamp(3rem,7vw,6rem) clamp(3.5rem,8vw,7rem); overflow:hidden}
+.hero-grid{position:relative; z-index:2; display:grid; gap:clamp(2.5rem,5vw,4rem); align-items:center}
+
+.hero-copy .eyebrow{margin-bottom:1.1rem; display:flex; align-items:center; gap:.6rem}
+.hero-copy .eyebrow::before{content:""; width:26px; height:2px; background:var(--coral); display:inline-block}
+.hero h1{margin-bottom:1.3rem; max-width:14ch}
+.hero h1 .u{
+  background:linear-gradient(transparent 62%, var(--amber) 62% 92%, transparent 92%);
+  padding-inline:.05em;
+}
+.hero-copy .lead{margin-bottom:2rem}
+.hero-actions{display:flex; flex-wrap:wrap; gap:.85rem}
+@media(max-width:460px){ .hero-actions .btn{width:100%; justify-content:center} }
+
+/* — disposition "split" (2 colonnes) : la mise en page d'origine — */
+@media(min-width:900px){
+  .hero--split .hero-grid{grid-template-columns:1.05fr .95fr}
+}
+
+/* — disposition "full-screen" : une colonne centrée, pleine hauteur — */
+.hero--full-screen{min-height:100svh; display:grid; align-items:center}
+.hero--full-screen .hero-grid{grid-template-columns:1fr; justify-items:center; text-align:center}
+.hero--full-screen .hero-copy{max-width:60ch}
+.hero--full-screen .hero-copy .eyebrow{justify-content:center}
+.hero--full-screen h1{max-width:20ch; margin-inline:auto}
+.hero--full-screen .lead{margin-inline:auto}
+.hero--full-screen .hero-actions{justify-content:center}
+.hero--full-screen .hero-visual{display:none}
+
+/* carte photo flottante */
+.hero-visual{position:relative}
+.photo-card{
+  position:relative; z-index:2; background:var(--paper); border-radius:var(--radius-lg);
+  padding:14px; box-shadow:var(--shadow); max-width:400px; margin-inline:auto;
+}
+.photo-card .frame{
+  border-radius:calc(var(--radius-lg) - 12px); overflow:hidden; aspect-ratio:4/5;
+  min-height:clamp(320px,40vw,430px);
+  background:linear-gradient(160deg,var(--mint),var(--cream-2));
+  display:grid; place-items:center;
+}
+.photo-card .frame img{width:100%; height:100%; object-fit:cover; grid-area:1/1}
+.photo-card .frame.noimg{background:linear-gradient(150deg,var(--coral),var(--sun))}
+.photo-card .frame.noimg::after{
+  content:"AZS"; font-family:var(--display); font-weight:800; font-size:2.4rem;
+  color:#fff; letter-spacing:.04em; opacity:.92;
+}
+.photo-card .caption{padding:.95rem .6rem .35rem; display:flex; align-items:center; justify-content:space-between; gap:.5rem}
+.photo-card .caption b{font-family:var(--display); font-size:1.02rem}
+.photo-card .caption span{font-size:.82rem; color:var(--muted)}
+
+/* pastille stat flottante */
+.chip{
+  position:absolute; z-index:3; background:var(--paper); border-radius:20px;
+  box-shadow:var(--shadow-soft); padding:.8rem 1.05rem; display:flex; align-items:center; gap:.7rem;
+}
+.chip .num{font-family:var(--display); font-weight:700; font-size:1.5rem; color:var(--teal); line-height:1}
+.chip .lbl{font-size:.74rem; color:var(--muted); line-height:1.25; max-width:12ch}
+.chip.tl{top:-18px; left:-8px}
+.chip.br{bottom:14px; right:-14px}
+@media(max-width:520px){ .chip.tl{left:2px; top:-14px} .chip.br{right:2px} }
+
+/* ── BANDE PREUVE ───────────────────────────────────────── */
+.proof{position:relative; z-index:2}
+.proof-inner{
+  background:var(--paper); border-radius:var(--radius); box-shadow:var(--shadow-soft);
+  margin-top:-1rem; padding:clamp(1.3rem,3vw,1.9rem) clamp(1.3rem,3vw,2.2rem);
+  display:grid; gap:1.4rem 2rem; align-items:center;
+}
+@media(min-width:820px){ .proof-inner{grid-template-columns:auto 1fr; gap:2.5rem} }
+.proof-qualiopi{display:flex; align-items:center; gap:1rem}
+.proof-qualiopi img{width:82px; height:auto}
+.proof-qualiopi .q-badge{
+  width:66px;height:66px;border-radius:16px;flex-shrink:0;
+  background:linear-gradient(135deg,#1a3a8f,#e63946);display:grid;place-items:center;
+  color:#fff;font-family:var(--display);font-weight:700;font-size:.72rem;text-align:center;line-height:1.05;
+  padding:.4rem;
+}
+.proof-qualiopi p{font-size:.8rem; color:var(--muted); max-width:24ch}
+.proof-qualiopi p b{color:var(--ink)}
+.proof-stats{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; text-align:center}
+.proof-stats .s .n{font-family:var(--display); font-weight:700; font-size:clamp(1.6rem,1.2rem+1.2vw,2.2rem); color:var(--teal); line-height:1}
+.proof-stats .s .t{font-size:.78rem; color:var(--muted); margin-top:.35rem; line-height:1.3}
+@media(max-width:560px){ .proof-stats{grid-template-columns:1fr; gap:1.1rem} .proof-stats .s{display:flex; align-items:baseline; gap:.7rem; justify-content:center} .proof-stats .s .t{margin-top:0; text-align:left} }
+
+/* ── SECTIONS GÉNÉRIQUES ────────────────────────────────── */
+section{position:relative}
+.sec{padding-block:clamp(3.5rem,8vw,6.5rem)}
+.sec-head{max-width:44ch; margin-bottom:clamp(2rem,4vw,3rem)}
+.sec-head .eyebrow{display:block; margin-bottom:.9rem}
+.sec-head p{color:var(--muted); margin-top:.9rem}
+
+.ghost-title{
+  font-family:var(--display); font-weight:700; letter-spacing:-.03em; line-height:.92;
+  color:var(--ghost); font-size:clamp(3rem,2rem + 8vw,8rem);
+  pointer-events:none; user-select:none;
+}
+
+/* ── PROBLÈME → PROMESSE ────────────────────────────────── */
+.promise{background:var(--cream-2); overflow:hidden}
+.promise .wrap{position:relative; z-index:2}
+.promise-grid{display:grid; gap:clamp(2rem,4vw,3.5rem); align-items:center}
+@media(min-width:900px){ .promise-grid{grid-template-columns:1fr 1fr} }
+.promise blockquote{
+  font-family:var(--display); font-weight:500; font-size:clamp(1.5rem,1.2rem+1.4vw,2.35rem);
+  line-height:1.22; color:var(--ink); letter-spacing:-.02em;
+}
+.promise blockquote em{font-style:normal; color:var(--coral-ink)}
+.promise .answer p{color:var(--muted); margin-bottom:1.1rem}
+.promise .answer p:last-child{margin-bottom:0}
+.promise .answer b{color:var(--ink)}
+
+/* ── FORMATIONS (3 domaines) ────────────────────────────── */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* --- BASE : grille (fallback sans JS + reduced-motion + SEO) --- */
+.dom-grid{display:grid; gap:1.4rem}
+@media(min-width:720px){ .dom-grid{grid-template-columns:repeat(3,1fr)} }
+.dom{
+  position:relative; background:var(--paper); border-radius:var(--radius);
+  padding:1.8rem 1.6rem 1.7rem; box-shadow:var(--shadow-soft);
+  border:1px solid var(--rule); transition:transform .2s, box-shadow .2s;
+  display:flex; flex-direction:column; overflow:hidden;
+}
+.dom:hover{transform:translateY(-5px); box-shadow:var(--shadow)}
+.dom .tag{
+  width:52px; height:52px; border-radius:18px 18px 18px 6px; display:grid; place-items:center;
+  font-size:1.5rem; margin-bottom:1.1rem; flex-shrink:0;
+}
+.dom.d1 .tag{background:rgba(30,136,196,.14)}
+.dom.d2 .tag{background:rgba(18,62,92,.12)}
+.dom.d3 .tag{background:rgba(47,200,224,.2)}
+.dom h3{margin-bottom:.4rem}
+.dom > p{color:var(--muted); font-size:.94rem; margin-bottom:1.1rem}
+.dom ul{list-style:none; display:flex; flex-direction:column; gap:.55rem; margin-bottom:1.4rem}
+.dom li{font-size:.92rem; color:var(--ink); display:flex; gap:.55rem; align-items:baseline}
+.dom li::before{content:"—"; color:var(--coral); flex-shrink:0}
+.dom .more{margin-top:auto; font-weight:700; font-size:.92rem; color:var(--teal); display:inline-flex; align-items:center; gap:.4rem}
+.dom:hover .more{gap:.7rem}
+
+/* --- AMÉLIORATION : coverflow 3D (activé par JS via .is-cf) --- */
+.is-cf .dom-grid{
+  display:block; position:relative; perspective:1600px; transform-style:preserve-3d;
+  height:var(--cf-h, 460px); margin-inline:auto; touch-action:pan-y;
+  cursor:grab; user-select:none;
+}
+.is-cf .dom-grid:active{cursor:grabbing}
+.is-cf .dom{
+  position:absolute; top:0; left:50%;
+  width:min(340px, 82vw);
+  transform:translate(-50%,0);
+  transition:transform .55s cubic-bezier(.22,.68,.28,1), opacity .55s ease;
+  will-change:transform, opacity; backface-visibility:hidden;
+  margin:0;
+}
+.is-cf .dom:hover{transform:translate(-50%,0)} /* neutralise le hover translate de la base */
+.is-cf.dragging .dom{transition:none}
+.is-cf .dom.is-active{cursor:default}
+.is-cf .dom:not(.is-active){cursor:pointer}
+.is-cf .dom:not(.is-active) .more{pointer-events:none}
+
+/* commandes */
+.cf-ctrl{display:none; align-items:center; justify-content:center; gap:1.1rem; margin-top:2rem}
+.is-cf .cf-ctrl{display:flex}
+.cf-arrow{
+  width:48px; height:48px; border-radius:50%; border:2px solid rgba(18,48,62,.16);
+  background:var(--paper); color:var(--ink); font-size:1.2rem; cursor:pointer;
+  display:grid; place-items:center; transition:border-color .15s, color .15s, transform .15s;
+}
+.cf-arrow:hover{border-color:var(--teal); color:var(--teal); transform:translateY(-2px)}
+.cf-dots{display:flex; gap:.5rem}
+.cf-dot{
+  width:9px; height:9px; border-radius:50%; border:0; padding:0; cursor:pointer;
+  background:rgba(18,48,62,.2); transition:background .2s, transform .2s;
+}
+.cf-dot.on{background:var(--amber); transform:scale(1.35)}
+.cf-hint{text-align:center; margin-top:1rem; font-size:.85rem; color:var(--muted); display:none}
+.is-cf .cf-hint{display:block}
+
+/* ── POURQUOI AZS — BENTO ───────────────────────────────── */
+.why{background:var(--cream-2); overflow:hidden}
+.why .wrap{position:relative; z-index:2}
+
+.bento{
+  display:grid; gap:14px;
+  grid-template-columns:1fr;
+  grid-template-areas:"feat" "b2" "b3" "b4";
+}
+@media(min-width:640px){
+  .bento{
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:
+      "feat feat"
+      "b2   b3"
+      "b4   b4";
+  }
+}
+@media(min-width:940px){
+  .bento{
+    grid-template-columns:repeat(4,1fr);
+    grid-template-areas:
+      "feat feat b2 b3"
+      "feat feat b4 b4";
+  }
+}
+
+.tile{
+  background:var(--paper); border:1.5px solid var(--tile-bd); border-radius:20px;
+  padding:1.5rem 1.5rem; display:flex; flex-direction:column;
+  transition:border-color .18s, transform .18s, box-shadow .18s;
+}
+.tile:hover{border-color:rgba(18,48,62,.32); transform:translateY(-3px); box-shadow:0 16px 34px -24px rgba(18,62,92,.35)}
+.tile .ic{
+  width:46px;height:46px;border-radius:50% 50% 50% 12px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--coral),var(--sun));color:#fff;font-weight:800;
+  margin-bottom:1rem; font-size:1.1rem; flex-shrink:0;
+}
+.tile h3{font-size:1.08rem; margin-bottom:.4rem}
+.tile p{font-size:.92rem; color:var(--muted)}
+
+/* tuile vedette (le différenciateur clé) */
+.tile.feat{
+  grid-area:feat; background:linear-gradient(150deg,#EAF6FC,var(--paper));
+  border-color:rgba(30,136,196,.3); justify-content:space-between; gap:1.2rem;
+}
+.tile.feat .ic{width:56px;height:56px;font-size:1.4rem;background:linear-gradient(135deg,var(--teal),var(--coral))}
+.tile.feat h3{font-size:clamp(1.3rem,1.1rem + .8vw,1.7rem); font-family:var(--display); letter-spacing:-.01em; margin-bottom:.55rem}
+.tile.feat p{font-size:1rem; max-width:42ch}
+.tile.feat .who{display:flex; align-items:center; gap:.7rem; margin-top:.4rem; padding-top:1rem; border-top:1.5px solid var(--tile-bd)}
+.tile.feat .who .av{width:40px;height:40px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--coral),var(--sun));display:grid;place-items:center;color:#fff;font-family:var(--display);font-weight:700}
+.tile.feat .who b{font-family:var(--display); font-size:.98rem; display:block}
+.tile.feat .who span{font-size:.82rem; color:var(--muted)}
+
+.tile.t2{grid-area:b2}
+.tile.t3{grid-area:b3}
+.tile.t4{grid-area:b4}
+
+/* ── TÉMOIGNAGE ─────────────────────────────────────────── */
+.testi{overflow:hidden}
+.testi .wrap{position:relative; z-index:2}
+.testi-card{
+  background:var(--teal); color:#fff; border-radius:var(--radius-lg);
+  padding:clamp(2rem,5vw,3.5rem); position:relative; overflow:hidden;
+  max-width:900px; margin-inline:auto; box-shadow:var(--shadow);
+}
+.testi-card .mark{font-family:var(--display); font-size:6rem; line-height:.5; opacity:.28; height:2.2rem; display:block}
+.testi-card blockquote{
+  font-family:var(--display); font-weight:400; font-size:clamp(1.2rem,1rem+1vw,1.7rem);
+  line-height:1.4; letter-spacing:-.01em; margin-bottom:1.6rem;
+}
+.testi-card cite{font-style:normal; display:flex; align-items:center; gap:.85rem}
+.testi-card cite .av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--coral),var(--sun));display:grid;place-items:center;font-family:var(--display);font-weight:700;color:#fff}
+.testi-card cite b{display:block; font-size:1rem}
+.testi-card cite span{font-size:.85rem; opacity:.85}
+.testi-card .deco{position:absolute; z-index:0; right:-60px; bottom:-60px; width:220px; height:220px; border-radius:50%; background:rgba(255,255,255,.06)}
+
+/* ── FINANCEMENT ────────────────────────────────────────── */
+/* Section financement : entièrement en utilitaires Tailwind (Financement.jsx) */
+
+/* ── CTA FINAL ──────────────────────────────────────────── */
+.final{position:relative; overflow:hidden; padding-block:clamp(3.5rem,8vw,6rem)}
+.final-card{
+  position:relative; z-index:2; background:linear-gradient(150deg,var(--coral),#2FC8E0);
+  border-radius:var(--radius-lg); padding:clamp(2.2rem,5vw,4rem); text-align:center;
+  box-shadow:var(--shadow); overflow:hidden;
+}
+.final-card h2{color:#fff; max-width:18ch; margin-inline:auto; margin-bottom:1rem}
+.final-card p{color:rgba(255,255,255,.92); max-width:48ch; margin-inline:auto; margin-bottom:2rem; font-size:1.08rem}
+.final-card .btn-primary{background:#fff; color:var(--coral-ink); border-color:#fff; box-shadow:0 0 0 3px rgba(255,255,255,.4), 0 12px 26px -14px rgba(0,0,0,.35)}
+.final-card .btn-primary:hover{background:var(--ink); color:#fff; border-color:var(--ink); box-shadow:0 0 0 4px rgba(255,255,255,.5), 0 16px 30px -14px rgba(0,0,0,.4)}
+.final-card .btn-ghost{background:transparent; border-color:rgba(255,255,255,.7); color:#fff}
+.final-card .btn-ghost:hover{background:rgba(255,255,255,.15); border-color:#fff; color:#fff}
+.final-actions{display:flex; flex-wrap:wrap; gap:.85rem; justify-content:center}
+.final-card .deco{position:absolute; border-radius:50%; background:rgba(255,255,255,.12); z-index:0}
+
+/* ── PIED DE PAGE ───────────────────────────────────────── */
+.site-footer{background:var(--ink); color:#CFE0EA; padding-block:clamp(2.8rem,6vw,4rem) 2rem; font-size:.92rem; margin-top:clamp(3rem,7vw,5rem)}
+.foot .brand{color:#fff; margin-bottom:.7rem}
+.foot .brand small{color:#7E99A9}
+.foot-q .q-badge{width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,#1a3a8f,#e63946);display:grid;place-items:center;color:#fff;font-family:var(--display);font-weight:700;font-size:.6rem;text-align:center;line-height:1.05;padding:.35rem}
+/* Le reste du pied de page est en utilitaires Tailwind (Footer.jsx) */
+
+/* ── BARRE MOBILE FIXE ──────────────────────────────────── */
+/* La barre fixe elle-même est en utilitaires Tailwind (MobileDock.jsx) ;
+   seule la compensation de hauteur sur <body> reste ici. */
+body{padding-bottom:80px}
+@media(min-width:860px){ body{padding-bottom:0} }
+
+/* ── ANIMATIONS ─────────────────────────────────────────── */
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+@keyframes floaty2{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(14px) rotate(3deg)}}
+.js .reveal{opacity:0; transform:translateY(22px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1; transform:none}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none !important; transition-duration:.001ms !important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1; transform:none}
+}

@@ -1,0 +1,231 @@
+/**
+ * Contenu de la landing page AZS Alpha Formations.
+ * Tous les textes, liens et images sont ici : aucun contenu en dur dans les composants.
+ *
+ * Les champs suffixés `Html` acceptent un balisage inline simple (<b>, <em>, <br>)
+ * rendu via le composant <RichText>.
+ */
+
+export const CONTACT = {
+  email: 'azs.alphaformations@gmail.com',
+  phone: '0690 75 72 26',
+  phoneHref: 'tel:+590690757226',
+  quoteHref: 'mailto:azs.alphaformations@gmail.com?subject=Demande%20de%20devis',
+};
+
+export const landingData = {
+  /* 'split' (2 colonnes, maquette d'origine) | 'full-screen' (hero centré pleine hauteur) */
+  disposition: 'split',
+
+  brand: {
+    href: '#top',
+    ariaLabel: 'AZS Alpha Formations, accueil',
+    name: 'AZS Alpha Formations',
+    tagline: 'Centre de formation · Guadeloupe',
+  },
+
+  nav: {
+    ariaLabel: 'Navigation principale',
+    links: [
+      { label: 'Formations', href: '#formations' },
+      { label: 'Pourquoi nous', href: '#pourquoi' },
+      { label: 'Financement', href: '#financement' },
+      { label: 'Contact', href: '#contact' },
+    ],
+    cta: { label: 'Demander un devis', href: '#contact' },
+  },
+
+  hero: {
+    eyebrow: 'Organisme certifié Qualiopi · Baie-Mahault',
+    title: [
+      { text: "Reprendre confiance à l'oral comme à " },
+      { text: "l'écrit", highlight: true },
+      { text: '.' },
+    ],
+    lead: "Formations en anglais, français et techniques d'accueil, en individuel ou en petit groupe. Un accompagnement humain, du premier appel jusqu'à votre attestation.",
+    actions: [
+      { label: 'Demander un devis gratuit', href: '#contact', variant: 'primary', size: 'lg' },
+      { label: 'Voir les formations', href: '#formations', variant: 'ghost', size: 'lg' },
+    ],
+    photo: {
+      src: 'https://azsalphaformations.com/wp-content/uploads/2024/11/Photo-AZSAF-768x1365.jpg',
+      alt: "Axelle Zigault Urie, formatrice et fondatrice d'AZS Alpha Formations",
+      width: 768,
+      height: 1365,
+    },
+    caption: { name: 'Axelle Zigault Urie', role: 'Formatrice & fondatrice' },
+    chips: [
+      { position: 'tl', num: '100%', label: 'de stagiaires satisfaits' },
+      { position: 'br', num: '1', label: 'seule interlocutrice, du début à la fin' },
+    ],
+    decor: [
+      { type: 'blob', fill: '#1E88C4', opacity: 0.22, style: { top: '-120px', right: '-140px', width: '520px', animation: 'floaty 11s ease-in-out infinite' }, path: 'M45.6,-58.3C58,-49,66,-33.8,69.3,-17.6C72.6,-1.4,71.1,15.9,63.4,29.6C55.7,43.3,41.8,53.4,26.4,60.1C11,66.8,-5.9,70.1,-21.7,66.1C-37.5,62.1,-52.2,50.8,-60.8,36C-69.4,21.2,-71.9,2.9,-67.7,-13.3C-63.5,-29.5,-52.6,-43.6,-39.4,-52.6C-26.2,-61.6,-13.1,-65.5,2,-68.1C17.1,-70.7,34.2,-71.9,45.6,-58.3Z' },
+      { type: 'blob', fill: '#BDE3F2', opacity: 0.45, style: { bottom: '-100px', left: '-120px', width: '360px', animation: 'floaty2 13s ease-in-out infinite' }, path: 'M42.7,-57.1C54.8,-47.9,63.5,-34.3,67.6,-19.2C71.7,-4.1,71.2,12.5,64.7,26.2C58.2,39.9,45.7,50.7,31.5,57.9C17.3,65.1,1.4,68.7,-14.7,66.8C-30.8,64.9,-47.1,57.5,-57.6,45C-68.1,32.5,-72.8,14.9,-71.3,-1.9C-69.8,-18.7,-62.1,-34.7,-50.3,-44.4C-38.5,-54.1,-22.6,-57.5,-6.4,-49.8C9.8,-42.1,19.6,-23.3,42.7,-57.1Z' },
+      { type: 'ring', style: { top: '60px', left: '44%', width: '120px', height: '120px' } },
+      { type: 'ring', style: { bottom: '120px', right: '38%', width: '64px', height: '64px', borderColor: 'rgba(18,62,92,.3)' } },
+    ],
+  },
+
+  proof: {
+    qualiopi: {
+      badge: 'Qualiopi',
+      textHtml: '<b>Certifié Qualiopi</b> au titre des actions de formation — vos cours sont finançables.',
+    },
+    stats: [
+      { valueHtml: '11', label: 'stagiaires formés en 2025' },
+      { valueHtml: '100%', label: 'de taux de réussite' },
+      { valueHtml: 'OPCO<br>·&nbsp;France&nbsp;Travail', label: 'financements mobilisables' },
+    ],
+  },
+
+  promise: {
+    eyebrow: 'Le vrai frein',
+    quoteHtml:
+      "« Je n'arrivais pas à comprendre des phrases simples, ni à m'exprimer correctement. C'était un gros frein pour mes projets. »<br><em>Ça change tout quand on est bien accompagné.</em>",
+    paragraphsHtml: [
+      "Apprendre ou remettre à niveau une langue quand on est adulte et déjà occupé, c'est intimidant. Les cours standardisés ne s'adaptent pas à votre rythme, et on abandonne.",
+      "Chez AZS, chaque parcours démarre par un <b>échange et un test de positionnement</b> : on part de votre niveau réel et de votre objectif concret — pas d'un programme tout fait.",
+      "Cours en présentiel ou à distance, aménagements possibles en situation de handicap, et une <b>seule interlocutrice</b> qui vous suit du premier appel à l'attestation.",
+    ],
+    decor: [
+      { type: 'blob', fill: '#1E88C4', opacity: 0.14, style: { top: '-60px', right: '-90px', width: '300px' }, path: 'M50,-60C64,-49,73,-32,74,-15C75,2,68,20,57,34C46,48,31,58,13,64C-5,70,-26,72,-42,63C-58,54,-69,34,-71,14C-73,-6,-66,-27,-53,-40C-40,-53,-20,-58,0,-58C20,-58,36,-71,50,-60Z' },
+    ],
+  },
+
+  formations: {
+    id: 'formations',
+    eyebrow: 'Nos formations',
+    title: 'Trois domaines, un objectif : vous rendre autonome.',
+    description:
+      'Toutes nos formations sont individualisées et finançables. Voici les grandes familles.',
+    carouselLabel: 'Nos formations',
+    hint: 'Glissez ou utilisez les flèches pour explorer les formations',
+    controls: { prev: 'Formation précédente', next: 'Formation suivante', dots: 'Choisir une formation' },
+    items: [
+      {
+        id: 'anglais',
+        modifier: 'd1',
+        icon: '🗣️',
+        title: 'Anglais',
+        description: 'Du TOEIC à la conversation courante, en individuel ou en groupe.',
+        bullets: ['Préparation au TOEIC', 'Anglais tourisme', 'Communication courante', 'Anglais général, tous niveaux'],
+        cta: { label: 'Discuter de mon objectif →', href: '#contact' },
+      },
+      {
+        id: 'francais',
+        modifier: 'd2',
+        icon: '✍️',
+        title: 'Français',
+        description: "Remise à niveau, écrits professionnels et lutte contre l'illettrisme.",
+        bullets: ["Lutte contre l'illettrisme", 'Remise à niveau en français', 'Maîtriser ses écrits pro', "Correction d'écrits"],
+        cta: { label: 'Discuter de mon objectif →', href: '#contact' },
+      },
+      {
+        id: 'accueil',
+        modifier: 'd3',
+        icon: '🤝',
+        title: 'Accueil',
+        description: 'La relation client au comptoir comme au téléphone, en secteur touristique.',
+        bullets: ['Accueil physique', 'Accueil téléphonique', 'Posture et communication orale', 'Compétences du tourisme'],
+        cta: { label: 'Discuter de mon objectif →', href: '#contact' },
+      },
+    ],
+  },
+
+  why: {
+    id: 'pourquoi',
+    eyebrow: 'Pourquoi AZS Alpha Formations',
+    title: 'Un accompagnement pensé pour les adultes qui avancent.',
+    feature: {
+      icon: '◆',
+      title: 'Une seule interlocutrice, du début à la fin',
+      text: "Pas de plateforme anonyme ni de formateur qui change en cours de route. Axelle vous suit personnellement, du premier appel jusqu'à votre attestation.",
+      person: { initial: 'A', name: 'Axelle Zigault Urie', role: 'Formatrice & fondatrice' },
+    },
+    tiles: [
+      { id: 't2', icon: '◆', title: 'Groupes réduits', text: 'Formation individuelle ou petit groupe, pour que chacun progresse vraiment.' },
+      { id: 't3', icon: '◆', title: 'Accessible à tous', text: 'Cours à distance et aménagements possibles en situation de handicap.' },
+      { id: 't4', icon: '◆', title: 'Finançable', text: 'On monte le dossier OPCO ou France Travail avec vous, étape par étape.' },
+    ],
+    decor: [
+      { type: 'blob', fill: '#BDE3F2', opacity: 0.4, style: { bottom: '-90px', left: '-110px', width: '340px' }, path: 'M44,-56C56,-46,63,-31,66,-15C69,1,66,18,57,32C48,46,32,56,15,62C-2,68,-20,70,-36,63C-52,56,-65,40,-69,22C-73,4,-68,-16,-57,-31C-46,-46,-29,-56,-11,-60C7,-64,26,-66,44,-56Z' },
+    ],
+  },
+
+  testimonial: {
+    quote:
+      "Grâce à l'accompagnement personnalisé et à la méthode progressive d'Axelle, j'ai pu surmonter mes blocages, à mon rythme. Aujourd'hui je peux comprendre des conversations et répondre avec des phrases claires — un vrai pas pour moi.",
+    author: { initial: 'M', name: 'Marine', role: "Formation d'anglais" },
+  },
+
+  financement: {
+    id: 'financement',
+    eyebrow: 'Financement',
+    title: "Vous n'avez pas à tout financer vous-même.",
+    description: 'Selon votre situation, votre formation peut être prise en charge en tout ou partie.',
+    items: [
+      { id: 'salarie', accent: 'coral', title: 'Salarié·e', text: "Prise en charge par l'OPCO de votre branche, dans le cadre du plan de développement des compétences." },
+      { id: 'entreprise', accent: 'teal', title: 'Entreprise', text: 'Formation de vos équipes sur site, sur des contenus adaptés à votre activité.' },
+      { id: 'demandeur', accent: 'sun', title: "Demandeur d'emploi", text: 'Votre conseiller France Travail peut mobiliser une aide individuelle à la formation.' },
+    ],
+  },
+
+  finalCta: {
+    id: 'contact',
+    title: 'Parlons de votre projet.',
+    text: "Dites-nous où vous en êtes et ce que vous visez. Réponse sous 48 h avec une proposition et les pistes de financement.",
+    actions: [
+      { label: 'Demander un devis', href: CONTACT.quoteHref, variant: 'primary', size: 'lg' },
+      { label: `📞 ${CONTACT.phone}`, href: CONTACT.phoneHref, variant: 'ghost', size: 'lg' },
+    ],
+    decor: [
+      { style: { width: '180px', height: '180px', top: '-50px', left: '-40px' } },
+      { style: { width: '120px', height: '120px', bottom: '-30px', right: '20px' } },
+    ],
+  },
+
+  footer: {
+    description: "Formations en langues et techniques d'accueil, certifiées Qualiopi, à Baie-Mahault.",
+    qualiopi: {
+      badge: 'Qualiopi',
+      text: 'Certification qualité délivrée au titre de la catégorie : actions de formation.',
+    },
+    contact: {
+      title: 'Contact',
+      lines: [
+        { label: 'Adresse', value: 'ZAC de Dothémare, 97122 Baie-Mahault' },
+        { label: 'Tél.', value: CONTACT.phone, href: CONTACT.phoneHref },
+        { label: 'E-mail', value: CONTACT.email, href: `mailto:${CONTACT.email}`, wrap: true },
+        { label: 'Horaires', value: 'Lun–jeu 8h–16h30 · Ven 8h–13h' },
+      ],
+    },
+    links: {
+      title: 'Formations',
+      items: [
+        { label: 'Anglais', href: '#formations' },
+        { label: 'Français & écrits', href: '#formations' },
+        { label: 'Accueil professionnel', href: '#formations' },
+        { label: 'Financement', href: '#financement' },
+        { label: 'Demander un devis', href: '#contact' },
+      ],
+    },
+    legalNotice: 'AZS Alpha Formations — SIRET à compléter · NDA à compléter',
+    legalNavLabel: 'Liens légaux',
+    legalLinks: [
+      { label: 'Mentions légales', href: '#' },
+      { label: 'CGV', href: '#' },
+      { label: 'Confidentialité', href: '#' },
+      { label: 'Règlement intérieur', href: '#' },
+    ],
+  },
+
+  dock: {
+    ariaLabel: 'Actions rapides',
+    actions: [
+      { label: '📞 Appeler', href: CONTACT.phoneHref, variant: 'ghost' },
+      { label: 'Demander un devis', href: '#contact', variant: 'primary' },
+    ],
+  },
+};
+
+export default landingData;

@@ -1,0 +1,50 @@
+/* ──────────────────────────────────────────────────────────
+   Point d'entrée des styles.
+
+   Tailwind est intégré en COHABITATION avec la feuille custom :
+   - le Preflight (reset Tailwind) n'est volontairement PAS importé,
+     il écraserait la typo, les listes et les images de la maquette ;
+   - landing.css est chargée dans la couche `base`, donc les utilitaires
+     Tailwind (couche `utilities`) peuvent la surcharger sans `!important`.
+   ────────────────────────────────────────────────────────── */
+
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "./landing.css" layer(base);
+
+/* — Design tokens : source de vérité, consommés à la fois par les
+     utilitaires Tailwind (bg-coral, text-ink…) et par landing.css — */
+@theme {
+  --color-cream: #F4FAFD;
+  --color-cream-2: #E7F3FB;
+  --color-coral: #1E88C4;
+  --color-coral-ink: #155E8A;
+  --color-teal: #123E5C;
+  --color-teal-deep: #0C2C43;
+  --color-mint: #BDE3F2;
+  --color-sun: #2FC8E0;
+  --color-amber: #F4A63C;
+
+  --color-ink: #12303E;
+  --color-muted: #557485;
+  --color-paper: #FFFFFF;
+  --color-rule: #D9E8F0;
+  --color-ghost: #D6EAF5;
+
+  /* nuances du pied de page */
+  --color-foot-link: #C2D7E4;
+  --color-foot-text: #93AEBE;
+  --color-foot-dim: #7E99A9;
+
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-body: 'Karla', system-ui, sans-serif;
+
+  --radius-card: 26px;
+  --radius-card-lg: 38px;
+
+  /* points de rupture repris de la maquette */
+  --breakpoint-foot: 760px;
+  --breakpoint-nav: 860px;
+}
