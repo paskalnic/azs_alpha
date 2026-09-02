@@ -62,12 +62,15 @@ export default function ContactPage() {
                 ))}
               </dl>
 
-              <div className="flex flex-wrap gap-[.85rem]">
+              {/* Sous 860 px, la barre fixe du bas (MobileDock) porte déjà ces
+                  deux actions : on ne les affiche qu'à partir du moment où elle
+                  disparaît. */}
+              <div className="hidden flex-wrap gap-[.85rem] nav:flex">
                 <Button href={SITE.contact.quoteHref} label="Demander un devis" variant="primary" size="lg" />
                 <Button href={SITE.contact.phoneHref} label={`📞 ${SITE.contact.phone}`} variant="ghost" size="lg" />
               </div>
 
-              <p className="mt-6 text-[.86rem] text-muted">
+              <p className="text-[.86rem] text-muted nav:mt-6">
                 <a
                   href={`https://www.google.com/maps/search/?api=1&query=${MAP_QUERY}`}
                   target="_blank"

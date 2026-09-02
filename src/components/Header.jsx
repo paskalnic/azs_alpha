@@ -65,7 +65,9 @@ export default function Header({ brand, nav }) {
       </div>
 
       {/* Le panneau reste dans le DOM : `hidden` suffit à le retirer de
-          l'arbre d'accessibilité comme de l'affichage. */}
+          l'arbre d'accessibilité comme de l'affichage. Il ne reprend pas
+          l'appel à l'action : sous 860 px, la barre fixe du bas (MobileDock)
+          l'affiche déjà en permanence, menu ouvert compris. */}
       <div id="menu-mobile" ref={panelRef} className="nav-panel" hidden={!open}>
         <nav aria-label={nav.ariaLabel}>
           {nav.links.map((l) => (
@@ -74,13 +76,6 @@ export default function Header({ brand, nav }) {
             </SmartLink>
           ))}
         </nav>
-        <Button
-          href={nav.cta.href}
-          label={nav.cta.label}
-          variant="primary"
-          size="lg"
-          className="w-full justify-center"
-        />
       </div>
     </header>
   );
