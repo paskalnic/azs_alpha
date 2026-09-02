@@ -1,0 +1,76 @@
+{
+  "id": "toeic",
+  "order": 0,
+  "path": "/preparation-au-toeic/",
+  "category": "anglais",
+  "title": "Préparation au TOEIC",
+  "shortTitle": "TOEIC",
+  "summary": "Préparez le TOEIC en 35 heures : format du test, stratégies de score, deux tests blancs et un bilan personnalisé. 950 € en centre, à Baie-Mahault.",
+  "intro": "Reconnu à l'international, le TOEIC (Test of English for International Communication) atteste votre niveau de maîtrise de l'anglais à l'oral comme à l'écrit. Cette formation vous prépare au format de l'épreuve autant qu'à la langue elle-même.",
+  "duration": {
+    "label": "5 jours, 35 heures",
+    "hours": 35,
+    "iso": "PT35H"
+  },
+  "price": {
+    "label": "950 € net de TVA par participant",
+    "amount": 950,
+    "note": "En regroupement au centre. En intra-entreprise : sur devis."
+  },
+  "participants": null,
+  "modes": [
+    "Présentiel",
+    "Distanciel avec formateur tuteur en ligne"
+  ],
+  "audience": "Tout public.",
+  "prerequisites": "Aucun prérequis.",
+  "objectives": {
+    "main": "Développer ses compétences linguistiques pour communiquer à l'oral et à l'écrit selon les niveaux du CECRL (Cadre européen commun de référence pour les langues), et viser le meilleur score possible au TOEIC.",
+    "list": [
+      "Se familiariser avec le format du test et ses différents types d’exercices",
+      "Apprendre à gérer son temps sur chaque partie de l’épreuve",
+      "Découvrir les stratégies qui optimisent le score",
+      "Approfondir le vocabulaire et la grammaire attendus au test",
+      "Comprendre des écrits professionnels et produire un discours cohérent"
+    ]
+  },
+  "programme": [
+    {
+      "title": "Entraînement au format du test",
+      "items": [
+        "Exercices types, au format exact des épreuves du jour J",
+        "Présentation des épreuves d’expression écrite et orale, et conseils de méthode",
+        "Deux tests blancs en conditions réelles"
+      ]
+    },
+    {
+      "title": "Consolidation linguistique",
+      "items": [
+        "Fiches de révision de grammaire et de vocabulaire",
+        "Interprétation de sujets concrets et abstraits, à l’écrit comme à l’oral",
+        "Compréhension de textes longs et saisie des significations implicites",
+        "Expression structurée sur des sujets complexes"
+      ]
+    }
+  ],
+  "method": [
+    "Approche communicative",
+    "Travail sur documents authentiques",
+    "Différenciation pédagogique selon le niveau de chacun"
+  ],
+  "evaluation": [
+    "Test de positionnement au démarrage de la formation",
+    "Simulation complète du test TOEIC en fin de parcours",
+    "Bilan de formation personnalisé avec score estimé",
+    "Attestation de fin de formation (objectifs, durée, résultats)"
+  ],
+  "accessDelay": "Démarrage dans le mois qui suit la commande, sous réserve des disponibilités de la formatrice.",
+  "media": {
+    "id": "formation-toeic",
+    "kind": "image",
+    "src": null,
+    "alt": "",
+    "ratio": "16/10",
+    "label": "TOEIC"
+  }
+}

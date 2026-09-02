@@ -1,0 +1,123 @@
+{
+  "id": "maitriser-les-ecrits",
+  "order": 7,
+  "path": "/maitriser-les-ecrits/",
+  "category": "francais",
+  "title": "Maîtriser les écrits professionnels",
+  "shortTitle": "Maîtriser les écrits",
+  "summary": "35 heures pour rédiger et s'exprimer avec aisance au travail : expression orale et écrite, orthographe, grammaire. Certification Le Robert incluse, 2 100 €.",
+  "intro": "Un parcours complet qui va au-delà des règles : comprendre, résumer, structurer et s'exprimer. Pour celles et ceux qui rédigent courriers, rapports et notes au quotidien et veulent le faire avec assurance.",
+  "duration": {
+    "label": "35 heures",
+    "hours": 35,
+    "iso": "PT35H"
+  },
+  "price": {
+    "label": "2 100 € la formation",
+    "amount": 2100,
+    "note": "En regroupement au centre — coût de la Certification Le Robert inclus. En intra-entreprise : sur devis."
+  },
+  "participants": {
+    "min": 1,
+    "max": 5
+  },
+  "modes": [
+    "Présentiel",
+    "Distanciel"
+  ],
+  "audience": "Toute personne ayant des difficultés à rédiger, communiquer et s'exprimer en français.",
+  "prerequisites": "Avoir le français pour langue maternelle ou avoir acquis le niveau A2 (CECRL), et ne pas être en situation d'analphabétisme.",
+  "objectives": {
+    "main": "Rédiger avec aisance, s'exprimer avec facilité et communiquer efficacement, à l'écrit comme à l'oral, en contexte professionnel.",
+    "list": [
+      "Maîtriser les règles d’orthographe et de grammaire, savoir conjuguer",
+      "Repérer et corriger ses fautes les plus courantes",
+      "Structurer et résumer un texte",
+      "Employer le registre de langage approprié à la situation",
+      "Obtenir la Certification Le Robert"
+    ]
+  },
+  "programme": [
+    {
+      "title": "1 — Expression orale",
+      "items": [
+        "Lecture et questions de compréhension autour d’un texte",
+        "Mises en situation",
+        "Attribuer correctement aux mots leur sens communément admis",
+        "Employer le registre de langage approprié",
+        "Construire des phrases grammaticalement correctes"
+      ]
+    },
+    {
+      "title": "2 — Expression écrite",
+      "items": [
+        "Compréhension écrite : répondre correctement à l’écrit",
+        "Méthodologie du résumé de textes",
+        "Maîtriser les structures de base du courrier et les formules d'usage",
+        "Déjouer les pièges de la langue française"
+      ]
+    },
+    {
+      "title": "3 — Connaissance des classes de mots",
+      "items": [
+        "Les pronoms personnels et les articles",
+        "Noms propres et noms communs",
+        "Les genres et les nombres",
+        "Les groupes de verbes, infinitif et verbes conjugués",
+        "Les compléments circonstanciels",
+        "Les adjectifs qualificatifs"
+      ]
+    },
+    {
+      "title": "4 — Orthographe",
+      "items": [
+        "L'orthographe d'usage et les règles spécifiques",
+        "Les erreurs courantes",
+        "Genre des noms, singulier et pluriel, écriture des nombres",
+        "Ponctuation et signes graphiques",
+        "Accords des noms, adjectifs, participes et verbes, homonymie",
+        "Mots invariables et adverbes de manière"
+      ]
+    },
+    {
+      "title": "5 — Grammaire",
+      "items": [
+        "Les règles de grammaire",
+        "Le verbe : accords et conjugaison",
+        "Différencier et écrire correctement les homophones"
+      ]
+    },
+    {
+      "title": "6 — Conjugaison",
+      "items": [
+        "Conjuguer en respectant temps et modes",
+        "Accorder le groupe nominal, le verbe avec son sujet, le participe passé",
+        "Les auxiliaires être et avoir, la concordance des temps",
+        "Maîtriser les temps usuels de l’indicatif : présent, passé composé, imparfait, passé simple, futur",
+        "Éviter la confusion entre futur et conditionnel",
+        "L’impératif"
+      ]
+    }
+  ],
+  "method": [
+    "Mises en application par des exercices pratiques",
+    "Méthode participative animée par des séances de communication écrites et orales",
+    "Incitation à la poursuite d’un travail personnel",
+    "Support de cours adapté et bilan de formation remis au stagiaire"
+  ],
+  "evaluation": [
+    "Suivi continu tout au long de la formation pour valider les progrès",
+    "Contrôles réguliers des acquis",
+    "Certification Le Robert en fin de formation"
+  ],
+  "certification": "robert",
+  "accessDelay": "Inscription à réaliser un mois avant le démarrage de la formation.",
+  "media": {
+    "id": "formation-maitriser-les-ecrits",
+    "kind": "image",
+    "src": null,
+    "alt": "",
+    "ratio": "16/10",
+    "label": "Maîtriser les écrits"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "id": "illettrisme",
+  "order": 5,
+  "path": "/lutte-contre-lilletrisme/",
+  "category": "francais",
+  "title": "Lutte contre l'illettrisme",
+  "shortTitle": "Lutte contre l'illettrisme",
+  "summary": "Réapprendre à lire, écrire et s'exprimer en français, jusqu'à la Certification Le Robert. Parcours de 71 h 45, certification incluse, 4 500 €.",
+  "intro": "Un parcours long et progressif, construit à partir d'un diagnostic individuel. On repart des sons et des syllabes pour aller jusqu'à la rédaction de courriers professionnels, sans jugement et au rythme de chacun.",
+  "duration": {
+    "label": "71 h 45 — 10 jours de formation et 1 h 45 de certification",
+    "hours": 71.75,
+    "iso": "PT71H45M"
+  },
+  "price": {
+    "label": "4 500 €",
+    "amount": 4500,
+    "note": "Frais d'inscription à la Certification Le Robert inclus."
+  },
+  "participants": null,
+  "modes": [
+    "Présentiel",
+    "Distanciel"
+  ],
+  "audience": "Toute personne souhaitant réapprendre les bases de la lecture, de l'écriture et de l'expression en français, dans un cadre personnel ou professionnel.",
+  "prerequisites": "Avoir le français pour langue maternelle ou avoir acquis le niveau A2 (CECRL), et ne pas être en situation d'analphabétisme.",
+  "objectives": {
+    "main": "Permettre au stagiaire de se sentir à l'aise avec la langue française, à l'oral comme à l'écrit, et faire reconnaître son niveau par une certification.",
+    "list": [
+      "Rédiger des écrits professionnels en respectant les règles de la langue française",
+      "S'exprimer de manière adéquate selon le contexte : registre de langue, vocabulaire, construction des phrases",
+      "Comprendre les documents de la vie courante et du monde du travail",
+      "Obtenir la Certification Le Robert"
+    ]
+  },
+  "programme": [
+    {
+      "title": "1 — Positionnement initial et diagnostic personnalisé",
+      "items": [
+        "Accueil des participants et présentation des objectifs",
+        "Évaluation des acquis de départ : lecture, écriture, compréhension, expression",
+        "Définition des besoins individuels et des objectifs personnalisés"
+      ]
+    },
+    {
+      "title": "2 — Réapprentissage des bases de la lecture",
+      "items": [
+        "Reconnaissance et association des sons et des syllabes",
+        "Lecture de mots, de phrases puis de petits textes",
+        "Compréhension de consignes simples et de documents de la vie courante",
+        "Lecture guidée et reformulation orale"
+      ]
+    },
+    {
+      "title": "3 — Orthographe et grammaire de base",
+      "items": [
+        "Les classes grammaticales : nom, verbe, adjectif, pronom",
+        "Accords en genre et en nombre",
+        "Conjugaison des temps essentiels : présent, passé, futur",
+        "Orthographe d'usage et règles simples à mémoriser",
+        "Exercices d’application et dictées courtes adaptées au niveau"
+      ]
+    },
+    {
+      "title": "4 — Expression orale et vocabulaire",
+      "items": [
+        "Développer son vocabulaire du quotidien et professionnel",
+        "Se présenter, exprimer ses besoins, raconter un fait",
+        "Dialoguer, poser des questions, reformuler",
+        "Jeux de rôle et exercices de prononciation, mise en confiance à l’oral"
+      ]
+    },
+    {
+      "title": "5 — Expression écrite fonctionnelle",
+      "items": [
+        "Rédaction de phrases courtes puis de petits paragraphes",
+        "Compléter et rédiger des formulaires simples",
+        "Rédiger un message, un courrier, un e-mail, une note",
+        "Connecteurs logiques et ponctuation"
+      ]
+    },
+    {
+      "title": "6 — Communication en contexte professionnel",
+      "items": [
+        "Lecture de documents administratifs : bulletins, consignes, affiches, courriels",
+        "Identification du vocabulaire professionnel courant",
+        "Rédaction adaptée à une situation de travail",
+        "Cas concrets : consignes de sécurité, horaires, fiches de poste"
+      ]
+    },
+    {
+      "title": "7 — Préparation à la Certification Le Robert",
+      "items": [
+        "Présentation du test, de son format et de ses critères",
+        "Révision ciblée de grammaire, conjugaison et orthographe",
+        "Exercices d’entraînement au format du test",
+        "Test blanc et analyse des résultats",
+        "Conseils méthodologiques"
+      ]
+    },
+    {
+      "title": "8 — Passage de la Certification Le Robert",
+      "items": [
+        "Réalisation du test officiel en ligne",
+        "Restitution des résultats et attestation de compétences"
+      ]
+    }
+  ],
+  "method": [
+    "Supports variés : fichiers audio et vidéo, jeux de rôles",
+    "Cours individuels dispensés par la même formatrice tout au long du parcours",
+    "Salles équipées : tableau, TV, ordinateur, tablette, connexion internet — Teams ou Zoom à distance",
+    "Accès illimité à la plateforme e-learning Orthodidacte, qui s’adapte au niveau et au rythme de chacun"
+  ],
+  "evaluation": [
+    "Diagnostic individuel avant le démarrage : besoins, niveau initial, personnalisation du programme",
+    "Évaluations régulières tout au long du parcours",
+    "Certification Le Robert en fin de formation"
+  ],
+  "certification": "robert",
+  "accessDelay": "Avant le démarrage, la responsable pédagogique vous contacte pour un entretien : diagnostic des besoins, évaluation du niveau initial et personnalisation du programme. La date de démarrage est fixée selon vos disponibilités.",
+  "media": {
+    "id": "formation-illettrisme",
+    "kind": "image",
+    "src": null,
+    "alt": "",
+    "ratio": "16/10",
+    "label": "Lutte contre l'illettrisme"
+  }
+}

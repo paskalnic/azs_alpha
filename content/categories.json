@@ -1,0 +1,35 @@
+[
+  {
+    "id": "anglais",
+    "path": "/formation-anglais/",
+    "name": "Anglais",
+    "title": "Formations en anglais",
+    "icon": "🗣️",
+    "modifier": "d1",
+    "summary": "Du TOEIC à la conversation courante, en individuel ou en petit groupe.",
+    "metaSummary": "TOEIC, anglais tourisme, communication courante et anglais général. Organisme Qualiopi à Baie-Mahault, formations finançables.",
+    "intro": "Que vous prépariez une certification, que vous accueilliez une clientèle anglophone ou que vous souhaitiez simplement oser parler, chaque parcours démarre par un test de positionnement et s'adapte à votre niveau réel."
+  },
+  {
+    "id": "francais",
+    "path": "/formation-francais/",
+    "name": "Français",
+    "title": "Formations en français",
+    "icon": "✍️",
+    "modifier": "d2",
+    "summary": "Remise à niveau, écrits professionnels et lutte contre l'illettrisme, avec la Certification Le Robert.",
+    "metaSummary": "Remise à niveau, écrits professionnels, lutte contre l'illettrisme. Certification Le Robert. Organisme Qualiopi à Baie-Mahault.",
+    "intro": "Reprendre les bases, gagner en aisance à l'écrit ou faire reconnaître son niveau : nos parcours en français partent de votre situation, sans jugement, et débouchent sur une certification reconnue."
+  },
+  {
+    "id": "accueil",
+    "path": "/formation-en-accueil/",
+    "name": "Accueil",
+    "title": "Formations aux techniques d'accueil",
+    "icon": "🤝",
+    "modifier": "d3",
+    "summary": "La relation client au comptoir comme au téléphone, en secteur touristique et en entreprise.",
+    "metaSummary": "Accueil physique et téléphonique : formations courtes en entreprise. Organisme Qualiopi à Baie-Mahault, finançables.",
+    "intro": "L'accueil est le premier contact avec votre établissement. Ces formations courtes, orientées mise en situation, professionnalisent la posture de vos équipes au comptoir et au téléphone."
+  }
+]

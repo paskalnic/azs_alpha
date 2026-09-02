@@ -1,0 +1,84 @@
+{
+  "id": "anglais-general-groupe",
+  "order": 4,
+  "path": "/anglais-general-en-groupe/",
+  "category": "anglais",
+  "title": "Anglais général — en groupe",
+  "shortTitle": "Anglais général (groupe)",
+  "summary": "30 heures d'anglais général en petit groupe de 2 à 10 personnes : phonétique, grammaire, vocabulaire professionnel. 1 000 € net de TVA.",
+  "intro": "Le même parcours que la formule individuelle, en petit groupe : la dynamique collective sert les jeux de rôle et les mises en situation, pour un coût par participant nettement réduit.",
+  "duration": {
+    "label": "30 heures",
+    "hours": 30,
+    "iso": "PT30H"
+  },
+  "price": {
+    "label": "1 000 € net de TVA",
+    "amount": 1000,
+    "note": "Autres formats et demandes spécifiques sur devis."
+  },
+  "participants": {
+    "min": 2,
+    "max": 10
+  },
+  "modes": [
+    "Présentiel",
+    "Distanciel"
+  ],
+  "audience": "Toute personne utilisant l'anglais dans un contexte professionnel, quelle que soit sa fonction, souhaitant être plus opérationnelle.",
+  "prerequisites": "Aucun prérequis.",
+  "objectives": {
+    "main": "Améliorer l'anglais courant et professionnel pour communiquer avec aisance dans les situations du quotidien comme du travail.",
+    "list": [
+      "Acquérir les bases linguistiques : automatismes et expressions types",
+      "Améliorer sa prononciation grâce à l'alphabet phonétique international",
+      "Acquérir le vocabulaire nécessaire pour converser au travail et dans la rue",
+      "Lire et rédiger des documents professionnels simples",
+      "Entamer et tenir une conversation spontanée avec un anglophone"
+    ]
+  },
+  "programme": [
+    {
+      "title": "Module 1 — Phonétique et lecture (15 heures)",
+      "items": [
+        "Révision de l'alphabet anglais : épeler et sonoriser les mots",
+        "Transcrire les mots avec les symboles de l'alphabet phonétique international",
+        "Travail sur les systèmes vocalique et consonantique anglais",
+        "Approfondissement des phonèmes complexes propres à la langue anglaise",
+        "Travail sur la syllabe, l'intonation, le rythme et l'accent tonique"
+      ]
+    },
+    {
+      "title": "Module 2 — Vocabulaire et grammaire (15 heures)",
+      "items": [
+        "Se présenter personnellement et professionnellement, formules de politesse",
+        "Vocabulaire lié à son secteur d'activité : sur la route, à l'hôtel, avec des clients anglophones",
+        "Structures grammaticales de base : interrogation, affirmation, négation",
+        "Révision du présent, du passé et du futur",
+        "Les verbes modaux et leurs multiples emplois",
+        "Acquisition du vocabulaire professionnel"
+      ]
+    }
+  ],
+  "method": [
+    "Séquences pédagogiques regroupées en modules, adaptées aux besoins identifiés en cours de formation",
+    "Réflexion et échanges sur cas pratiques, retours d’expériences, jeux de rôle",
+    "Lecture de textes pour évaluer prononciation, accent tonique, intonation et rythme",
+    "Corrections et contrôles des connaissances à chaque étape, au rythme des apprenants",
+    "Tableau blanc, paper-board, support de cours numérique projeté puis transmis par e-mail"
+  ],
+  "evaluation": [
+    "Évaluation individuelle du profil, des attentes et des besoins avant le démarrage (test de positionnement)",
+    "Évaluation des connaissances à chaque étape : questionnaires, exercices, travaux pratiques, entretiens",
+    "Questionnaire de satisfaction en fin de formation"
+  ],
+  "accessDelay": "Inscription à réaliser un mois avant le démarrage de la formation.",
+  "media": {
+    "id": "formation-anglais-general-groupe",
+    "kind": "image",
+    "src": null,
+    "alt": "",
+    "ratio": "16/10",
+    "label": "Anglais général (groupe)"
+  }
+}

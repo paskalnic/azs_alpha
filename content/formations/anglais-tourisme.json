@@ -1,0 +1,118 @@
+{
+  "id": "anglais-tourisme",
+  "order": 1,
+  "path": "/anglais-tourisme/",
+  "category": "anglais",
+  "title": "Anglais tourisme",
+  "shortTitle": "Anglais tourisme",
+  "summary": "21 heures d'anglais appliqué au tourisme : accueil client, réservations, réclamations. Groupes de 1 à 5 personnes, 950 € net de TVA.",
+  "intro": "Destinée aux professionnels du tourisme, cette formation met l'anglais au service de situations concrètes : accueillir un client, décrire un circuit, gérer une réservation ou répondre à une réclamation.",
+  "duration": {
+    "label": "3 jours, 21 heures",
+    "hours": 21,
+    "iso": "PT21H"
+  },
+  "price": {
+    "label": "950 € net de TVA par participant",
+    "amount": 950,
+    "note": "Autres formats et demandes spécifiques sur devis."
+  },
+  "participants": {
+    "min": 1,
+    "max": 5
+  },
+  "modes": [
+    "Présentiel",
+    "Distanciel"
+  ],
+  "audience": "Toute personne utilisant l'anglais dans un contexte professionnel touristique, quelle que soit sa fonction, souhaitant gagner en aisance opérationnelle.",
+  "prerequisites": "Connaître les bases de l'anglais (niveau scolaire).",
+  "objectives": {
+    "main": "Consolider et mettre en pratique les bases de l'anglais, avec un accent porté sur le vocabulaire et les situations propres au secteur du tourisme.",
+    "list": [
+      "Accueillir et renseigner une clientèle anglophone",
+      "Gérer une réservation, une facturation, une confirmation de séjour",
+      "Répondre à une réclamation avec le registre approprié",
+      "Décrire un voyage, un circuit, un produit touristique et le valoriser"
+    ]
+  },
+  "programme": [
+    {
+      "title": "Module 1 — Les bases de la langue",
+      "items": [
+        "L’essentiel de la grammaire et ses principaux points",
+        "Le vocabulaire courant et professionnel",
+        "L’intonation et la prononciation"
+      ]
+    },
+    {
+      "title": "Module 2 — Vocabulaire",
+      "items": [
+        "Vocabulaire courant, puis économique et commercial",
+        "La correspondance en langue anglaise",
+        "Suivi de l'actualité économique et sociale des pays anglophones"
+      ]
+    },
+    {
+      "title": "Module 3 — Expression orale",
+      "items": [
+        "Entraînement intensif à l’expression orale",
+        "Reformulation des messages oraux",
+        "Conversation téléphonique",
+        "Accueil des clients en anglais"
+      ]
+    },
+    {
+      "title": "Module 4 — Expression écrite",
+      "items": [
+        "Techniques d’écriture",
+        "Entraînement intensif à l’expression écrite",
+        "Rédaction de documents professionnels appliqués au tourisme"
+      ]
+    },
+    {
+      "title": "Module 5 — Cas pratiques",
+      "items": [
+        "Communiquer au téléphone",
+        "Les voyages, les transports, le restaurant, l’hôtel",
+        "Jeux de rôle",
+        "L’entretien d’embauche : se présenter, présenter une entreprise"
+      ]
+    },
+    {
+      "title": "Module 6 — Le tourisme",
+      "items": [
+        "Pays et villes étrangères, vocabulaire des voyages",
+        "Accueillir le client, prendre une commande",
+        "Réserver un séjour, un vol, un hôtel, une voiture",
+        "Les transferts touristiques",
+        "Valoriser un produit touristique et ses points forts",
+        "Facturer, confirmer un voyage ou un séjour",
+        "Répondre à une réclamation et savoir présenter ses excuses"
+      ]
+    }
+  ],
+  "method": [
+    "Exercices pratiques et mises en situation",
+    "Supports audio et vidéo",
+    "Supports de cours fournis"
+  ],
+  "evaluation": [
+    "Suivi continu tout au long de la formation pour valider les progrès",
+    "Quiz d’évaluation des acquis pédagogiques",
+    "Correction orale et collective avec l’intervenante",
+    "Feuille de présence signée à chaque demi-journée",
+    "Fiches d’évaluation complétées par la formatrice et par les participants",
+    "Support de cours adapté et bilan de formation remis au stagiaire",
+    "Attestation de formation"
+  ],
+  "accessDelay": "Inscription à réaliser au plus tard 15 jours avant le démarrage de la formation.",
+  "media": {
+    "id": "formation-anglais-tourisme",
+    "kind": "image",
+    "src": null,
+    "alt": "",
+    "ratio": "16/10",
+    "label": "Anglais tourisme"
+  }
+}

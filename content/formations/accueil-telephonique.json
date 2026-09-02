@@ -1,0 +1,97 @@
+{
+  "id": "accueil-telephonique",
+  "order": 9,
+  "path": "/accueil-telephonique/",
+  "category": "accueil",
+  "title": "La relation client : l'accueil téléphonique",
+  "seoTitle": "Formation accueil téléphonique",
+  "shortTitle": "Accueil téléphonique",
+  "summary": "Une journée pour structurer l'accueil téléphonique : attitude, étapes de l'appel, traitement de la demande. Groupes de 4 à 10 personnes, 550 € net de TVA.",
+  "intro": "Un accueil téléphonique de qualité est un moyen simple et peu coûteux de développer une image positive de votre établissement. Cette journée en donne la méthode, du premier mot au transfert d'appel.",
+  "duration": {
+    "label": "1 jour, 7 heures",
+    "hours": 7,
+    "iso": "PT7H"
+  },
+  "price": {
+    "label": "550 € net de TVA la journée",
+    "amount": 550,
+    "note": "Tarif intra-entreprise, pour 4 à 10 apprenants. Autres formats sur devis."
+  },
+  "participants": {
+    "min": 4,
+    "max": 10
+  },
+  "modes": [
+    "Présentiel",
+    "Distanciel"
+  ],
+  "audience": "Personnes en situation d'accueil téléphonique : réception, accueil, vendeurs en point de vente.",
+  "prerequisites": "Aucun prérequis. Formation ouverte à tout public.",
+  "objectives": {
+    "main": "Professionnaliser la relation téléphonique pour véhiculer une image de qualité de service et mieux satisfaire les clients.",
+    "list": [
+      "Rappeler les enjeux de la relation téléphonique",
+      "Améliorer et maintenir une démarche proactive sur les appels entrants",
+      "Être concret et savoir terminer un appel",
+      "Optimiser la gestion simultanée des tâches administratives et des appels"
+    ]
+  },
+  "programme": [
+    {
+      "title": "Module 1 — Une attitude positive dès le premier mot",
+      "items": [
+        "Réussir l'accueil téléphonique dans différentes situations",
+        "Développer une attitude positive dès le début de la conversation"
+      ]
+    },
+    {
+      "title": "Module 2 — Les étapes d’un accueil de qualité",
+      "items": [
+        "Construire les différentes étapes à suivre",
+        "Le transfert d’appel, la prise de message"
+      ]
+    },
+    {
+      "title": "Module 3 — Les mots qui comptent",
+      "items": [
+        "Expressions et mots à bannir lors d’un entretien téléphonique"
+      ]
+    },
+    {
+      "title": "Module 4 — Analyser et traiter la demande",
+      "items": [
+        "Analyse de la demande du client",
+        "Traitement et réponse adaptée"
+      ]
+    },
+    {
+      "title": "Module 5 — Mise en pratique",
+      "items": [
+        "Mise en pratique de l’ensemble des méthodes vues dans la journée"
+      ]
+    }
+  ],
+  "method": [
+    "Trois modes pédagogiques : acquisition de l'information, expérimentation, appropriation",
+    "Animation centrée sur des mises en situation issues de cas concrets vécus en entreprise",
+    "Exercices et études de cas, apports de méthode",
+    "Moyens audiovisuels et informatiques"
+  ],
+  "evaluation": [
+    "Quiz d'évaluation des acquis pédagogiques",
+    "Correction orale et collective avec l'intervenante",
+    "Feuille de présence signée à chaque demi-journée",
+    "Fiches d’évaluation complétées par la formatrice et par les participants",
+    "Attestation de formation"
+  ],
+  "accessDelay": "Inscription à réaliser au plus tard un mois avant le démarrage de la formation.",
+  "media": {
+    "id": "formation-accueil-telephonique",
+    "kind": "image",
+    "src": null,
+    "alt": "",
+    "ratio": "16/10",
+    "label": "Accueil téléphonique"
+  }
+}

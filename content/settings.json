@@ -1,0 +1,30 @@
+{
+  "name": "AZS Alpha Formations",
+  "legalName": "AZ Services Alpha Formations",
+  "tagline": "Centre de formation · Guadeloupe",
+  "description": "Organisme de formation certifié Qualiopi à Baie-Mahault : anglais, français et techniques d'accueil, finançables OPCO et France Travail.",
+  "origin": "https://azsalphaformations.com",
+  "founder": {
+    "name": "Axelle Zigault Urie",
+    "role": "Formatrice & fondatrice",
+    "credentials": "Formatrice d'anglais depuis 2002, certifiée CELTA Cambridge"
+  },
+  "contact": {
+    "email": "azs.alphaformations@gmail.com",
+    "phone": "0690 75 72 26",
+    "phoneE164": "+590690757226",
+    "hours": "Lun–jeu 8h–16h30 · Ven 8h–13h"
+  },
+  "address": {
+    "street": "11 Rue des Jardins de Dalciat",
+    "postalCode": "97122",
+    "city": "Baie-Mahault",
+    "region": "Guadeloupe",
+    "country": "FR"
+  },
+  "certification": {
+    "name": "Qualiopi",
+    "scope": "Actions de formation",
+    "label": "Certification qualité délivrée au titre de la catégorie : actions de formation."
+  }
+}

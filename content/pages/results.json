@@ -1,0 +1,26 @@
+{
+  "path": "/nos-resultats/",
+  "title": "Nos résultats",
+  "summary": "Les indicateurs de résultats d'{{name}} : taux de satisfaction, taux de réussite et nombre de stagiaires formés.",
+  "intro": "En tant qu'organisme certifié Qualiopi, nous publions nos indicateurs de résultats. Ils sont mis à jour à la clôture de chaque année civile.",
+  "period": "2025",
+  "updatedAt": "Janvier 2026",
+  "indicators": [
+    {
+      "label": "Taux de satisfaction",
+      "value": "100 %",
+      "note": "Mesuré par questionnaire en fin de formation"
+    },
+    {
+      "label": "Taux de réussite",
+      "value": "100 %",
+      "note": "Sur les formations donnant lieu à une certification"
+    },
+    {
+      "label": "Stagiaires formés",
+      "value": "11",
+      "note": "Sur l’année civile"
+    }
+  ],
+  "note": "Le faible effectif s'explique par la taille de la structure : les formations sont dispensées en individuel ou en très petit groupe, par une formatrice unique."
+}

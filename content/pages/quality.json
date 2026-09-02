@@ -1,0 +1,75 @@
+{
+  "path": "/nos-engagements-qualite/",
+  "title": "Nos engagements qualité",
+  "summary": "Les engagements qualité d'{{name}}, organisme certifié Qualiopi : enseignement, accompagnement, délais de réponse et sécurité.",
+  "intro": "Toutes nos prestations sont personnalisées et ajustées pour répondre précisément à la demande. Notre démarche qualité s'organise autour de trois axes : la satisfaction du client, l'implication du personnel et l'amélioration continue.",
+  "pillars": [
+    {
+      "title": "La satisfaction du client",
+      "text": "Chaque parcours part d'un besoin réel, évalué avant le démarrage et suivi jusqu'à l'attestation."
+    },
+    {
+      "title": "L'implication du personnel",
+      "text": "Une seule interlocutrice, disponible sur toute la durée de la formation."
+    },
+    {
+      "title": "L’amélioration continue",
+      "text": "Les retours des stagiaires alimentent la révision des programmes et des méthodes."
+    }
+  ],
+  "commitments": [
+    {
+      "title": "Offrir un enseignement de qualité",
+      "items": [
+        "Méthodes d'enseignement ancrées dans une perspective actionnelle et communicative",
+        "Qualité des programmes contrôlée tout au long de la formation",
+        "Matériel adapté et rigoureusement entretenu"
+      ]
+    },
+    {
+      "title": "Accompagner les apprenants dans les meilleures conditions",
+      "items": [
+        "Personnel disponible sur l'intégralité du temps de cours",
+        "Plusieurs moyens de communication pour répondre à toutes les demandes",
+        "Suivi individualisé du parcours de chaque apprenant",
+        "Procédure de réclamation définie",
+        "Procédures d'aide aux démarches administratives"
+      ]
+    },
+    {
+      "title": "Proposer des formations adaptées aux besoins et aux niveaux",
+      "items": [
+        "Système d’évaluation défini : diagnostique, formative et sommative",
+        "Suivi individualisé de la progression et remédiations",
+        "Niveaux, contenus et offre de cours adaptés aux objectifs",
+        "Respect du nombre d’heures de formation et des effectifs par type de formation",
+        "Diffusion d’informations sur les certifications et diplômes"
+      ]
+    },
+    {
+      "title": "Développer les compétences interculturelles",
+      "items": [
+        "Activités de découverte et d’échanges sur les différences culturelles",
+        "Engagement dans des projets interculturels",
+        "Sorties pédagogiques, conférences et ateliers thématiques"
+      ]
+    },
+    {
+      "title": "Communiquer rapidement toute information utile",
+      "items": [
+        "Réponse aux demandes d’information sous 48 heures",
+        "Tarifs et conditions de vente accessibles",
+        "Suivi individualisé des inscriptions",
+        "Procédures administratives d’accueil clairement définies"
+      ]
+    },
+    {
+      "title": "Respecter les normes de sécurité en vigueur",
+      "items": [
+        "Mesures d’évacuation clairement établies et visibles",
+        "Exercices incendie organisés à chaque rentrée",
+        "Locaux et matériel rigoureusement entretenus"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "id": "communication-courante",
+  "order": 2,
+  "path": "/communication-courante/",
+  "category": "anglais",
+  "title": "Anglais — communication courante",
+  "shortTitle": "Communication courante",
+  "summary": "35 heures pour gagner en aisance à l'oral et à l'écrit en anglais professionnel. Certification English 360 éligible au CPF. 950 € net de TVA.",
+  "intro": "Cette formation vise l'aisance : prendre la parole en réunion, rédiger un e-mail, négocier au téléphone, présenter des chiffres. L'accent est mis sur l'expression et la compréhension orales.",
+  "duration": {
+    "label": "5 jours, 35 heures",
+    "hours": 35,
+    "iso": "PT35H"
+  },
+  "price": {
+    "label": "950 € net de TVA par participant",
+    "amount": 950,
+    "note": "En regroupement au centre. En intra-entreprise : sur devis."
+  },
+  "participants": null,
+  "modes": [
+    "Présentiel",
+    "Distanciel avec formateur tuteur en ligne"
+  ],
+  "audience": "Tout public.",
+  "prerequisites": "Connaître les bases de l'anglais (niveau scolaire).",
+  "objectives": {
+    "main": "Consolider les bases de l'anglais pour atteindre une réelle aisance à l'écrit comme à l'oral, et prendre du plaisir à pratiquer la langue.",
+    "list": [
+      "Gagner en autonomie dans ses interventions professionnelles en anglais",
+      "Enrichir le vocabulaire lié à son activité",
+      "Participer activement à une réunion et savoir y intervenir",
+      "Rédiger notes et e-mails professionnels"
+    ]
+  },
+  "programme": [
+    {
+      "title": "Les bases de la langue",
+      "items": [
+        "L’essentiel de la grammaire et ses principaux points",
+        "Le vocabulaire courant et professionnel",
+        "L’intonation et la prononciation"
+      ]
+    },
+    {
+      "title": "Vocabulaire",
+      "items": [
+        "Vocabulaire courant, économique et commercial",
+        "Maîtrise de la correspondance",
+        "Suivi de l'actualité des pays anglophones"
+      ]
+    },
+    {
+      "title": "Expression orale",
+      "items": [
+        "Entraînement intensif à l’oral",
+        "Reformulation des messages",
+        "Conversation téléphonique",
+        "Accueil des clients en anglais"
+      ]
+    },
+    {
+      "title": "Expression écrite",
+      "items": [
+        "Techniques d’écriture",
+        "Rédaction de documents professionnels"
+      ]
+    },
+    {
+      "title": "Cas pratiques",
+      "items": [
+        "Communiquer au téléphone",
+        "Les voyages, les transports, le restaurant, l’hôtel",
+        "Jeux de rôle",
+        "L’entretien d’embauche"
+      ]
+    },
+    {
+      "title": "Cadre professionnel",
+      "items": [
+        "Participer activement à des réunions et savoir y intervenir",
+        "Rédiger des notes et des e-mails",
+        "Négocier par téléphone",
+        "Communiquer ses décisions",
+        "Les rencontres professionnelles",
+        "Présenter des chiffres"
+      ]
+    }
+  ],
+  "method": [
+    "Entraînement progressif à la prise de parole en public",
+    "Jeux de rôles et mises en situation",
+    "Supports de cours fournis",
+    "Formatrice expérimentée et diplômée"
+  ],
+  "evaluation": [
+    "Suivi continu tout au long de la formation",
+    "Quiz d’évaluation des acquis pédagogiques",
+    "Correction orale et collective avec l’intervenante",
+    "Feuille de présence signée à chaque demi-journée",
+    "Support de cours adapté et bilan de formation remis au stagiaire"
+  ],
+  "certification": {
+    "name": "Certification English 360",
+    "summary": "Cette formation prépare à la Certification English 360, éligible au compte personnel de formation (CPF).",
+    "modalities": [
+      "Le passage de la certification est obligatoire dans le cadre d’un financement CPF."
+    ]
+  },
+  "accessDelay": "Démarrage dans le mois qui suit la commande, sous réserve des disponibilités de la formatrice.",
+  "media": {
+    "id": "formation-communication-courante",
+    "kind": "image",
+    "src": null,
+    "alt": "",
+    "ratio": "16/10",
+    "label": "Communication courante"
+  }
+}

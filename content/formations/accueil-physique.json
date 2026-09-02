@@ -1,0 +1,90 @@
+{
+  "id": "accueil-physique",
+  "order": 8,
+  "path": "/accueil-physique/",
+  "category": "accueil",
+  "title": "La relation client : l'accueil physique",
+  "seoTitle": "Formation accueil physique",
+  "shortTitle": "Accueil physique",
+  "summary": "Une journée pour professionnaliser l'accueil au comptoir : communication non verbale, gestion de l'espace, traitement des réclamations. 550 € net de TVA.",
+  "intro": "L'accueil physique est le premier contact avec votre établissement, et souvent celui dont on se souvient. Cette journée travaille la posture, la communication non verbale et la conduite d'entretien face à tous les profils d'interlocuteurs.",
+  "duration": {
+    "label": "1 jour, 7 heures",
+    "hours": 7,
+    "iso": "PT7H"
+  },
+  "price": {
+    "label": "550 € net de TVA la journée",
+    "amount": 550,
+    "note": "Tarif intra-entreprise. Autres formats et demandes spécifiques sur devis."
+  },
+  "participants": null,
+  "modes": [
+    "Présentiel"
+  ],
+  "audience": "Personnes en situation d'accueil physique : réception, accueil, vendeurs en point de vente.",
+  "prerequisites": "Personnes débutantes dans la fonction.",
+  "objectives": {
+    "main": "Professionnaliser l'accueil physique pour véhiculer une image de qualité de service et mieux satisfaire les clients et usagers.",
+    "list": [
+      "Mesurer les enjeux de la qualité de service sur l'image de l'établissement",
+      "Identifier les attentes des clients et des usagers en accueil physique",
+      "Maîtriser la communication verbale et non verbale : allure, gestuelle, synchronisation",
+      "Gérer l'espace d'accueil et la distance à l'interlocuteur",
+      "Structurer un entretien et aboutir à une solution puis à un engagement",
+      "Traiter une réclamation avec méthode"
+    ]
+  },
+  "programme": [
+    {
+      "title": "Comprendre les enjeux de la qualité de service",
+      "items": [
+        "Sur l'image de l'établissement",
+        "Sur l'organisation",
+        "Sur la stratégie",
+        "Sur votre propre mission et votre niveau de stress"
+      ]
+    },
+    {
+      "title": "Les bases de la relation client",
+      "items": [
+        "Les attentes des clients et des usagers en accueil physique",
+        "La communication verbale et non verbale : l'allure, la gestuelle, les autres sens de la communication",
+        "La gestion de l'espace : le sien, celui de l'usager, l'espace d'accueil en général",
+        "La synchronisation avec son interlocuteur",
+        "Les lois de la directivité par le mouvement"
+      ]
+    },
+    {
+      "title": "Conduire l'entretien",
+      "items": [
+        "Savoir isoler",
+        "Aboutir à une solution puis à un engagement",
+        "Structurer son entretien selon les types d'entretiens et d'interlocuteurs",
+        "Un cas particulier : la réclamation"
+      ]
+    }
+  ],
+  "method": [
+    "Méthode interactive et participative, appuyée sur les expériences professionnelles des participants",
+    "Apports théoriques illustrés par des exemples concrets et réels",
+    "Jeux de rôles et simulations",
+    "Exercices individuels et collectifs"
+  ],
+  "evaluation": [
+    "Quiz d'évaluation des acquis pédagogiques",
+    "Correction orale et collective avec l'intervenante",
+    "Feuille de présence signée à chaque demi-journée",
+    "Fiches d’évaluation complétées par la formatrice et par les participants",
+    "Attestation de formation"
+  ],
+  "accessDelay": "Démarrage dans le mois qui suit la commande, sous réserve des disponibilités de la formatrice.",
+  "media": {
+    "id": "formation-accueil-physique",
+    "kind": "image",
+    "src": null,
+    "alt": "",
+    "ratio": "16/10",
+    "label": "Accueil physique"
+  }
+}

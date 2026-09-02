@@ -1,0 +1,47 @@
+{
+  "funding": [
+    {
+      "id": "salarie",
+      "profile": "Vous êtes salarié·e",
+      "text": "Prise en charge possible dans le cadre du plan de développement des compétences de votre entreprise. Parlez-en à votre employeur ou à votre service formation."
+    },
+    {
+      "id": "demandeur",
+      "profile": "Vous êtes demandeur d'emploi",
+      "text": "Nous établissons un devis à présenter à votre conseiller France Travail, qui peut mobiliser une aide individuelle à la formation."
+    },
+    {
+      "id": "particulier",
+      "profile": "Vous êtes un particulier",
+      "text": "L'autofinancement est possible, avec un règlement échelonné sur demande."
+    }
+  ],
+  "accessSteps": [
+    "Prise de contact par téléphone ou par e-mail",
+    "Analyse de votre besoin et test de positionnement",
+    "Proposition commerciale et devis",
+    "Contrat de formation, puis entrée en formation"
+  ],
+  "accessibility": {
+    "title": "Accessibilité et situation de handicap",
+    "text": "Nos formations sont accessibles aux personnes en situation de handicap. Lorsqu'un aménagement est nécessaire, nous mobilisons notre réseau de partenaires et d'experts du champ du handicap pour le mettre en place.",
+    "referent": "Référente handicap : {{founder}} — {{phone}}"
+  },
+  "trainer": {
+    "title": "Référente pédagogique",
+    "text": "Chaque formation est placée sous la responsabilité pédagogique de l'organisme. Les sessions sont animées par {{founder}}, {{credentials}}."
+  },
+  "certifications": {
+    "robert": {
+      "name": "Certification Le Robert",
+      "summary": "La Certification Le Robert mesure le niveau de maîtrise du français en contexte professionnel : respect des règles de la langue, précision de l'expression orale et écrite.",
+      "modalities": [
+        "Épreuve 100 % en ligne, à distance ou en centre agréé",
+        "Un ordinateur équipé d'un micro, d'une webcam et d'une connexion internet est requis",
+        "350 questions réparties en 11 séries, pour une durée maximale de 1 h 45",
+        "Le certificat mentionne le score obtenu"
+      ],
+      "validity": "Validité à vie"
+    }
+  }
+}

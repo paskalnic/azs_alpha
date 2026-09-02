@@ -43,6 +43,19 @@ for (const routePath of prerenderPaths()) {
   written.push([routePath, path.relative(dist, file), Buffer.byteLength(page)]);
 }
 
+// — page 404 —
+// Netlify sert automatiquement /404.html sur une URL inconnue ; sans elle,
+// le visiteur tomberait sur une page blanche du serveur statique.
+{
+  const { html, head } = render('/404/');
+  const page = template
+    .replace('<!--app-head-->', renderHeadTags(head))
+    .replace('<!--app-html-->', html)
+    .replace('<div id="root">', '<div id="root" data-prerendered="true">');
+  await fs.writeFile(path.join(dist, '404.html'), page);
+  written.push(['(404)', '404.html', Buffer.byteLength(page)]);
+}
+
 // — sitemap.xml —
 const today = new Date().toISOString().slice(0, 10);
 const urls = routes

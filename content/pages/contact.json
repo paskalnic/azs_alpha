@@ -1,0 +1,14 @@
+{
+  "path": "/contact/",
+  "title": "Contact",
+  "summary": "Contacter {{name}} à {{city}} : téléphone, e-mail, adresse et horaires. Réponse sous 48 heures.",
+  "intro": "Une question sur une formation, un financement ou une inscription ? Dites-nous où vous en êtes et ce que vous visez : nous répondons sous 48 heures avec une proposition et les pistes de financement mobilisables.",
+  "about": {
+    "title": "Qui suis-je ?",
+    "paragraphs": [
+      "Fin 2020, j'ai décidé de créer mon propre organisme de formation, destiné aussi bien à mes partenaires qu'à mes clients. La qualité du travail a été récompensée par l'obtention de la certification Qualiopi.",
+      "L'organisme est ouvert à toute personne désirant développer ou consolider ses compétences en anglais et en français : collégiens, étudiants, salariés, demandeurs d'emploi, seniors.",
+      "Chaque programme de formation ou d'accompagnement est adapté à vos objectifs. Toutes nos formations partent d'une approche pédagogique précise et s'appuient sur la qualité des compétences des intervenants."
+    ]
+  }
+}

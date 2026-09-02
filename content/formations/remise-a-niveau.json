@@ -1,0 +1,100 @@
+{
+  "id": "remise-a-niveau",
+  "order": 6,
+  "path": "/remise-a-niveau/",
+  "category": "francais",
+  "title": "Remise à niveau en français",
+  "shortTitle": "Remise à niveau",
+  "summary": "35 heures pour revoir orthographe, grammaire et conjugaison et déjouer les pièges du français. Certification Le Robert incluse, 990 €.",
+  "intro": "Se réconcilier avec l'orthographe et la grammaire, repérer ses fautes récurrentes et apprendre à les éviter. À l'issue du parcours, vous gagnez en confiance et en crédibilité dans tous vos écrits.",
+  "duration": {
+    "label": "35 heures",
+    "hours": 35,
+    "iso": "PT35H"
+  },
+  "price": {
+    "label": "990 € par participant",
+    "amount": 990,
+    "note": "En inter-entreprises, en regroupement ou à distance — coût de la Certification Le Robert inclus. En intra-entreprise : sur devis."
+  },
+  "participants": {
+    "min": 1,
+    "max": 5
+  },
+  "modes": [
+    "Présentiel",
+    "Distanciel"
+  ],
+  "audience": "Toute personne ayant des difficultés à rédiger dans un français correct : cadres, secrétaires, commerciaux, techniciens, demandeurs d’emploi.",
+  "prerequisites": "Avoir le français pour langue maternelle ou avoir acquis le niveau A2 (CECRL), et ne pas être en situation d'analphabétisme.",
+  "objectives": {
+    "main": "Maîtriser les règles d'orthographe, de grammaire et de conjugaison dans les écrits professionnels, repérer ses fautes les plus courantes et apprendre à les éviter.",
+    "list": [
+      "Accorder correctement noms, adjectifs, participes et verbes",
+      "Différencier et écrire correctement les homophones lexicaux et grammaticaux",
+      "Employer le registre de langage approprié à la situation de rédaction",
+      "Construire des phrases grammaticalement correctes",
+      "Obtenir la Certification Le Robert"
+    ]
+  },
+  "programme": [
+    {
+      "title": "Module 1 — Orthographe",
+      "items": [
+        "Les règles d'orthographe spécifiques et l'orthographe d'usage",
+        "Le pluriel, le féminin et le masculin",
+        "L'écriture des nombres et le trait d'union",
+        "Accords des noms, adjectifs, participes et verbes",
+        "Homonymie",
+        "Ponctuation et signes graphiques",
+        "Les erreurs courantes, les mots invariables, les adverbes de manière",
+        "Les formules d'usage dans les courriers"
+      ]
+    },
+    {
+      "title": "Module 2 — Grammaire et conjugaison",
+      "items": [
+        "Les règles de la grammaire française",
+        "Le verbe : accord et conjugaison, les verbes irréguliers",
+        "Les conjugaisons difficiles des premier et troisième groupes",
+        "Les auxiliaires être et avoir, la concordance des temps",
+        "Participe passé et participe présent : quand accorder ?",
+        "Éviter les confusions : subjonctif/indicatif, conditionnel/futur, temps composés/simples",
+        "L'adjectif, le complément d'objet direct et indirect, l'impératif"
+      ]
+    },
+    {
+      "title": "Module 3 — Déjouer les pièges de la langue française",
+      "items": [
+        "Revoir de façon pratique les règles principales",
+        "La logique de la langue française et ses pièges",
+        "Doublement des consonnes, chiffres en lettres",
+        "Points problématiques : singulier ou pluriel après « de », accord du participe présent, tous/tout",
+        "Éviter les erreurs de ponctuation",
+        "Capitales et bas de casse, écriture des chiffres et des nombres",
+        "Le style des caractères : italique, gras, romain",
+        "La structure de la phrase"
+      ]
+    }
+  ],
+  "method": [
+    "Mise en application par des exercices pratiques",
+    "Méthode participative, animée par des séances de réflexion",
+    "Incitation à la poursuite d’un travail personnel"
+  ],
+  "evaluation": [
+    "Test de positionnement au démarrage",
+    "Contrôles réguliers des acquis",
+    "Certification Le Robert en fin de formation"
+  ],
+  "certification": "robert",
+  "accessDelay": "Inscription à réaliser un mois avant le démarrage de la formation.",
+  "media": {
+    "id": "formation-remise-a-niveau",
+    "kind": "image",
+    "src": null,
+    "alt": "",
+    "ratio": "16/10",
+    "label": "Remise à niveau"
+  }
+}
