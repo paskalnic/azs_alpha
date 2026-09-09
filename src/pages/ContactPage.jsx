@@ -83,17 +83,7 @@ export default function ContactPage() {
             </Reveal>
 
             <Reveal className="rounded-[var(--radius)] border border-rule bg-paper p-7 shadow-[var(--shadow-soft)]">
-              <MediaSlot
-                media={{
-                  id: 'contact-portrait',
-                  kind: 'image',
-                  src: null,
-                  alt: '',
-                  ratio: '4/3',
-                  label: 'Portrait ou vue du centre',
-                }}
-                className="mb-6 rounded-[18px]"
-              />
+              <MediaSlot media={CONTACT_PAGE.about.media} className="mb-6 rounded-[18px]" />
               <h2 className="mb-4 font-display text-[1.3rem]">{CONTACT_PAGE.about.title}</h2>
               {CONTACT_PAGE.about.paragraphs.map((p) => (
                 <p key={p.slice(0, 24)} className="mb-4 text-[.94rem] text-muted last:mb-0">

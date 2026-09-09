@@ -32,10 +32,19 @@
   --maxw:1160px;
 
   --tile-bd:rgba(18,48,62,.16);  /* couleur des bordures bento */
+
+  /* Hauteur de l'en-tête collant : bouton de 52px + .85rem de marge haute et
+     basse, plus la bordure. Sert à réserver la place des ancres et à borner le
+     panneau du menu — les deux doivent suivre la même valeur. */
+  --header-h:80px;
 }
 
 *,*::before,*::after{box-sizing:border-box; margin:0; padding:0}
 html{scroll-behavior:smooth}
+/* L'en-tête est collant : sans cette réserve, toute ancre dépose sa cible au
+   ras du haut de la fenêtre, c'est-à-dire cachée dessous. Vaut pour le saut du
+   navigateur comme pour scrollIntoView(). */
+html{scroll-padding-top:calc(var(--header-h) + 1rem)}
 body{
   font-family:var(--body); color:var(--ink); background:var(--cream);
   line-height:1.65; -webkit-font-smoothing:antialiased;
@@ -115,12 +124,26 @@ a.btn:focus-visible, button:focus-visible, a:focus-visible{outline:3px solid var
 .nav-burger-icon.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 /* — panneau déroulant (mobile) — */
+/* En surimpression, et non dans le flux : posé dans l'en-tête, il rallongeait
+   le document de sa propre hauteur à l'ouverture et le raccourcissait à la
+   fermeture. Tout ce qui suit se déplaçait de ~250 px au moment précis où un
+   lien d'ancre lançait son défilement, qui atterrissait donc à côté.
+   `position:sticky` sur l'en-tête suffit à servir de référence. */
 .nav-panel{
+  position:absolute; top:100%; left:0; right:0;
   border-top:1px solid var(--rule); background:var(--cream);
   padding:1.1rem clamp(1.15rem,4vw,2.5rem) 1.5rem;
   display:flex; flex-direction:column; gap:1.1rem;
-  max-height:calc(100dvh - 70px); overflow-y:auto;
+  max-height:calc(100dvh - var(--header-h)); overflow-y:auto;
+  /* Le défilement du panneau ne se propage pas au document : sans quoi, arrivé
+     en bout de liste, il ferait défiler la page — donc refermer le menu. */
+  overscroll-behavior:contain;
+  box-shadow:0 18px 30px -22px rgba(18,62,92,.45);
 }
+/* L'attribut `hidden` ne tient que par la feuille du navigateur : le
+   `display:flex` ci-dessus, écrit par nous, l'emportait et le menu restait
+   ouvert en permanence. Cette règle lui redonne le dernier mot. */
+.nav-panel[hidden]{display:none}
 .nav-panel nav{display:flex; flex-direction:column}
 .nav-panel nav a{
   padding:.85rem 0; font-family:var(--display); font-weight:600; font-size:1.15rem;
@@ -149,6 +172,17 @@ a.btn:focus-visible, button:focus-visible, a:focus-visible{outline:3px solid var
 .hero-copy .lead{margin-bottom:2rem}
 .hero-actions{display:flex; flex-wrap:wrap; gap:.85rem}
 @media(max-width:460px){ .hero-actions .btn{width:100%; justify-content:center} }
+/* Sous 860 px la barre fixe du bas porte « Appeler » et « Demander un devis » en
+   permanence : les rappeler dans la page ne fait que répéter ce qui est déjà à
+   portée de pouce. Voir `dockDuplicate` dans Button.jsx. */
+/* 859.98 et non 859 : sous zoom ou mise à l'échelle, la largeur peut tomber
+   entre les deux et n'être couverte par aucune des deux règles. */
+@media(max-width:859.98px){
+  .btn-dock-duplicate{display:none}
+  /* Le bloc final se réduit alors à son titre et son texte : plus d'actions à
+     espacer sous le paragraphe. */
+  .final-card p{margin-bottom:0}
+}
 
 /* — disposition "split" (2 colonnes) : la mise en page d'origine — */
 @media(min-width:900px){
@@ -165,34 +199,96 @@ a.btn:focus-visible, button:focus-visible, a:focus-visible{outline:3px solid var
 .hero--full-screen .hero-actions{justify-content:center}
 .hero--full-screen .hero-visual{display:none}
 
-/* carte photo flottante */
+/* jeu de cartes à jouer (CardDeck.jsx) */
 .hero-visual{position:relative}
-.photo-card{
-  position:relative; z-index:2; background:var(--paper); border-radius:var(--radius-lg);
-  padding:14px; box-shadow:var(--shadow); max-width:400px; margin-inline:auto;
+
+/* `--open` vaut 0 pile fermée, 1 éventail déployé. Les transformations le
+   lisent dans un calc(), ce qui évite de redéclarer chaque état — et comme
+   `transform` reste interpolable, la transition joue normalement. */
+.card-deck{
+  --open:0;
+  position:relative; z-index:2; display:grid; width:min(320px,100%); margin-inline:auto;
+  transform:translateX(calc(var(--open) * -46px));
+  transition:transform .5s cubic-bezier(.2,.7,.2,1);
 }
-.photo-card .frame{
-  border-radius:calc(var(--radius-lg) - 12px); overflow:hidden; aspect-ratio:4/5;
-  min-height:clamp(320px,40vw,430px);
+.card-deck:hover{ --open:1 }
+/* Règle à part : si `:has()` manquait, elle tomberait sans emporter le survol.
+   `:focus-visible` et non `:focus-within` — le focus laissé par un clic souris
+   ne doit pas retenir l'éventail ouvert une fois le curseur parti. */
+.card-deck:has(:focus-visible){ --open:1 }
+/* Sans survol possible (tactile), l'éventail reste ouvert : sinon les cartes
+   du dessous seraient impossibles à atteindre. */
+@media(hover:none){ .card-deck{ --open:1 } }
+
+.deck-card{
+  grid-area:1/1;                       /* toutes les cartes dans la même cellule */
+  position:relative; background:var(--paper); border-radius:var(--radius-lg);
+  padding:12px; box-shadow:var(--shadow);
+  transform-origin:bottom center;      /* pivot d'une main de cartes */
+  transition:transform .5s cubic-bezier(.2,.7,.2,1);
+}
+.deck-card[data-pos="0"]{
+  z-index:3;
+  transform:rotate(calc(var(--open) * -4deg));
+}
+.deck-card[data-pos="1"]{
+  z-index:2;
+  transform:translate(calc(9px + var(--open) * 7px), calc(-9px + var(--open) * 5px))
+            rotate(calc(2.5deg + var(--open) * 5.5deg))
+            scale(calc(.985 + var(--open) * .015));
+}
+.deck-card[data-pos="2"]{
+  z-index:1;
+  transform:translate(calc(18px + var(--open) * 8px), calc(-18px + var(--open) * 10px))
+            rotate(calc(5deg + var(--open) * 11deg))
+            scale(calc(.97 + var(--open) * .03));
+}
+
+/* Métier inscrit à même la photo, dans le coin, comme l'indice d'une carte à
+   jouer : pas de cartouche, seulement la typo et un filet. */
+.deck-card-role{
+  position:absolute; top:30px; right:28px; z-index:2; max-width:11ch;
+  text-align:right; padding-bottom:.5rem;
+  font-family:var(--display); font-weight:600; font-size:.72rem; line-height:1.35;
+  letter-spacing:.17em; text-transform:uppercase; color:#fff;
+  text-shadow:0 1px 14px rgba(8,32,48,.7), 0 1px 3px rgba(8,32,48,.55);
+  opacity:var(--open); transform:translateY(calc((1 - var(--open)) * -6px));
+  transition:opacity .4s ease, transform .4s cubic-bezier(.2,.7,.2,1);
+}
+.deck-card-role::after{
+  content:""; position:absolute; right:0; bottom:0; width:24px; height:1px;
+  background:rgba(255,255,255,.8);
+}
+
+/* Le contenu du cadre est un emplacement média piloté par les données (MediaSlot.jsx). */
+.deck-card .frame{
+  position:relative;
+  border-radius:calc(var(--radius-lg) - 10px); overflow:hidden; aspect-ratio:5/7;
   background:linear-gradient(160deg,var(--mint),var(--cream-2));
   display:grid; place-items:center;
 }
-.photo-card .frame img{width:100%; height:100%; object-fit:cover; grid-area:1/1}
-/* Le contenu du cadre est un emplacement média piloté par les données (MediaSlot.jsx). */
-.photo-card .caption{padding:.95rem .6rem .35rem; display:flex; align-items:center; justify-content:space-between; gap:.5rem}
-.photo-card .caption b{font-family:var(--display); font-size:1.02rem}
-.photo-card .caption span{font-size:.82rem; color:var(--muted)}
-
-/* pastille stat flottante */
-.chip{
-  position:absolute; z-index:3; background:var(--paper); border-radius:20px;
-  box-shadow:var(--shadow-soft); padding:.8rem 1.05rem; display:flex; align-items:center; gap:.7rem;
+/* Voile en coin, le temps de l'éventail : garantit la lisibilité du métier
+   quelle que soit la photo dessous, sans l'enfermer dans un cadre. */
+.deck-card .frame::after{
+  content:""; position:absolute; inset:0; pointer-events:none; z-index:1;
+  background:linear-gradient(205deg,rgba(8,32,48,.62) 0%,rgba(8,32,48,.2) 34%,transparent 60%);
+  opacity:var(--open); transition:opacity .4s ease;
 }
-.chip .num{font-family:var(--display); font-weight:700; font-size:1.5rem; color:var(--teal); line-height:1}
-.chip .lbl{font-size:.74rem; color:var(--muted); line-height:1.25; max-width:12ch}
-.chip.tl{top:-18px; left:-8px}
-.chip.br{bottom:14px; right:-14px}
-@media(max-width:520px){ .chip.tl{left:2px; top:-14px} .chip.br{right:2px} }
+.deck-card .frame :is(img,video){width:100%; height:100%; object-fit:cover; grid-area:1/1}
+
+.deck-card-hit{
+  position:absolute; inset:0; z-index:4;
+  background:none; border:0; border-radius:inherit; cursor:pointer;
+}
+.deck-card-hit:focus-visible{border-radius:var(--radius-lg)}
+
+@media(max-width:1180px) and (min-width:980px){ .card-deck{width:min(280px,100%)} }
+/* Sur mobile l'éventail est ouvert en permanence : sa carte la plus inclinée
+   dépasse d'environ 100 px sur la droite, et le décalage du paquet d'autant à
+   gauche. À 320 px de large, un paquet de 320 px se faisait rogner des deux
+   côtés — la largeur descend donc pour que l'éventail entier tienne dans la
+   colonne. */
+@media(max-width:600px){ .card-deck{width:min(250px,68vw)} }
 
 /* ── BANDE PREUVE ───────────────────────────────────────── */
 .proof{position:relative; z-index:2}
@@ -306,12 +402,19 @@ section{position:relative}
   display:grid; place-items:center; transition:border-color .15s, color .15s, transform .15s;
 }
 .cf-arrow:hover{border-color:var(--teal); color:var(--teal); transform:translateY(-2px)}
-.cf-dots{display:flex; gap:.5rem}
+.cf-dots{display:flex; gap:.4rem}
+/* La pastille ne fait que 9 px, mais le bouton en fait 28 : sous le doigt,
+   une cible de 9 px est intouchable. Le point est peint au dégradé plutôt
+   qu'avec la taille de l'élément, qui sert désormais de zone de contact. */
 .cf-dot{
-  width:9px; height:9px; border-radius:50%; border:0; padding:0; cursor:pointer;
-  background:rgba(18,48,62,.2); transition:background .2s, transform .2s;
+  width:28px; height:28px; border-radius:50%; border:0; padding:0; cursor:pointer;
+  background:radial-gradient(circle at center, rgba(18,48,62,.2) 4.5px, transparent 4.5px);
+  transition:background .2s, transform .2s;
 }
-.cf-dot.on{background:var(--amber); transform:scale(1.35)}
+.cf-dot.on{
+  background:radial-gradient(circle at center, var(--amber) 4.5px, transparent 4.5px);
+  transform:scale(1.35);
+}
 .cf-hint{text-align:center; margin-top:1rem; font-size:.85rem; color:var(--muted); display:none}
 .is-cf .cf-hint{display:block}
 
@@ -421,12 +524,28 @@ section{position:relative}
 /* ── BARRE MOBILE FIXE ──────────────────────────────────── */
 /* La barre fixe elle-même est en utilitaires Tailwind (MobileDock.jsx) ;
    seule la compensation de hauteur sur <body> reste ici. */
-body{padding-bottom:80px}
+/* La barre mesure ~68 px, plus la zone sûre des écrans à encoche que son
+   propre `padding-bottom` absorbe : sans la reprendre ici, la fin de page
+   passait sous la barre sur iPhone. */
+body{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
 @media(min-width:860px){ body{padding-bottom:0} }
 
 /* ── ANIMATIONS ─────────────────────────────────────────── */
-@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
-@keyframes floaty2{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(14px) rotate(3deg)}}
+/* Écran de veille : les blobs traversent tout l'écran en ligne droite et
+   « rebondissent » d'un bord à l'autre (timing linéaire côté animation). */
+@keyframes floaty{
+  0%,100%{transform:translate(2vw,4vh)}
+  20%{transform:translate(-86vw,44vh)}
+  40%{transform:translate(-12vw,78vh)}
+  60%{transform:translate(-90vw,20vh)}
+  80%{transform:translate(-44vw,66vh)}
+}
+@keyframes floaty2{
+  0%,100%{transform:translate(-2vw,-4vh) rotate(0)}
+  25%{transform:translate(88vw,-48vh) rotate(3deg)}
+  50%{transform:translate(22vw,-12vh) rotate(-2deg)}
+  75%{transform:translate(80vw,-70vh) rotate(2deg)}
+}
 .js .reveal{opacity:0; transform:translateY(22px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)}
 .js .reveal.in{opacity:1; transform:none}
 

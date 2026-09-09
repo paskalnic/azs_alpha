@@ -130,8 +130,16 @@ export const COLLECTIONS = [
       object('hero', 'En-tête de la page', [
         text('eyebrow', 'Sur-titre'),
         area('lead', 'Introduction', { rows: 4 }),
-        MEDIA,
-        object('caption', 'Légende du portrait', [text('name', 'Nom'), text('role', 'Fonction')]),
+        list('cards', 'Cartes de l’en-tête', {
+          type: 'object',
+          titleField: 'role',
+          fields: [
+            text('role', 'Métier', { help: 'Inscrit dans le coin de la carte quand l’éventail s’ouvre.' }),
+            MEDIA,
+          ],
+        }, {
+          help: 'Trois cartes empilées. La première est affichée devant ; les autres se découvrent au survol.',
+        }),
       ]),
       object('formations', 'Présentation des formations', [
         text('title', 'Titre'),
@@ -184,6 +192,7 @@ export const COLLECTIONS = [
       area('intro', 'Introduction', { rows: 4 }),
       object('about', 'Présentation', [
         text('title', 'Titre'),
+        MEDIA,
         list('paragraphs', 'Paragraphes', { type: 'text' }),
       ]),
     ],

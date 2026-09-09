@@ -1,6 +1,6 @@
 import Button from './Button';
+import CardDeck from './CardDeck';
 import Decor from './Decor';
-import PhotoCard from './PhotoCard';
 import Reveal from './Reveal';
 
 /**
@@ -39,7 +39,7 @@ export default function Hero({ hero, disposition = 'split' }) {
 
         {showVisual && (
           <Reveal className="hero-visual">
-            <PhotoCard media={hero.media} caption={hero.caption} chips={hero.chips} />
+            <CardDeck cards={hero.cards} label={hero.cardsLabel} />
           </Reveal>
         )}
       </div>

@@ -79,7 +79,9 @@ export default function FormationPage({ formation: f }) {
                 {f.title}
               </h1>
               <p className="lead">{f.intro}</p>
-              <div className="mt-7 flex flex-wrap gap-[.85rem]">
+              {/* Comme sur la page contact : sous 860 px la barre fixe du bas
+                  porte déjà ces deux actions. */}
+              <div className="mt-7 hidden flex-wrap gap-[.85rem] nav:flex">
                 <Button href="#contact-formation" label="Demander un devis" variant="primary" size="lg" />
                 <Button href={SITE.contact.phoneHref} label={`📞 ${SITE.contact.phone}`} variant="ghost" size="lg" />
               </div>
