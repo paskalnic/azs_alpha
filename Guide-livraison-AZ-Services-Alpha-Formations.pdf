@@ -1,0 +1,344 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R] /Count 7 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Length 1397 >>
+stream
+0.957 0.984 0.996 rg 0 0 595.28 841.89 re f
+0.118 0.533 0.769 rg 0 825.89 595.28 16 re f
+0.118 0.533 0.769 rg 52 665.89 54 54 re f
+BT /F2 17 Tf 1 1 1 rg 1 0 0 1 68.00 684.89 Tm (AZ) Tj ET
+BT /F2 11 Tf 0.118 0.533 0.769 rg 1 0 0 1 52.00 611.89 Tm (GUIDE DE LIVRAISON) Tj ET
+BT /F2 29 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 565.89 Tm (Site internet et) Tj ET
+BT /F2 29 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 527.89 Tm (back-office sans CMS) Tj ET
+BT /F1 11 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 487.89 Tm (Procédure de remise à la cliente, raccordement du domaine,) Tj ET
+BT /F1 11 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 470.89 Tm (gestion des accès et contrôle avant mise en ligne définitive.) Tj ET
+1 1 1 rg 52 316.89 491.28 102 re f
+BT /F2 9 Tf 0.118 0.533 0.769 rg 1 0 0 1 70.00 392.89 Tm (ENVIRONNEMENT ACTUEL) Tj ET
+BT /F3 10 Tf 0.071 0.188 0.243 rg 1 0 0 1 70.00 368.89 Tm (Site : https://jocular-licorice-ef0a42.netlify.app/) Tj ET
+BT /F3 10 Tf 0.071 0.188 0.243 rg 1 0 0 1 70.00 348.89 Tm (Admin : https://jocular-licorice-ef0a42.netlify.app/admin/) Tj ET
+BT /F3 10 Tf 0.071 0.188 0.243 rg 1 0 0 1 70.00 328.89 Tm (Dépôt : github.com/paskalnic/azs_alpha — branche main) Tj ET
+BT /F2 10 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 105.00 Tm (État : site public, administration GitHub opérationnelle) Tj ET
+BT /F1 9 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 81.00 Tm (Version 1.0 — 2 septembre 2026) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 4167 >>
+stream
+0.118 0.533 0.769 rg 0 832.89 595.28 9 re f
+BT /F2 8.5 Tf 0.118 0.533 0.769 rg 1 0 0 1 52.00 789.89 Tm (AZ SERVICES ALPHA FORMATIONS) Tj ET
+BT /F1 8.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 453.28 789.89 Tm (Guide de livraison) Tj ET
+BT /F2 16 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 759.89 Tm (1. État du projet avant livraison) Tj ET
+0.118 0.533 0.769 RG 1.2 w 52 749.89 m 543.28 749.89 l S
+BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 725.89 Tm (Éléments déjà validés) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 706.89 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 706.89 Tm (Le site est publié depuis la branche main et Netlify redéploie automatiquement après) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 693.12 Tm (chaque commit.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 675.35 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 675.35 Tm (Les 25 pages du sitemap répondent correctement et les 30 liens ou ressources internes) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 661.58 Tm (contrôlés sont accessibles.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 643.81 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 643.81 Tm (La connexion GitHub OAuth fonctionne et le compte paskalnic est autorisé.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 626.04 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 626.04 Tm (Une modification de texte, sa publication, puis son retrait ont été testés de bout en) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 612.27 Tm (bout.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 594.50 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 594.50 Tm (Le dépôt et l’affichage d’une image JPEG ont été validés sur le site public.) Tj ET
+BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 576.73 Tm (À terminer avant la remise définitive) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 557.73 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 557.73 Tm (Retirer la photographie de test représentant une gendarme si elle ne constitue pas le) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 543.96 Tm (portrait définitif de la formatrice.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 526.19 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 526.19 Tm (Remplacer les mentions « SIRET à compléter » et « NDA à compléter » par les) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 512.42 Tm (informations officielles.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 494.65 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 494.65 Tm (Renseigner un texte alternatif pertinent pour chaque image porteuse d’information.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 476.88 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 476.88 Tm (Rattacher le nom de domaine définitif et vérifier le certificat HTTPS.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 459.11 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 459.11 Tm (Mettre à jour le domaine canonique du site si le domaine fourni diffère de) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 445.34 Tm (azsalphaformations.com.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 427.57 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 427.57 Tm (Tester la connexion au back-office avec le propre compte GitHub de la cliente.) Tj ET
+0.925 0.969 0.988 rg 52 355.8000000000003 491.28 68 re f
+BT /F2 10.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 67.00 402.80 Tm (Règle de sécurité) Tj ET
+BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 384.80 Tm (Aucun mot de passe, secret GitHub ou jeton d’accès ne doit être envoyé par e-mail,) Tj ET
+BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 371.80 Tm (messagerie ou ajouté au dépôt. Chaque personne utilise son propre compte.) Tj ET
+0.82 0.89 0.92 RG 0.7 w 52 43 m 543.28 43 l S
+BT /F1 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 27.00 Tm (Document préparé le 2 septembre 2026) Tj ET
+BT /F2 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 538.28 27.00 Tm (2) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 4075 >>
+stream
+0.118 0.533 0.769 rg 0 832.89 595.28 9 re f
+BT /F2 8.5 Tf 0.118 0.533 0.769 rg 1 0 0 1 52.00 789.89 Tm (AZ SERVICES ALPHA FORMATIONS) Tj ET
+BT /F1 8.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 453.28 789.89 Tm (Guide de livraison) Tj ET
+BT /F2 16 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 759.89 Tm (2. Informations à demander à la cliente) Tj ET
+0.118 0.533 0.769 RG 1.2 w 52 749.89 m 543.28 749.89 l S
+BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 725.89 Tm (Informations administratives et éditoriales) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 706.89 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 706.89 Tm (Raison sociale et nom commercial exacts.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 689.12 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 689.12 Tm (SIRET, numéro de déclaration d’activité, adresse officielle et identité du représentant) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 675.35 Tm (légal.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 657.58 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 657.58 Tm (Téléphone, adresse e-mail, horaires et coordonnées définitives.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 639.81 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 639.81 Tm (Données Qualiopi, résultats annuels et date de dernière mise à jour.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 622.04 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 622.04 Tm (Logo, photographies et vidéos avec confirmation des droits d’utilisation et de) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 608.27 Tm (diffusion.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 590.50 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 590.50 Tm (Nom de domaine souhaité et nom du prestataire auprès duquel il est enregistré.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 572.73 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 572.73 Tm (Information sur les adresses e-mail déjà rattachées au domaine afin de préserver les) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 558.96 Tm (enregistrements MX.) Tj ET
+BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 541.19 Tm (Comptes à créer) Tj ET
+BT /F2 10.5 Tf 0.071 0.188 0.243 rg 1 0 0 1 52.00 522.19 Tm (GitHub — obligatoire pour utiliser le back-office) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 502.70 Tm (La cliente crée gratuitement son propre compte GitHub et transmet uniquement son) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 488.21 Tm (identifiant public. Elle ne transmet jamais son mot de passe.) Tj ET
+BT /F2 10.5 Tf 0.071 0.188 0.243 rg 1 0 0 1 52.00 465.72 Tm (Netlify — recommandé pour la propriété du projet) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 446.23 Tm (La cliente peut créer un compte Netlify avec son adresse professionnelle. Le projet) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 431.74 Tm (pourra ensuite être transféré dans son équipe. Pour une gestion simple à court terme, le) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 417.25 Tm (projet peut rester sur le compte du prestataire, à condition que ce choix soit prévu) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 402.76 Tm (contractuellement.) Tj ET
+BT /F2 10.5 Tf 0.071 0.188 0.243 rg 1 0 0 1 52.00 380.27 Tm (Compte chez le registrar — doit rester à la cliente) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 360.78 Tm (La cliente conserve la propriété du domaine. Elle invite le prestataire comme) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 346.29 Tm (administrateur DNS si cette fonction existe, ou saisit elle-même les enregistrements) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 331.80 Tm (communiqués.) Tj ET
+0.82 0.89 0.92 RG 0.7 w 52 43 m 543.28 43 l S
+BT /F1 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 27.00 Tm (Document préparé le 2 septembre 2026) Tj ET
+BT /F2 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 538.28 27.00 Tm (3) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 3289 >>
+stream
+0.118 0.533 0.769 rg 0 832.89 595.28 9 re f
+BT /F2 8.5 Tf 0.118 0.533 0.769 rg 1 0 0 1 52.00 789.89 Tm (AZ SERVICES ALPHA FORMATIONS) Tj ET
+BT /F1 8.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 453.28 789.89 Tm (Guide de livraison) Tj ET
+BT /F2 16 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 759.89 Tm (3. Accès GitHub et Netlify) Tj ET
+0.118 0.533 0.769 RG 1.2 w 52 749.89 m 543.28 749.89 l S
+BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 725.89 Tm (Autoriser la cliente dans GitHub) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 706.89 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 706.89 Tm (Ouvrir le dépôt paskalnic/azs_alpha.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 689.12 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 689.12 Tm (Aller dans Settings, puis Collaborators ou Manage access.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 671.35 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 671.35 Tm (Inviter l’identifiant GitHub de la cliente avec un droit d’écriture.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 653.58 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 653.58 Tm (Demander à la cliente d’accepter l’invitation reçue par e-mail.) Tj ET
+BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 635.81 Tm (Autoriser son compte dans le back-office) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 616.81 Tm (Dans Netlify, ouvrir Project configuration ? Environment variables, puis modifier la) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 602.32 Tm (variable suivante :) Tj ET
+0.965 0.975 0.98 rg 52 572.83 491.28 21 re f
+BT /F3 8.7 Tf 0.071 0.188 0.243 rg 1 0 0 1 62.00 579.83 Tm (GITHUB_ALLOWED_USERS=paskalnic,identifiant-de-la-cliente) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 554.83 Tm (Relancer ensuite un déploiement depuis Deploys ? Trigger deploy. Ne jamais ajouter le mot) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 540.34 Tm (de passe GitHub de la cliente.) Tj ET
+BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 517.85 Tm (Propriété Netlify) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 498.85 Tm (Option recommandée pour une livraison complète : la cliente crée son équipe Netlify,) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 484.36 Tm (invite le prestataire, puis le projet est transféré depuis Project configuration ?) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 469.87 Tm (General ? Project information ? Transfer project.) Tj ET
+0.925 0.969 0.988 rg 52 380.38 491.28 81 re f
+BT /F2 10.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 67.00 440.38 Tm (À ne pas transmettre) Tj ET
+BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 422.38 Tm (Ne jamais communiquer GITHUB_CLIENT_SECRET, un jeton OAuth, une clé SSH, le mot de passe) Tj ET
+BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 409.38 Tm (Netlify ou le mot de passe GitHub. La cliente n’a besoin que de ses propres comptes et de) Tj ET
+BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 396.38 Tm (l’adresse /admin/.) Tj ET
+0.82 0.89 0.92 RG 0.7 w 52 43 m 543.28 43 l S
+BT /F1 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 27.00 Tm (Document préparé le 2 septembre 2026) Tj ET
+BT /F2 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 538.28 27.00 Tm (4) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 3494 >>
+stream
+0.118 0.533 0.769 rg 0 832.89 595.28 9 re f
+BT /F2 8.5 Tf 0.118 0.533 0.769 rg 1 0 0 1 52.00 789.89 Tm (AZ SERVICES ALPHA FORMATIONS) Tj ET
+BT /F1 8.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 453.28 789.89 Tm (Guide de livraison) Tj ET
+BT /F2 16 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 759.89 Tm (4. Raccorder le nom de domaine) Tj ET
+0.118 0.533 0.769 RG 1.2 w 52 749.89 m 543.28 749.89 l S
+BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 725.89 Tm (Ajouter le domaine dans Netlify) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 706.89 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 706.89 Tm (Ouvrir Domain management dans le projet Netlify.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 689.12 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 689.12 Tm (Choisir Add a domain ? Add a domain you already own.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 671.35 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 671.35 Tm (Saisir le domaine fourni par la cliente.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 653.58 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 653.58 Tm (Choisir Netlify DNS ou conserver le fournisseur DNS actuel.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 635.81 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 635.81 Tm (Appliquer chez le registrar les enregistrements exacts indiqués par Netlify.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 618.04 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 618.04 Tm (Conserver tous les enregistrements MX, SPF, DKIM et DMARC utiles aux e-mails) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 604.27 Tm (professionnels.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 586.50 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 586.50 Tm (Attendre la propagation DNS et vérifier que Netlify a délivré le certificat HTTPS.) Tj ET
+BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 568.73 Tm (Mettre à jour GitHub OAuth) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 549.73 Tm (Dans les paramètres de l’application OAuth GitHub, ajouter une URL de redirection exacte) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 535.24 Tm (pour le nouveau domaine :) Tj ET
+0.965 0.975 0.98 rg 52 505.7500000000001 491.28 21 re f
+BT /F3 8.7 Tf 0.071 0.188 0.243 rg 1 0 0 1 62.00 512.75 Tm (https://son-domaine.fr/.netlify/functions/callback) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 487.75 Tm (Conserver temporairement l’URL Netlify existante comme seconde URL de redirection. Ne pas) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 473.26 Tm (activer la correspondance générique des URL, Device Flow ou l’expiration des jetons pour) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 458.77 Tm (cette version.) Tj ET
+BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 436.28 Tm (Référencement) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 417.28 Tm (Si le domaine final n’est pas azsalphaformations.com, mettre à jour l’URL du site dans) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 402.79 Tm (src/site.config.js, reconstruire et vérifier les URL canoniques ainsi que sitemap.xml.) Tj ET
+0.82 0.89 0.92 RG 0.7 w 52 43 m 543.28 43 l S
+BT /F1 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 27.00 Tm (Document préparé le 2 septembre 2026) Tj ET
+BT /F2 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 538.28 27.00 Tm (5) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 3546 >>
+stream
+0.118 0.533 0.769 rg 0 832.89 595.28 9 re f
+BT /F2 8.5 Tf 0.118 0.533 0.769 rg 1 0 0 1 52.00 789.89 Tm (AZ SERVICES ALPHA FORMATIONS) Tj ET
+BT /F1 8.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 453.28 789.89 Tm (Guide de livraison) Tj ET
+BT /F2 16 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 759.89 Tm (5. Ce qui est remis à la cliente) Tj ET
+0.118 0.533 0.769 RG 1.2 w 52 749.89 m 543.28 749.89 l S
+BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 725.89 Tm (Adresses à communiquer) Tj ET
+0.965 0.975 0.98 rg 52 699.89 491.28 21 re f
+BT /F3 8.7 Tf 0.071 0.188 0.243 rg 1 0 0 1 62.00 706.89 Tm (Site public : https://son-domaine.fr/) Tj ET
+0.965 0.975 0.98 rg 52 674.89 491.28 21 re f
+BT /F3 8.7 Tf 0.071 0.188 0.243 rg 1 0 0 1 62.00 681.89 Tm (Administration : https://son-domaine.fr/admin/) Tj ET
+BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 656.89 Tm (Mode d’emploi court) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 637.89 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 637.89 Tm (Ouvrir l’adresse /admin/ et sélectionner « Se connecter avec GitHub ».) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 620.12 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 620.12 Tm (Choisir une rubrique : formations, coordonnées, accueil, contact, qualité, résultats ou) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 606.35 Tm (pages légales.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 588.58 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 588.58 Tm (Modifier les champs souhaités puis cliquer sur « Enregistrer ».) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 570.81 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 570.81 Tm (Attendre généralement une à deux minutes avant de contrôler le site public.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 553.04 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 553.04 Tm (Pour un média : JPG, PNG, WebP, GIF, MP4 ou WebM, avec une taille maximale de 4 Mo.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 535.27 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 535.27 Tm (Compléter le texte alternatif des images informatives.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 517.50 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 517.50 Tm (Ne pas fermer la page avec des changements non enregistrés.) Tj ET
+BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 499.73 Tm (Assistance à convenir contractuellement) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 480.73 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 480.73 Tm (Responsable du renouvellement du domaine et des éventuels frais Netlify.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 462.96 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 462.96 Tm (Responsable des sauvegardes et de la maintenance technique.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 445.19 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 445.19 Tm (Délai d’intervention en cas de panne ou de contenu erroné.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 427.42 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 427.42 Tm (Procédure de restitution ou de transfert en fin de prestation.) Tj ET
+0.82 0.89 0.92 RG 0.7 w 52 43 m 543.28 43 l S
+BT /F1 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 27.00 Tm (Document préparé le 2 septembre 2026) Tj ET
+BT /F2 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 538.28 27.00 Tm (6) Tj ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Length 3716 >>
+stream
+0.118 0.533 0.769 rg 0 832.89 595.28 9 re f
+BT /F2 8.5 Tf 0.118 0.533 0.769 rg 1 0 0 1 52.00 789.89 Tm (AZ SERVICES ALPHA FORMATIONS) Tj ET
+BT /F1 8.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 453.28 789.89 Tm (Guide de livraison) Tj ET
+BT /F2 16 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 759.89 Tm (6. Checklist de livraison finale) Tj ET
+0.118 0.533 0.769 RG 1.2 w 52 749.89 m 543.28 749.89 l S
+BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 725.89 Tm (o) Tj ET
+BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 725.89 Tm (Photo de test retirée ou remplacée par le média définitif.) Tj ET
+BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 703.89 Tm (o) Tj ET
+BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 703.89 Tm (Textes alternatifs complétés.) Tj ET
+BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 681.89 Tm (o) Tj ET
+BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 681.89 Tm (SIRET, NDA, adresse et coordonnées vérifiés.) Tj ET
+BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 659.89 Tm (o) Tj ET
+BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 659.89 Tm (Pages légales relues et validées par la cliente.) Tj ET
+BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 637.89 Tm (o) Tj ET
+BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 637.89 Tm (Nom de domaine connecté et HTTPS actif.) Tj ET
+BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 615.89 Tm (o) Tj ET
+BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 615.89 Tm (E-mails du domaine toujours opérationnels.) Tj ET
+BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 593.89 Tm (o) Tj ET
+BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 593.89 Tm (URL canonique et sitemap alignés sur le domaine final.) Tj ET
+BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 571.89 Tm (o) Tj ET
+BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 571.89 Tm (Compte GitHub de la cliente ajouté au dépôt.) Tj ET
+BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 549.89 Tm (o) Tj ET
+BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 549.89 Tm (GITHUB_ALLOWED_USERS mis à jour sans exposer de secret.) Tj ET
+BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 527.89 Tm (o) Tj ET
+BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 527.89 Tm (Connexion de la cliente à /admin/ testée.) Tj ET
+BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 505.89 Tm (o) Tj ET
+BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 505.89 Tm (Modification puis restauration d’un contenu testées avec son compte.) Tj ET
+BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 483.89 Tm (o) Tj ET
+BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 483.89 Tm (Propriété Netlify décidée et documentée.) Tj ET
+BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 461.89 Tm (o) Tj ET
+BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 461.89 Tm (URL du site et URL d’administration remises à la cliente.) Tj ET
+BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 439.89 Tm (o) Tj ET
+BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 439.89 Tm (Modalités de maintenance et de restitution confirmées.) Tj ET
+0.925 0.969 0.988 rg 52 350.89 491.28 81 re f
+BT /F2 10.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 67.00 410.89 Tm (Livraison terminée) Tj ET
+BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 392.89 Tm (La livraison peut être considérée comme achevée lorsque toutes les cases ci-dessus sont) Tj ET
+BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 379.89 Tm (validées et que la cliente a réalisé elle-même une connexion et une modification depuis) Tj ET
+BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 366.89 Tm (son compte GitHub.) Tj ET
+0.82 0.89 0.92 RG 0.7 w 52 43 m 543.28 43 l S
+BT /F1 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 27.00 Tm (Document préparé le 2 septembre 2026) Tj ET
+BT /F2 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 538.28 27.00 Tm (7) Tj ET
+endstream
+endobj
+19 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 18 0 R >>
+endobj
+xref
+0 20
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000162 00000 n 
+0000000259 00000 n 
+0000000361 00000 n 
+0000000456 00000 n 
+0000001905 00000 n 
+0000002057 00000 n 
+0000006276 00000 n 
+0000006428 00000 n 
+0000010556 00000 n 
+0000010710 00000 n 
+0000014052 00000 n 
+0000014206 00000 n 
+0000017753 00000 n 
+0000017907 00000 n 
+0000021506 00000 n 
+0000021660 00000 n 
+0000025429 00000 n 
+trailer
+<< /Size 20 /Root 1 0 R >>
+startxref
+25583
+%%EOF
