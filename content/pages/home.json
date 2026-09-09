@@ -61,11 +61,11 @@
         "size": "lg"
       }
     ],
-    "cardsLabel": "Métiers accompagnés",
+    "cardsLabel": "Métiers de l’accueil",
     "cards": [
       {
         "id": "gendarme",
-        "role": "Gendarme",
+        "role": "Hôte·sse d’accueil",
         "media": {
           "id": "hero-card-1",
           "kind": "image",
@@ -77,7 +77,7 @@
       },
       {
         "id": "police",
-        "role": "Police nationale",
+        "role": "Agent·e d’accueil touristique",
         "media": {
           "id": "hero-card-2",
           "kind": "image",
@@ -88,7 +88,7 @@
       },
       {
         "id": "sapeur-pompier",
-        "role": "Sapeur-pompier",
+        "role": "Chargé·e de relation client",
         "media": {
           "id": "hero-card-3",
           "kind": "image",
