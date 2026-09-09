@@ -6,6 +6,7 @@ import FinalCta from '../components/FinalCta';
 import { Link } from 'react-router-dom';
 import { useHead } from '../seo/HeadProvider';
 import { breadcrumbLd } from '../seo/jsonld';
+import { SITE } from '../site.config';
 import { CATEGORIES, formationsOf, FORMATIONS } from '../data/formations';
 import { landingData } from '../data/landingData';
 
@@ -24,7 +25,7 @@ export default function CatalogPage({ path, canonicalPath, title }) {
   useHead({
     path: canonicalPath || path,
     title,
-    description: `Les ${FORMATIONS.length} formations d'AZS Alpha Formations : anglais, français et techniques d'accueil. Organisme certifié Qualiopi à Baie-Mahault, formations finançables.`,
+    description: `Les ${FORMATIONS.length} formations de ${SITE.name} : anglais, français et techniques d'accueil. Organisme certifié Qualiopi à Baie-Mahault, formations finançables.`,
     jsonLd: breadcrumbLd(crumbs),
   });
 

@@ -2,7 +2,7 @@
 order: 6
 title: "Règlement intérieur"
 path: "/reglement-interieur/"
-summary: "Règlement intérieur d'AZS Alpha Formations : discipline, hygiène et sécurité applicables aux stagiaires."
+summary: "Règlement intérieur d'AZ Services Alpha Formations : discipline, hygiène et sécurité applicables aux stagiaires."
 ---### Article 1 :
 
 Le présent règlement est établi conformément aux dispositions des articles L 6352-3 à L.6352-5 et R 6352-1 à R 6352-15 du Code du travail

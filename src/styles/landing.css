@@ -100,9 +100,14 @@ a.btn:focus-visible, button:focus-visible, a:focus-visible{outline:3px solid var
   border-bottom:1px solid var(--rule);
 }
 .nav{display:flex; align-items:center; justify-content:space-between; gap:1rem; padding-block:.85rem}
-.brand{display:flex; align-items:center; gap:.6rem; font-family:var(--display); font-weight:700; font-size:1.12rem; letter-spacing:-.01em}
+/* « AZ Services Alpha Formations » fait 28 caractères : il passe sur deux
+   lignes dès que la barre se resserre. L'interligne est donc resserré pour que
+   l'en-tête garde la hauteur annoncée par `--header-h`, dont dépendent la
+   réserve des ancres et le panneau du menu. */
+.brand{display:flex; align-items:center; gap:.6rem; font-family:var(--display); font-weight:700; font-size:1.12rem; letter-spacing:-.01em; line-height:1.15}
 .brand .dot{width:30px; height:30px; border-radius:50% 50% 50% 12px; background:linear-gradient(135deg,var(--coral),var(--sun)); flex-shrink:0}
-.brand small{display:block; font-family:var(--body); font-weight:500; font-size:.68rem; letter-spacing:.06em; color:var(--muted); text-transform:uppercase}
+.brand small{display:block; margin-top:.15rem; font-family:var(--body); font-weight:500; font-size:.68rem; line-height:1.3; letter-spacing:.06em; color:var(--muted); text-transform:uppercase}
+@media(max-width:600px){ .brand{font-size:1rem} .brand small{font-size:.62rem} }
 .nav-links{display:none; gap:1.9rem; font-weight:600; font-size:.95rem}
 .nav-links a{color:var(--muted); transition:color .15s}
 .nav-links a:hover{color:var(--ink)}

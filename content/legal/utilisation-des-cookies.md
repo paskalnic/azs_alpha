@@ -2,7 +2,7 @@
 order: 5
 title: "Utilisation des cookies"
 path: "/utilisation-des-cookies/"
-summary: "Utilisation des cookies sur le site d'AZS Alpha Formations : types de cookies déposés et moyens de les refuser."
+summary: "Utilisation des cookies sur le site d'AZ Services Alpha Formations : types de cookies déposés et moyens de les refuser."
 ---## Informations sur les cookies
 
 En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies qui permettront notamment de vous offrir des contenus, des services, et des publicités liées à vos centres d’intérêts.

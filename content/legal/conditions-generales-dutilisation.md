@@ -2,7 +2,7 @@
 order: 1
 title: "Conditions générales d'utilisation"
 path: "/conditions-generales-dutilisation/"
-summary: "Conditions générales d'utilisation du site d'AZS Alpha Formations : propriété intellectuelle, données personnelles et cookies."
+summary: "Conditions générales d'utilisation du site d'AZ Services Alpha Formations : propriété intellectuelle, données personnelles et cookies."
 ---Article 1 – Définitions azsaplhaformations.com, ci-après dénommé « le Site » : désigne le site internet accessible via l’URL suivante : https://azs.alphaformations.com
 
 – CGU : désignent les présentes conditions générales d’utilisation.

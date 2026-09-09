@@ -2,12 +2,12 @@
 order: 4
 title: "Politique de confidentialité"
 path: "/politique-de-confidentialite/"
-summary: "Politique de confidentialité d'AZS Alpha Formations : données collectées, finalités et droits des personnes."
+summary: "Politique de confidentialité d'AZ Services Alpha Formations : données collectées, finalités et droits des personnes."
 ---Cet article décrit la manière dont sont retenues, traitées, publiées et effacées les données transmises par les utilisateurs de ce site internet.
 
 ## Editeur
 
-AZS Alpha Formations
+AZ Services Alpha Formations
 
 Axelle ZIGAULT-URIE
 

@@ -3,7 +3,7 @@ order: 2
 title: "Conditions générales de vente aux particuliers"
 seoTitle: "CGV particuliers"
 path: "/conditions-generales-de-vente-aux-particuliers/"
-summary: "Conditions générales de vente aux particuliers d'AZS Alpha Formations : inscription, tarifs, paiement et annulation."
+summary: "Conditions générales de vente aux particuliers d'AZ Services Alpha Formations : inscription, tarifs, paiement et annulation."
 ---Déclaration d’activité enregistrée sous le numéro 01973485497 auprès du Préfet de région GUADELOUPE
 
 Les présentes conditions générales catégorielles s’appliquent exclusivement aux personnes physiques clientes des prestations de formation de AZSERVICES – ALPHAFORMATIONS pour leur compte personnel, participant entièrement au financement de la formation sur des fonds personnels, ci-après désignées « CLIENT PARTICULIER ».

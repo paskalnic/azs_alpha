@@ -1,4 +1,4 @@
-# AZS Alpha Formations
+# AZ Services Alpha Formations
 
 Site React pré-rendu et publié par Netlify. Les contenus sont des fichiers JSON
 et Markdown versionnés dans le dépôt. Le back-office `/admin/` les modifie via

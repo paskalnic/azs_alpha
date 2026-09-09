@@ -3,7 +3,7 @@ order: 3
 title: "Conditions générales de vente aux professionnels"
 seoTitle: "CGV professionnels"
 path: "/conditions-generales-de-vente-aux-professionnels/"
-summary: "Conditions générales de vente aux professionnels d'AZS Alpha Formations : convention, facturation et annulation."
+summary: "Conditions générales de vente aux professionnels d'AZ Services Alpha Formations : convention, facturation et annulation."
 ---## 1. Objet
 
 Les présentes conditions générales de vente concernent les différentes formations proposées par AZ SERVICES – ALPHAFORMATIONS dans le cadre de la formation professionnelle. Elles sont applicables sauf conditions particulières contraires précisées.
