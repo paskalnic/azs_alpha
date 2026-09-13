@@ -7,9 +7,11 @@
   <!-- Marque le document comme « JS actif » avant le premier rendu :
        sans JavaScript, les blocs `.reveal` restent visibles. -->
   <script>document.documentElement.className += ' js';</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Polices servies par le site lui-même (voir src/styles/fonts.css).
+       Préchargées : le navigateur les découvrirait sinon seulement après
+       avoir analysé la feuille de style, soit un aller-retour de retard. -->
+  <link rel="preload" href="/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/karla-latin.woff2" as="font" type="font/woff2" crossorigin>
   <!--app-head-->
 </head>
 <body>

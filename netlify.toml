@@ -18,6 +18,12 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Les polices portent leur version dans leur nom : même traitement.
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 # Le HTML, lui, doit être revalidé pour qu'une republication soit visible.
 [[headers]]
   for = "/*.html"

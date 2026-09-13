@@ -10,6 +10,7 @@
 
 @layer theme, base, components, utilities;
 
+@import "./fonts.css";
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
 @import "./landing.css" layer(base);

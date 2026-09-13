@@ -1,0 +1,35 @@
+/* Polices auto-hébergées.
+ *
+ * Elles étaient auparavant chargées depuis fonts.googleapis.com : une feuille
+ * de style bloquante servie par un tiers, donc deux connexions (DNS, TLS) à
+ * établir avant même de savoir quels fichiers télécharger. Servies depuis le
+ * même domaine que le HTML, elles partent dès la première connexion — c'est
+ * autant de gagné sur le LCP, surtout en mobile.
+ *
+ * Les deux fichiers sont les variables latines officielles (SIL Open Font
+ * License), sous-ensemble « latin » : il couvre le français. Un seul fichier
+ * par famille suffit donc pour toutes les graisses utilisées.
+ */
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/fonts/bricolage-grotesque-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/karla-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
