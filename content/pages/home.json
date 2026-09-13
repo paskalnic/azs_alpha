@@ -69,10 +69,12 @@
         "media": {
           "id": "hero-card-1",
           "kind": "image",
-          "src": "/media/1788326882861-whatsapp-image-2026-08-25-at-20.18.00.jpeg",
+          "src": "/media/1788326882861-whatsapp-image-2026-08-25-at-20.18.00.webp",
           "alt": "Gendarme en tenue devant une brigade de la Gendarmerie nationale",
           "label": "Photo à venir",
-          "eager": true
+          "eager": true,
+          "width": 1200,
+          "height": 800
         }
       },
       {
@@ -81,9 +83,11 @@
         "media": {
           "id": "hero-card-2",
           "kind": "image",
-          "src": "/media/1788326882862-whatsapp-image-2026-08-25-at-20.14.49.jpeg",
+          "src": "/media/1788326882862-whatsapp-image-2026-08-25-at-20.14.49.webp",
           "alt": "Agent de la Police nationale devant un véhicule sérigraphié",
-          "label": "Photo à venir"
+          "label": "Photo à venir",
+          "width": 1200,
+          "height": 800
         }
       },
       {
@@ -92,9 +96,11 @@
         "media": {
           "id": "hero-card-3",
           "kind": "image",
-          "src": "/media/1788326882863-whatsapp-image-2026-08-25-at-20.12.43.jpeg",
+          "src": "/media/1788326882863-whatsapp-image-2026-08-25-at-20.12.43.webp",
           "alt": "Sapeur-pompier en tenue d’intervention devant un camion de secours",
-          "label": "Photo à venir"
+          "label": "Photo à venir",
+          "width": 960,
+          "height": 1200
         }
       }
     ],

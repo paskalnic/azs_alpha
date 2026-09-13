@@ -70,6 +70,9 @@ export default function MediaSlot({ media, className = '', ...rest }) {
       width={media.width || undefined}
       height={media.height || undefined}
       loading={media.eager ? 'eager' : 'lazy'}
+      /* L’image marquee `eager` est le LCP de la page : la demander en
+         priorite haute evite qu’elle passe derriere le CSS et les polices. */
+      fetchpriority={media.eager ? 'high' : undefined}
       style={style}
       className={`${fit} object-cover ${className}`}
       {...rest}

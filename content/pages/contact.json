@@ -8,10 +8,12 @@
     "media": {
       "id": "contact-portrait",
       "kind": "image",
-      "src": "/media/axelle.jpg",
+      "src": "/media/axelle.webp",
       "alt": "Axelle Zigault Urie, formatrice et fondatrice d’AZ Services Alpha Formations",
       "ratio": "4/5",
-      "label": "Portrait ou vue du centre"
+      "label": "Portrait ou vue du centre",
+      "width": 675,
+      "height": 1200
     },
     "paragraphs": [
       "Fin 2020, j'ai décidé de créer mon propre organisme de formation, destiné aussi bien à mes partenaires qu'à mes clients. La qualité du travail a été récompensée par l'obtention de la certification Qualiopi.",
