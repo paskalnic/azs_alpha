@@ -11,7 +11,7 @@ import Footer from '../components/Footer';
 import MobileDock from '../components/MobileDock';
 import { landingData as defaultData } from '../data/landingData';
 import { useHead } from '../seo/HeadProvider';
-import { organizationLd } from '../seo/jsonld';
+import { organizationLd, websiteLd } from '../seo/jsonld';
 import { SITE } from '../site.config';
 
 /**
@@ -24,9 +24,9 @@ export default function HomePage({ data = defaultData, disposition }) {
 
   useHead({
     path: '/',
-    title: SITE.name,
+    title: 'Formation anglais & français en Guadeloupe',
     description: SITE.description,
-    jsonLd: organizationLd(),
+    jsonLd: [organizationLd(), websiteLd()],
   });
 
   return (

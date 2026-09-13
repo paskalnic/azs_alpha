@@ -27,15 +27,31 @@ if (!template.includes('<!--app-html-->') || !template.includes('<!--app-head-->
 
 const outFile = (p) => (p === '/' ? 'index.html' : path.join(p.replace(/^\/|\/$/g, ''), 'index.html'));
 
+/**
+ * L'image marquée `fetchpriority="high"` est le LCP de la page. Elle est
+ * déclarée dans le HTML, donc l'analyseur de préchargement la trouve — mais
+ * seulement après avoir lu le corps du document. Un `preload` en tête la fait
+ * partir en même temps que la feuille de style.
+ */
+function preloadLcpImage(html) {
+  const img = html.match(/<img\b[^>]*\bfetchpriority="high"[^>]*>/i);
+  const src = img && img[0].match(/\bsrc="([^"]+)"/i);
+  return src ? `<link rel="preload" as="image" href="${src[1]}" fetchpriority="high">\n    ` : '';
+}
+
+/** Assemble une page complète à partir du gabarit et du rendu serveur. */
+const compose = (html, head) =>
+  template
+    .replace('<!--app-head-->', preloadLcpImage(html) + renderHeadTags(head))
+    .replace('<!--app-html-->', html)
+    .replace('<div id="root">', '<div id="root" data-prerendered="true">');
+
 const written = [];
 for (const routePath of prerenderPaths()) {
   const { html, head } = render(routePath);
   if (!head) throw new Error(`${routePath} : aucune métadonnée — la page appelle-t-elle useHead() ?`);
 
-  const page = template
-    .replace('<!--app-head-->', renderHeadTags(head))
-    .replace('<!--app-html-->', html)
-    .replace('<div id="root">', '<div id="root" data-prerendered="true">');
+  const page = compose(html, head);
 
   const file = path.join(dist, outFile(routePath));
   await fs.mkdir(path.dirname(file), { recursive: true });
@@ -48,10 +64,7 @@ for (const routePath of prerenderPaths()) {
 // le visiteur tomberait sur une page blanche du serveur statique.
 {
   const { html, head } = render('/404/');
-  const page = template
-    .replace('<!--app-head-->', renderHeadTags(head))
-    .replace('<!--app-html-->', html)
-    .replace('<div id="root">', '<div id="root" data-prerendered="true">');
+  const page = compose(html, head);
   await fs.writeFile(path.join(dist, '404.html'), page);
   written.push(['(404)', '404.html', Buffer.byteLength(page)]);
 }

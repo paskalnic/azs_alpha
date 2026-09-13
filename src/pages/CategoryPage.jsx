@@ -48,7 +48,12 @@ export default function CategoryPage({ category }) {
 
           <div className="dom-grid">
             {formations.map((f) => (
-              <FormationCardLink key={f.id} formation={f} categoryModifier={category.modifier} />
+              <FormationCardLink
+                key={f.id}
+                formation={f}
+                categoryModifier={category.modifier}
+                level={2}
+              />
             ))}
           </div>
         </div>

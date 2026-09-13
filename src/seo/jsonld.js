@@ -24,12 +24,37 @@ export const organizationLd = () => ({
   address: postalAddress(SITE.address),
   founder: { '@type': 'Person', name: SITE.founder.name },
   areaServed: { '@type': 'AdministrativeArea', name: 'Guadeloupe' },
+  ...(SITE.ogImage ? { image: SITE.origin + SITE.ogImage } : {}),
   hasCredential: {
     '@type': 'EducationalOccupationalCredential',
     name: SITE.certification.name,
     description: SITE.certification.label,
   },
 });
+
+/**
+ * Le site lui-même. Complète `EducationalOrganization` : Google s'appuie
+ * dessus pour le nom affiché du site dans ses résultats.
+ */
+export const websiteLd = () => ({
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE.origin}/#website`,
+  url: SITE.origin,
+  name: SITE.name,
+  description: SITE.description,
+  inLanguage: 'fr-FR',
+  publisher: { '@id': `${SITE.origin}/#organization` },
+});
+
+/**
+ * Les modalités affichées sur la fiche sont rédigées pour un lecteur
+ * (« Distanciel avec formateur tuteur en ligne ») ; `courseMode` n'accepte
+ * que le vocabulaire de Google : Onsite, Online, Blended.
+ */
+const courseModes = (modes) => [
+  ...new Set((modes || []).map((m) => (/distanc|ligne|visio/i.test(m) ? 'Online' : 'Onsite'))),
+];
 
 /** Fiche formation. */
 export const courseLd = (f) => {
@@ -40,12 +65,19 @@ export const courseLd = (f) => {
     description: f.summary,
     url: canonicalUrl(f.path),
     inLanguage: 'fr',
-    provider: { '@id': `${SITE.origin}/#organization` },
+    // La fiche formation ne porte pas le nœud Organization : on y redonne le
+    // nom et l'URL, sans quoi `provider` ne pointerait sur rien de défini.
+    provider: {
+      '@type': 'EducationalOrganization',
+      '@id': `${SITE.origin}/#organization`,
+      name: SITE.name,
+      url: SITE.origin,
+    },
   };
   if (f.duration || f.modes) {
     ld.hasCourseInstance = {
       '@type': 'CourseInstance',
-      courseMode: f.modes,
+      courseMode: courseModes(f.modes),
       ...(f.durationIso ? { courseWorkload: f.durationIso } : {}),
       location: {
         '@type': 'Place',
@@ -59,7 +91,10 @@ export const courseLd = (f) => {
       '@type': 'Offer',
       price: f.price.amount,
       priceCurrency: 'EUR',
-      category: f.price.note,
+      // `category` attend le type de tarification, pas la note commerciale :
+      // celle-ci reste affichée sur la fiche, à sa place.
+      category: 'Paid',
+      url: canonicalUrl(f.path),
       availability: 'https://schema.org/InStock',
     };
   }

@@ -88,10 +88,16 @@ export default function Footer({ brand, footer }) {
   );
 }
 
+/**
+ * Intitulé de colonne du pied de page. `h2` et non `h4` : le pied suit
+ * directement le `h1` de la page, un `h4` y creuserait un saut de niveau.
+ * Les classes lui rendent sa petite capitale — la taille d'un titre et son
+ * niveau sont deux choses distinctes.
+ */
 function FootTitle({ children }) {
   return (
-    <h4 className="mb-4 font-body text-[.72rem] font-bold uppercase tracking-[.13em] text-sun">
+    <h2 className="mb-4 font-body text-[.72rem] font-bold uppercase tracking-[.13em] text-sun">
       {children}
-    </h4>
+    </h2>
   );
 }

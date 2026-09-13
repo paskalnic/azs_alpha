@@ -365,7 +365,9 @@ section{position:relative}
 .dom.d1 .tag{background:rgba(30,136,196,.14)}
 .dom.d2 .tag{background:rgba(18,62,92,.12)}
 .dom.d3 .tag{background:rgba(47,200,224,.2)}
-.dom h3{margin-bottom:.4rem}
+/* Le titre de carte prend le niveau qu'exige la hiérarchie de la page (h2 sur
+   une page catégorie, h3 dans le catalogue) : sa taille, elle, ne bouge pas. */
+.dom :is(h2,h3){font-size:clamp(1.15rem,1rem + .6vw,1.4rem); margin-bottom:.4rem}
 .dom > p{color:var(--muted); font-size:.94rem; margin-bottom:1.1rem}
 .dom ul{list-style:none; display:flex; flex-direction:column; gap:.55rem; margin-bottom:1.4rem}
 .dom li{font-size:.92rem; color:var(--ink); display:flex; gap:.55rem; align-items:baseline}
