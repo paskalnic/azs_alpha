@@ -11,6 +11,36 @@
 [build.environment]
   NODE_VERSION = "22"
 
+# Redirections héritées de l'ancien site.
+#
+# Le nouveau site reprend 25 des 26 adresses du WordPress qu'il remplace :
+# c'est volontaire, et c'est ce qui fait qu'une refonte ne repart pas de zéro
+# dans Google. L'ancienneté et les liens entrants sont attachés à l'URL, pas
+# au serveur ni au contenu.
+#
+# `/inscription-formation/` est la seule exception : la page portait un
+# formulaire d'inscription, remplacé par celui de /contact/. Sans cette
+# redirection elle renverrait un 404 — Google retirerait la page de son index,
+# et toute personne qui en a gardé le lien tomberait sur une erreur.
+#
+# 301 et non 302 : le déplacement est définitif, et c'est le seul code qui
+# transmette à la nouvelle page le crédit accumulé par l'ancienne.
+#
+# Pas de `force` : la règle ne s'applique que si aucun fichier ne répond à ce
+# chemin. Le jour où une vraie page `/inscription-formation/` reviendrait, elle
+# reprendrait la main sans qu'on ait à y penser.
+[[redirects]]
+  from = "/inscription-formation/"
+  to = "/contact/"
+  status = 301
+
+# La même sans barre oblique finale : Netlify traite les deux formes comme
+# équivalentes, mais l'écrire coûte une ligne et ne dépend d'aucun réglage.
+[[redirects]]
+  from = "/inscription-formation"
+  to = "/contact/"
+  status = 301
+
 # Les fichiers versionnés portent une empreinte dans leur nom : ils peuvent
 # être mis en cache indéfiniment.
 [[headers]]
