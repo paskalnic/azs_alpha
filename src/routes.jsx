@@ -15,8 +15,13 @@ import { LEGAL_PAGES } from './data/legalPages';
  * le pré-rendu statique et le générateur de sitemap.
  *
  * Les chemins reprennent exactement les URL du site WordPress : le domaine
- * étant conservé, le positionnement acquis sur ces adresses est préservé
- * et aucune redirection n'est nécessaire.
+ * étant conservé, le positionnement acquis sur ces adresses est préservé.
+ * Une seule adresse n'a pas d'équivalent, /inscription-formation/, et elle
+ * est redirigée en 301 vers /contact/ dans netlify.toml.
+ *
+ * `sitemap` dit seulement si la page est annoncée aux moteurs. Il ne porte
+ * ni `priority` ni `changefreq` : Google ignore les deux, et les écrire
+ * laissait croire qu'on réglait quelque chose.
  */
 const CATALOG_PATH = '/nos-formations/';
 
@@ -24,13 +29,13 @@ export const routes = [
   {
     path: '/',
     element: <HomePage />,
-    sitemap: { priority: 1.0, changefreq: 'monthly' },
+    sitemap: true,
   },
 
   {
     path: CATALOG_PATH,
     element: <CatalogPage path={CATALOG_PATH} title="Nos formations" />,
-    sitemap: { priority: 0.9, changefreq: 'monthly' },
+    sitemap: true,
   },
   {
     /* URL historique conservée, mais canonique pointée vers /nos-formations/
@@ -45,37 +50,38 @@ export const routes = [
   ...CATEGORIES.map((category) => ({
     path: category.path,
     element: <CategoryPage category={category} />,
-    sitemap: { priority: 0.8, changefreq: 'monthly' },
+    sitemap: true,
   })),
 
   {
     path: '/nos-engagements-qualite/',
     element: <QualityPage />,
-    sitemap: { priority: 0.7, changefreq: 'yearly' },
+    sitemap: true,
   },
   {
     path: '/nos-resultats/',
     element: <ResultsPage />,
-    sitemap: { priority: 0.6, changefreq: 'yearly' },
+    sitemap: true,
   },
   {
     path: '/contact/',
     element: <ContactPage />,
-    sitemap: { priority: 0.9, changefreq: 'yearly' },
+    sitemap: true,
   },
 
   ...FORMATIONS.map((formation) => ({
     path: formation.path,
     element: <FormationPage formation={formation} />,
-    sitemap: { priority: 0.7, changefreq: 'yearly' },
+    sitemap: true,
   })),
 
   ...LEGAL_PAGES.map((page) => ({
     path: page.path,
     element: <LegalPage page={page} />,
-    /* Indexables — ces mentions doivent rester accessibles — mais en
-       priorité basse : ce n'est pas sur elles qu'on veut être trouvé. */
-    sitemap: { priority: 0.3, changefreq: 'yearly' },
+    /* Indexables : ces mentions doivent rester accessibles. Aucune valeur du
+       sitemap ne peut dire qu'elles comptent moins que les formations — c'est
+       le maillage interne et leur contenu qui le disent à Google. */
+    sitemap: true,
   })),
 
   { path: '*', element: <NotFoundPage />, sitemap: false },

@@ -70,16 +70,24 @@ for (const routePath of prerenderPaths()) {
 }
 
 // — sitemap.xml —
-const today = new Date().toISOString().slice(0, 10);
+//
+// Une adresse par page, et rien d'autre.
+//
+// La version précédente écrivait la date du build dans <lastmod> pour toutes
+// les pages. Or chaque « Enregistrer » du back-office relance un build : une
+// virgule corrigée sur le TOEIC annonçait les 25 pages modifiées le jour même.
+// Google n'utilise <lastmod> que s'il est « systématiquement et vérifiablement
+// exact » ; une date qui ment sur 24 pages sur 25 lui apprend à l'ignorer.
+// Le champ est facultatif : mieux vaut ne rien dire que dire faux.
+//
+// <changefreq> et <priority> sont retirés pour une autre raison : ils étaient
+// exacts, mais Google les ignore entièrement.
 const urls = routes
   .filter((r) => r.sitemap && r.path !== '*')
   .map((r) => {
     const loc = SITE.origin + (r.path === '/' ? '/' : `${r.path.replace(/\/$/, '')}/`);
     return `  <url>
     <loc>${loc}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>${r.sitemap.changefreq}</changefreq>
-    <priority>${r.sitemap.priority.toFixed(1)}</priority>
   </url>`;
   })
   .join('\n');
