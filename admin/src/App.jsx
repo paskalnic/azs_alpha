@@ -69,7 +69,7 @@ function ConfigurationError() {
         <h1 className="mb-3 font-display text-[1.5rem] font-bold">Back-office non configuré</h1>
         <p className="text-[.9rem] text-muted">
           Les variables <code>VITE_GITHUB_OWNER</code> et <code>VITE_GITHUB_REPO</code> doivent être
-          définies dans Netlify, puis le site doit être redéployé.
+          définies dans le projet Cloudflare Pages, puis le site doit être redéployé.
         </p>
       </div>
     </main>

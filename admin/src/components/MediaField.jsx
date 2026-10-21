@@ -24,8 +24,11 @@ const slugify = (name) =>
  * Dépôt d'une image ou d'un GIF.
  *
  * Le fichier est versionné avec le contenu, dans `public/media/`, et servi
- * ensuite via l'Image CDN de Netlify qui le redimensionne et le convertit au
- * format que le navigateur accepte.
+ * tel quel depuis /media/ : aucune conversion n'est faite à la volée. D'où la
+ * limite de 4 Mo, et l'invitation à compresser l'image avant de la déposer.
+ *
+ * (Une version antérieure de ce commentaire parlait d'un redimensionnement
+ * par l'Image CDN de Netlify. Aucun code ne l'a jamais appelé.)
  */
 export default function MediaField({ field, value, onChange, client }) {
   const input = useRef(null);

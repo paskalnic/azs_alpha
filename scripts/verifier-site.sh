@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #
-# Vérifie un déploiement du site, en production comme sur l'adresse Netlify.
+# Vérifie un déploiement du site, en production comme sur l'adresse .pages.dev.
 #
 #   bash scripts/verifier-site.sh                                    # le domaine
-#   bash scripts/verifier-site.sh https://jocular-licorice-ef0a42.netlify.app
+#   bash scripts/verifier-site.sh https://azs-alpha.pages.dev
 #
 # À lancer le lendemain du raccordement du domaine, puis après toute
 # intervention sur le DNS. Chaque contrôle correspond à une façon concrète de
@@ -109,6 +109,16 @@ printf '%s' "$entetes_admin" | grep -qi '^x-robots-tag:.*noindex' \
   && ok "/admin/ fermé aux moteurs" || ko "/admin/ sans X-Robots-Tag: noindex"
 printf '%s' "$entetes_admin" | grep -qi '^cache-control:.*no-store' \
   && ok "/admin/ jamais mis en cache" || ko "/admin/ sans Cache-Control: no-store"
+
+# La connexion GitHub : /api/auth doit renvoyer vers la page d'autorisation.
+# 404 = les fonctions ne sont pas déployées ; 500 = GITHUB_CLIENT_ID manque.
+auth=$(curl -s -o /dev/null -m 20 -w '%{http_code} %{redirect_url}' "$BASE/api/auth")
+case "$auth" in
+  "302 https://github.com/login/oauth/authorize?"*) ok "/api/auth renvoie vers la page d'autorisation GitHub" ;;
+  "404 "*) ko "/api/auth introuvable — les fonctions de functions/api/ ne sont pas déployées" ;;
+  "500 "*) ko "/api/auth en erreur — GITHUB_CLIENT_ID n'est pas défini dans le projet" ;;
+  *) ko "/api/auth : attendu 302 vers GitHub, obtenu « $auth »" ;;
+esac
 echo
 
 echo "En-têtes"

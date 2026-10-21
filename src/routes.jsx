@@ -17,7 +17,7 @@ import { LEGAL_PAGES } from './data/legalPages';
  * Les chemins reprennent exactement les URL du site WordPress : le domaine
  * étant conservé, le positionnement acquis sur ces adresses est préservé.
  * Une seule adresse n'a pas d'équivalent, /inscription-formation/, et elle
- * est redirigée en 301 vers /contact/ dans netlify.toml.
+ * est redirigée en 301 vers /contact/ dans public/_redirects.
  *
  * `sitemap` dit seulement si la page est annoncée aux moteurs. Il ne porte
  * ni `priority` ni `changefreq` : Google ignore les deux, et les écrire

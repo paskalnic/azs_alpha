@@ -26,7 +26,7 @@ export const clearToken = () => {
 export function login() {
   return new Promise((resolve, reject) => {
     const popup = window.open(
-      '/.netlify/functions/auth',
+      '/api/auth',
       'azs-admin-auth',
       'width=680,height=760,menubar=no,toolbar=no',
     );

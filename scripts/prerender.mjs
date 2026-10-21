@@ -60,8 +60,12 @@ for (const routePath of prerenderPaths()) {
 }
 
 // — page 404 —
-// Netlify sert automatiquement /404.html sur une URL inconnue ; sans elle,
-// le visiteur tomberait sur une page blanche du serveur statique.
+// Cloudflare Pages sert /404.html, avec un vrai statut 404, sur toute URL
+// inconnue. Ce fichier n'est pas un simple confort : **sans lui, Pages
+// considère le site comme une application d'une seule page** et répond à
+// n'importe quelle adresse par l'accueil, en 200. Google verrait alors une
+// infinité de doublons de la page d'accueil — des « soft 404 » à perte de vue.
+// Ne jamais le supprimer.
 {
   const { html, head } = render('/404/');
   const page = compose(html, head);

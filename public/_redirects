@@ -1,0 +1,18 @@
+# Redirections, lues par Cloudflare Pages à chaque déploiement.
+#
+# Le nouveau site reprend 25 des 26 adresses du WordPress qu'il remplace :
+# c'est ce qui fait qu'une refonte ne repart pas de zéro dans Google.
+# L'ancienneté et les liens entrants sont attachés à l'URL, pas au serveur.
+#
+# /inscription-formation/ est la seule exception : la page portait un
+# formulaire d'inscription, remplacé par celui de /contact/. Sans cette ligne
+# elle renverrait un 404, Google la retirerait de son index, et toute personne
+# qui en a gardé le lien tomberait sur une erreur.
+#
+# 301 et non 302 : le déplacement est définitif, et c'est le seul code qui
+# transmette à la nouvelle page le crédit accumulé par l'ancienne. La forme
+# sans barre oblique finale est écrite aussi : une ligne, et aucune
+# dépendance à un réglage de normalisation.
+
+/inscription-formation/  /contact/  301
+/inscription-formation   /contact/  301

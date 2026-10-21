@@ -1,0 +1,31 @@
+# En-têtes HTTP, lus par Cloudflare Pages à chaque déploiement.
+#
+# Quand plusieurs règles visent une même adresse, Pages additionne leurs
+# en-têtes, et un en-tête défini deux fois voit ses valeurs jointes par une
+# virgule. Cache-Control n'est donc jamais posé sur /* : /admin/ recevrait
+# « public, …, no-store ». Le HTML n'a besoin d'aucune règle de cache — Pages
+# envoie déjà « public, max-age=0, must-revalidate », ce qui rend une
+# republication visible immédiatement.
+#
+# Ces règles ne s'appliquent qu'aux fichiers statiques. Les réponses de
+# functions/api/ posent leurs propres en-têtes.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+
+# Les fichiers versionnés portent une empreinte dans leur nom : ils peuvent
+# être mis en cache indéfiniment.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Les polices portent leur version dans leur nom : même traitement.
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Le back-office peut contenir un jeton temporaire en mémoire navigateur : ses
+# réponses ne doivent jamais être conservées par un cache intermédiaire.
+/admin/*
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow

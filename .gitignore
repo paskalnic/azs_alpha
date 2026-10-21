@@ -4,3 +4,7 @@ dist
 .env
 .env.*
 !.env.example
+# Wrangler (Cloudflare) en local : `.dev.vars` contient les secrets OAuth.
+# Le dépôt est public — ce fichier ne doit jamais y entrer.
+.dev.vars
+.wrangler/
