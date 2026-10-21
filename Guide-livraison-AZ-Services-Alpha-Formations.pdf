@@ -16,7 +16,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
 endobj
 6 0 obj
-<< /Length 1396 >>
+<< /Length 1383 >>
 stream
 0.957 0.984 0.996 rg 0 0 595.28 841.89 re f
 0.118 0.533 0.769 rg 0 825.89 595.28 16 re f
@@ -29,18 +29,18 @@ BT /F1 11 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 487.89 Tm (Procédure de remise à
 BT /F1 11 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 470.89 Tm (gestion des accès et contrôle avant mise en ligne définitive.) Tj ET
 1 1 1 rg 52 316.89 491.28 102 re f
 BT /F2 9 Tf 0.118 0.533 0.769 rg 1 0 0 1 70.00 392.89 Tm (ENVIRONNEMENT ACTUEL) Tj ET
-BT /F3 10 Tf 0.071 0.188 0.243 rg 1 0 0 1 70.00 368.89 Tm (Site : https://jocular-licorice-ef0a42.netlify.app/) Tj ET
-BT /F3 10 Tf 0.071 0.188 0.243 rg 1 0 0 1 70.00 348.89 Tm (Admin : https://jocular-licorice-ef0a42.netlify.app/admin/) Tj ET
+BT /F3 10 Tf 0.071 0.188 0.243 rg 1 0 0 1 70.00 368.89 Tm (Site : https://azsalphaformations.com/) Tj ET
+BT /F3 10 Tf 0.071 0.188 0.243 rg 1 0 0 1 70.00 348.89 Tm (Admin : https://azsalphaformations.com/admin/) Tj ET
 BT /F3 10 Tf 0.071 0.188 0.243 rg 1 0 0 1 70.00 328.89 Tm (Dépôt : github.com/paskalnic/azs_alpha — branche main) Tj ET
-BT /F2 10 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 105.00 Tm (État : site public, administration GitHub opérationnelle) Tj ET
-BT /F1 9 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 81.00 Tm (Version 1.1 — 21 octobre 2026) Tj ET
+BT /F2 10 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 105.00 Tm (État : hébergement Cloudflare Pages, raccordement du domaine en cours) Tj ET
+BT /F1 9 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 81.00 Tm (Version 1.2 — 21 octobre 2026) Tj ET
 endstream
 endobj
 7 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
 endobj
 8 0 obj
-<< /Length 4175 >>
+<< /Length 4753 >>
 stream
 0.118 0.533 0.769 rg 0 832.89 595.28 9 re f
 BT /F2 8.5 Tf 0.118 0.533 0.769 rg 1 0 0 1 52.00 789.89 Tm (AZ SERVICES ALPHA FORMATIONS) Tj ET
@@ -49,40 +49,45 @@ BT /F2 16 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 759.89 Tm (1. État du projet ava
 0.118 0.533 0.769 RG 1.2 w 52 749.89 m 543.28 749.89 l S
 BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 725.89 Tm (Éléments déjà validés) Tj ET
 BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 706.89 Tm (•) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 706.89 Tm (Le site est publié depuis la branche main et Netlify redéploie automatiquement après) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 693.12 Tm (chaque commit.) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 706.89 Tm (Le site se construit depuis la branche main ; Cloudflare Pages republie automatiquement) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 693.12 Tm (après chaque commit.) Tj ET
 BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 675.35 Tm (•) Tj ET
 BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 675.35 Tm (Les 25 pages du sitemap répondent correctement et les 30 liens ou ressources internes) Tj ET
 BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 661.58 Tm (contrôlés sont accessibles.) Tj ET
 BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 643.81 Tm (•) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 643.81 Tm (La connexion GitHub OAuth fonctionne et le compte paskalnic est autorisé.) Tj ET
-BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 626.04 Tm (•) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 626.04 Tm (Une modification de texte, sa publication, puis son retrait ont été testés de bout en) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 612.27 Tm (bout.) Tj ET
-BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 594.50 Tm (•) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 594.50 Tm (Le dépôt et l’affichage d’une image JPEG ont été validés sur le site public.) Tj ET
-BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 576.73 Tm (À terminer avant la remise définitive) Tj ET
-BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 557.73 Tm (•) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 557.73 Tm (Retirer la photographie de test représentant une gendarme si elle ne constitue pas le) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 543.96 Tm (portrait définitif de la formatrice.) Tj ET
-BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 526.19 Tm (•) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 526.19 Tm (Remplacer les mentions « SIRET à compléter » et « NDA à compléter » par les) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 512.42 Tm (informations officielles.) Tj ET
-BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 494.65 Tm (•) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 494.65 Tm (Renseigner un texte alternatif pertinent pour chaque image porteuse d’information.) Tj ET
-BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 476.88 Tm (•) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 476.88 Tm (Rattacher le nom de domaine définitif et vérifier le certificat HTTPS.) Tj ET
-BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 459.11 Tm (•) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 459.11 Tm (Mettre à jour le domaine canonique du site si le domaine fourni diffère de) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 445.34 Tm (azsalphaformations.com.) Tj ET
-BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 427.57 Tm (•) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 427.57 Tm (Tester la connexion au back-office avec le propre compte GitHub de la cliente.) Tj ET
-0.925 0.969 0.988 rg 52 355.8000000000003 491.28 68 re f
-BT /F2 10.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 67.00 402.80 Tm (Règle de sécurité) Tj ET
-BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 384.80 Tm (Aucun mot de passe, secret GitHub ou jeton d’accès ne doit être envoyé par e-mail,) Tj ET
-BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 371.80 Tm (messagerie ou ajouté au dépôt. Chaque personne utilise son propre compte.) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 643.81 Tm (Les 26 adresses de l’ancien site sont conservées : 25 à l’identique, la dernière) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 630.04 Tm (redirigée en 301 vers /contact/.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 612.27 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 612.27 Tm (Le back-office \(connexion, modification, publication, retrait\) a été testé de bout en) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 598.50 Tm (bout lors de la première mise en ligne.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 580.73 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 580.73 Tm (Le dépôt et l’affichage d’une image JPEG ont été validés sur le site public.) Tj ET
+BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 562.96 Tm (À terminer avant la remise définitive) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 543.96 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 543.96 Tm (Retirer la photographie de test représentant une gendarme si elle ne constitue pas le) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 530.19 Tm (portrait définitif de la formatrice.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 512.42 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 512.42 Tm (Remplacer les mentions « SIRET à compléter » et « NDA à compléter » par les) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 498.65 Tm (informations officielles.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 480.88 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 480.88 Tm (Renseigner un texte alternatif pertinent pour chaque image porteuse d’information.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 463.11 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 463.11 Tm (Revalider sur Cloudflare Pages la connexion au back-office et une publication de bout) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 449.34 Tm (en bout.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 431.57 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 431.57 Tm (Rattacher le domaine, vérifier le certificat HTTPS, puis lancer) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 417.80 Tm (scripts/verifier-site.sh : tous les contrôles doivent passer.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 400.03 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 400.03 Tm (Mettre à jour le domaine canonique du site si le domaine fourni diffère de) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 386.26 Tm (azsalphaformations.com.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 368.49 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 368.49 Tm (Tester la connexion au back-office avec le propre compte GitHub de la cliente.) Tj ET
+0.925 0.969 0.988 rg 52 296.72000000000037 491.28 68 re f
+BT /F2 10.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 67.00 343.72 Tm (Règle de sécurité) Tj ET
+BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 325.72 Tm (Aucun mot de passe, secret GitHub ou jeton d’accès ne doit être envoyé par e-mail,) Tj ET
+BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 312.72 Tm (messagerie ou ajouté au dépôt. Chaque personne utilise son propre compte.) Tj ET
 0.82 0.89 0.92 RG 0.7 w 52 43 m 543.28 43 l S
-BT /F1 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 27.00 Tm (Version 1.1 — mise à jour le 21 octobre 2026) Tj ET
+BT /F1 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 27.00 Tm (Version 1.2 — mise à jour le 21 octobre 2026) Tj ET
 BT /F2 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 538.28 27.00 Tm (2) Tj ET
 endstream
 endobj
@@ -90,7 +95,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
 endobj
 10 0 obj
-<< /Length 4180 >>
+<< /Length 4432 >>
 stream
 0.118 0.533 0.769 rg 0 832.89 595.28 9 re f
 BT /F2 8.5 Tf 0.118 0.533 0.769 rg 1 0 0 1 52.00 789.89 Tm (AZ SERVICES ALPHA FORMATIONS) Tj ET
@@ -119,17 +124,19 @@ BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 541.19 Tm (Comptes à créer) Tj
 BT /F2 10.5 Tf 0.071 0.188 0.243 rg 1 0 0 1 52.00 522.19 Tm (GitHub — obligatoire pour utiliser le back-office) Tj ET
 BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 502.70 Tm (La cliente crée gratuitement son propre compte GitHub et transmet uniquement son) Tj ET
 BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 488.21 Tm (identifiant public. Elle ne transmet jamais son mot de passe.) Tj ET
-BT /F2 10.5 Tf 0.071 0.188 0.243 rg 1 0 0 1 52.00 465.72 Tm (Netlify — recommandé pour la propriété du projet) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 446.23 Tm (La cliente peut créer un compte Netlify avec son adresse professionnelle ; le projet y) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 431.74 Tm (sera alors transféré. À court terme, il peut rester sur le compte du prestataire, à) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 417.25 Tm (condition que ce choix soit prévu contractuellement. Elle n’a pas besoin d’accès Netlify) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 402.76 Tm (pour modifier son site : le back-office passe par GitHub.) Tj ET
-BT /F2 10.5 Tf 0.071 0.188 0.243 rg 1 0 0 1 52.00 380.27 Tm (Compte chez le registrar — doit rester à la cliente) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 360.78 Tm (La cliente conserve la propriété du domaine. Chez SiteGround, elle ajoute le prestataire) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 346.29 Tm (comme collaborateur du site : il accède au DNS Zone Editor, sans voir ses e-mails ni sa) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 331.80 Tm (facturation. Elle ne transmet jamais son mot de passe.) Tj ET
+BT /F2 10.5 Tf 0.071 0.188 0.243 rg 1 0 0 1 52.00 465.72 Tm (Cloudflare — hébergement du site et DNS du domaine) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 446.23 Tm (Un compte Cloudflare gratuit héberge le site et la zone DNS du domaine. Le plus simple) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 431.74 Tm (est de l’ouvrir au nom de la cliente, qui y invite le prestataire comme membre : le plan) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 417.25 Tm (gratuit le permet. S’il reste au nom du prestataire, ce choix doit être prévu) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 402.76 Tm (contractuellement. Elle n’a pas besoin de cet accès pour modifier son site : le) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 388.27 Tm (back-office passe par GitHub.) Tj ET
+BT /F2 10.5 Tf 0.071 0.188 0.243 rg 1 0 0 1 52.00 365.78 Tm (Compte chez le registrar — doit rester à la cliente) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 346.29 Tm (La cliente conserve la propriété du domaine, enregistré via SiteGround. Le raccordement) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 331.80 Tm (exige de remplacer ses serveurs de noms par ceux de Cloudflare : l’opération se fait sur) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 317.31 Tm (le domaine, depuis son propre compte — un collaborateur du site n’y a pas accès. Elle ne) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 302.82 Tm (transmet jamais son mot de passe.) Tj ET
 0.82 0.89 0.92 RG 0.7 w 52 43 m 543.28 43 l S
-BT /F1 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 27.00 Tm (Version 1.1 — mise à jour le 21 octobre 2026) Tj ET
+BT /F1 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 27.00 Tm (Version 1.2 — mise à jour le 21 octobre 2026) Tj ET
 BT /F2 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 538.28 27.00 Tm (3) Tj ET
 endstream
 endobj
@@ -137,12 +144,12 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 10 0 R >>
 endobj
 12 0 obj
-<< /Length 3869 >>
+<< /Length 3774 >>
 stream
 0.118 0.533 0.769 rg 0 832.89 595.28 9 re f
 BT /F2 8.5 Tf 0.118 0.533 0.769 rg 1 0 0 1 52.00 789.89 Tm (AZ SERVICES ALPHA FORMATIONS) Tj ET
 BT /F1 8.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 453.28 789.89 Tm (Guide de livraison) Tj ET
-BT /F2 16 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 759.89 Tm (3. Accès GitHub et Netlify) Tj ET
+BT /F2 16 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 759.89 Tm (3. Accès GitHub et Cloudflare) Tj ET
 0.118 0.533 0.769 RG 1.2 w 52 749.89 m 543.28 749.89 l S
 BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 725.89 Tm (Autoriser la cliente dans GitHub) Tj ET
 BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 706.89 Tm (•) Tj ET
@@ -154,27 +161,26 @@ BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 671.35 Tm (Inviter l’identifia
 BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 653.58 Tm (•) Tj ET
 BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 653.58 Tm (Demander à la cliente d’accepter l’invitation reçue par e-mail.) Tj ET
 BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 635.81 Tm (Autoriser son compte dans le back-office) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 616.81 Tm (Dans Netlify, ouvrir Project configuration › Environment variables, puis modifier la) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 602.32 Tm (variable suivante :) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 616.81 Tm (Dans le projet Cloudflare Pages, ouvrir Settings › Variables and Secrets, puis modifier) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 602.32 Tm (la variable suivante :) Tj ET
 0.965 0.975 0.98 rg 52 572.83 491.28 21 re f
 BT /F3 8.7 Tf 0.071 0.188 0.243 rg 1 0 0 1 62.00 579.83 Tm (GITHUB_ALLOWED_USERS=paskalnic,identifiant-de-la-cliente) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 554.83 Tm (Relancer ensuite un déploiement depuis Deploys › Trigger deploy. Ne jamais ajouter le mot) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 540.34 Tm (de passe GitHub de la cliente.) Tj ET
-BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 517.85 Tm (Propriété Netlify) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 498.85 Tm (Pour une livraison complète, le projet est transféré dans l’équipe Netlify de la cliente) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 484.36 Tm (: Project configuration › General › Project information › Transfer project. Les plans) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 469.87 Tm (Free et Personal n’acceptent pas de second membre : le prestataire assure ensuite la) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 455.38 Tm (maintenance en poussant sur le dépôt, sans accès à l’équipe.) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 432.89 Tm (Le dépôt est public. Sur un plan gratuit, c’est ce qui permet aux enregistrements faits) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 418.40 Tm (avec le compte GitHub de la cliente de se publier sans approbation. Il ne contient aucun) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 403.91 Tm (secret.) Tj ET
-0.925 0.969 0.988 rg 52 314.41999999999996 491.28 81 re f
-BT /F2 10.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 67.00 374.42 Tm (À ne pas transmettre) Tj ET
-BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 356.42 Tm (Ne jamais communiquer GITHUB_CLIENT_SECRET, un jeton OAuth, une clé SSH, le mot de passe) Tj ET
-BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 343.42 Tm (Netlify ou le mot de passe GitHub. La cliente n’a besoin que de ses propres comptes et de) Tj ET
-BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 330.42 Tm (l’adresse /admin/.) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 554.83 Tm (Relancer ensuite un déploiement depuis l’onglet Deployments. Ne jamais ajouter le mot de) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 540.34 Tm (passe GitHub de la cliente.) Tj ET
+BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 517.85 Tm (Propriété du projet) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 498.85 Tm (Si l’hébergement doit revenir à la cliente, le projet est recréé sur son compte) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 484.36 Tm (Cloudflare depuis le même dépôt : tout le site vit dans GitHub, rien n’est perdu. Le plus) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 469.87 Tm (simple reste d’ouvrir le compte à son nom dès le départ et d’y inviter le prestataire.) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 447.38 Tm (Le dépôt est public et ne contient aucun secret : ils sont rangés dans les variables) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 432.89 Tm (Cloudflare. La sécurité du back-office repose sur l’OAuth GitHub et la liste des comptes) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 418.40 Tm (autorisés, pas sur le secret du code.) Tj ET
+0.925 0.969 0.988 rg 52 328.90999999999997 491.28 81 re f
+BT /F2 10.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 67.00 388.91 Tm (À ne pas transmettre) Tj ET
+BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 370.91 Tm (Ne jamais communiquer GITHUB_CLIENT_SECRET, un jeton OAuth, une clé SSH, le mot de passe) Tj ET
+BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 357.91 Tm (Cloudflare ou le mot de passe GitHub. La cliente n’a besoin que de ses propres comptes et) Tj ET
+BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 344.91 Tm (de l’adresse /admin/.) Tj ET
 0.82 0.89 0.92 RG 0.7 w 52 43 m 543.28 43 l S
-BT /F1 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 27.00 Tm (Version 1.1 — mise à jour le 21 octobre 2026) Tj ET
+BT /F1 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 27.00 Tm (Version 1.2 — mise à jour le 21 octobre 2026) Tj ET
 BT /F2 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 538.28 27.00 Tm (4) Tj ET
 endstream
 endobj
@@ -182,43 +188,47 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 12 0 R >>
 endobj
 14 0 obj
-<< /Length 3656 >>
+<< /Length 4265 >>
 stream
 0.118 0.533 0.769 rg 0 832.89 595.28 9 re f
 BT /F2 8.5 Tf 0.118 0.533 0.769 rg 1 0 0 1 52.00 789.89 Tm (AZ SERVICES ALPHA FORMATIONS) Tj ET
 BT /F1 8.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 453.28 789.89 Tm (Guide de livraison) Tj ET
 BT /F2 16 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 759.89 Tm (4. Raccorder le nom de domaine) Tj ET
 0.118 0.533 0.769 RG 1.2 w 52 749.89 m 543.28 749.89 l S
-BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 725.89 Tm (Ajouter le domaine dans Netlify) Tj ET
-BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 706.89 Tm (•) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 706.89 Tm (Ouvrir Domain management dans le projet Netlify.) Tj ET
-BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 689.12 Tm (•) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 689.12 Tm (Choisir Add a domain › Add a domain you already own.) Tj ET
-BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 671.35 Tm (•) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 671.35 Tm (Saisir le domaine fourni par la cliente.) Tj ET
-BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 653.58 Tm (•) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 653.58 Tm (Choisir Netlify DNS ou conserver le fournisseur DNS actuel.) Tj ET
-BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 635.81 Tm (•) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 635.81 Tm (Appliquer chez le registrar les enregistrements exacts indiqués par Netlify.) Tj ET
-BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 618.04 Tm (•) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 618.04 Tm (Conserver tous les enregistrements MX, SPF, DKIM et DMARC utiles aux e-mails) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 604.27 Tm (professionnels.) Tj ET
-BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 586.50 Tm (•) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 586.50 Tm (Attendre la propagation DNS et vérifier que Netlify a délivré le certificat HTTPS.) Tj ET
-BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 568.73 Tm (Mettre à jour GitHub OAuth) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 549.73 Tm (Le jour du raccordement, dans l’application OAuth GitHub, remplacer l’URL de rappel par) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 535.24 Tm (celle du domaine :) Tj ET
-0.965 0.975 0.98 rg 52 505.7500000000001 491.28 21 re f
-BT /F3 8.7 Tf 0.071 0.188 0.243 rg 1 0 0 1 62.00 512.75 Tm (https://son-domaine.fr/.netlify/functions/callback) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 487.75 Tm (Une application OAuth n’accepte qu’une URL de rappel : le back-office ne fonctionne plus) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 473.26 Tm (depuis l’adresse .netlify.app après ce changement. Mettre aussi à jour la Homepage URL.) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 458.77 Tm (Ne pas activer la correspondance générique des URL, Device Flow ou l’expiration des) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 444.28 Tm (jetons pour cette version.) Tj ET
-BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 421.79 Tm (Référencement) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 402.79 Tm (Si le domaine final n’est pas azsalphaformations.com, mettre à jour l’URL du site dans) Tj ET
-BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 388.30 Tm (src/site.config.js, reconstruire et vérifier les URL canoniques ainsi que sitemap.xml.) Tj ET
+BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 725.89 Tm (Déplacer la zone DNS chez Cloudflare) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 706.89 Tm (Pages n’accepte un domaine racine que si sa zone DNS est chez Cloudflare : un simple) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 692.40 Tm (enregistrement A ne suffit pas.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 669.91 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 669.91 Tm (Dans Cloudflare, ajouter le domaine \(plan Free\) : les enregistrements existants sont) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 656.14 Tm (importés.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 638.37 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 638.37 Tm (Comparer l’import à l’inventaire ci-dessous et recréer ce qui manque.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 620.60 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 620.60 Tm (Passer en « DNS only » mail, ftp, autodiscover, autoconfig et default._domainkey : le) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 606.83 Tm (proxy ne transporte que le web.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 589.06 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 589.06 Tm (Dans le projet Pages, Custom domains : ajouter le domaine et www.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 571.29 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 571.29 Tm (Chez SiteGround, la cliente remplace les serveurs de noms par les deux fournis par) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 557.52 Tm (Cloudflare.) Tj ET
+BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 539.75 Tm (•) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 539.75 Tm (Une fois le domaine actif et le certificat délivré, lancer scripts/verifier-site.sh.) Tj ET
+BT /F1 9.6 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 521.98 Tm (Inventaire relevé le 21 octobre 2026 : trois MX vers mailspamprotection.com, TXT SPF, TXT _dmarc,) Tj ET
+BT /F1 9.6 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 508.73 Tm (CNAME default._domainkey \(signature DKIM\), A mail, ftp, autodiscover et autoconfig vers) Tj ET
+BT /F1 9.6 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 495.48 Tm (34.155.80.219.) Tj ET
+BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 474.24 Tm (Mettre à jour GitHub OAuth) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 455.24 Tm (Le même jour, dans l’application OAuth GitHub, remplacer l’URL de rappel par celle du) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 440.75 Tm (domaine :) Tj ET
+0.965 0.975 0.98 rg 52 411.25600000000014 491.28 21 re f
+BT /F3 8.7 Tf 0.071 0.188 0.243 rg 1 0 0 1 62.00 418.26 Tm (https://son-domaine.fr/api/callback) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 393.26 Tm (Une application OAuth n’accepte qu’une URL de rappel : le back-office ne répond plus) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 378.77 Tm (depuis l’adresse .pages.dev après ce changement. Mettre aussi à jour la Homepage URL. Ne) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 364.28 Tm (pas activer la correspondance générique, Device Flow ni l’expiration des jetons.) Tj ET
+BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 341.79 Tm (Référencement) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 322.79 Tm (Si le domaine final n’est pas azsalphaformations.com, mettre à jour l’URL du site dans) Tj ET
+BT /F1 10.5 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 308.30 Tm (src/site.config.js, reconstruire et vérifier les URL canoniques ainsi que sitemap.xml.) Tj ET
 0.82 0.89 0.92 RG 0.7 w 52 43 m 543.28 43 l S
-BT /F1 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 27.00 Tm (Version 1.1 — mise à jour le 21 octobre 2026) Tj ET
+BT /F1 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 27.00 Tm (Version 1.2 — mise à jour le 21 octobre 2026) Tj ET
 BT /F2 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 538.28 27.00 Tm (5) Tj ET
 endstream
 endobj
@@ -226,7 +236,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 14 0 R >>
 endobj
 16 0 obj
-<< /Length 3554 >>
+<< /Length 3557 >>
 stream
 0.118 0.533 0.769 rg 0 832.89 595.28 9 re f
 BT /F2 8.5 Tf 0.118 0.533 0.769 rg 1 0 0 1 52.00 789.89 Tm (AZ SERVICES ALPHA FORMATIONS) Tj ET
@@ -256,7 +266,7 @@ BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 517.50 Tm (•) Tj ET
 BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 517.50 Tm (Ne pas fermer la page avec des changements non enregistrés.) Tj ET
 BT /F2 11.5 Tf 0.071 0.243 0.361 rg 1 0 0 1 52.00 499.73 Tm (Assistance à convenir contractuellement) Tj ET
 BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 480.73 Tm (•) Tj ET
-BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 480.73 Tm (Responsable du renouvellement du domaine et des éventuels frais Netlify.) Tj ET
+BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 480.73 Tm (Responsable du renouvellement du domaine et des éventuels frais Cloudflare.) Tj ET
 BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 462.96 Tm (•) Tj ET
 BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 462.96 Tm (Responsable des sauvegardes et de la maintenance technique.) Tj ET
 BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 445.19 Tm (•) Tj ET
@@ -264,7 +274,7 @@ BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 445.19 Tm (Délai d’interventio
 BT /F2 11.2 Tf 0.118 0.533 0.769 rg 1 0 0 1 56.00 427.42 Tm (•) Tj ET
 BT /F1 10.2 Tf 0.071 0.188 0.243 rg 1 0 0 1 73.00 427.42 Tm (Procédure de restitution ou de transfert en fin de prestation.) Tj ET
 0.82 0.89 0.92 RG 0.7 w 52 43 m 543.28 43 l S
-BT /F1 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 27.00 Tm (Version 1.1 — mise à jour le 21 octobre 2026) Tj ET
+BT /F1 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 27.00 Tm (Version 1.2 — mise à jour le 21 octobre 2026) Tj ET
 BT /F2 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 538.28 27.00 Tm (6) Tj ET
 endstream
 endobj
@@ -272,7 +282,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 16 0 R >>
 endobj
 18 0 obj
-<< /Length 3724 >>
+<< /Length 3768 >>
 stream
 0.118 0.533 0.769 rg 0 832.89 595.28 9 re f
 BT /F2 8.5 Tf 0.118 0.533 0.769 rg 1 0 0 1 52.00 789.89 Tm (AZ SERVICES ALPHA FORMATIONS) Tj ET
@@ -290,7 +300,7 @@ BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 659.89 Tm (Pages légales relue
 BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 637.89 Tm (o) Tj ET
 BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 637.89 Tm (Nom de domaine connecté et HTTPS actif.) Tj ET
 BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 615.89 Tm (o) Tj ET
-BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 615.89 Tm (E-mails du domaine toujours opérationnels.) Tj ET
+BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 615.89 Tm (E-mails du domaine opérationnels après le changement de serveurs de noms.) Tj ET
 BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 593.89 Tm (o) Tj ET
 BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 593.89 Tm (URL canonique et sitemap alignés sur le domaine final.) Tj ET
 BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 571.89 Tm (o) Tj ET
@@ -302,7 +312,7 @@ BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 527.89 Tm (Connexion de la cli
 BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 505.89 Tm (o) Tj ET
 BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 505.89 Tm (Modification puis restauration d’un contenu testées avec son compte.) Tj ET
 BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 483.89 Tm (o) Tj ET
-BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 483.89 Tm (Propriété Netlify décidée et documentée.) Tj ET
+BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 483.89 Tm (Propriété du compte Cloudflare décidée et documentée.) Tj ET
 BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 461.89 Tm (o) Tj ET
 BT /F1 10.3 Tf 0.071 0.188 0.243 rg 1 0 0 1 77.00 461.89 Tm (URL du site et URL d’administration remises à la cliente.) Tj ET
 BT /F1 12 Tf 0.118 0.533 0.769 rg 1 0 0 1 55.00 439.89 Tm (o) Tj ET
@@ -313,7 +323,7 @@ BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 392.89 Tm (La livraison peut êt
 BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 379.89 Tm (validées et que la cliente a réalisé elle-même une connexion et une modification depuis) Tj ET
 BT /F1 9.8 Tf 0.071 0.188 0.243 rg 1 0 0 1 67.00 366.89 Tm (son compte GitHub.) Tj ET
 0.82 0.89 0.92 RG 0.7 w 52 43 m 543.28 43 l S
-BT /F1 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 27.00 Tm (Version 1.1 — mise à jour le 21 octobre 2026) Tj ET
+BT /F1 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 52.00 27.00 Tm (Version 1.2 — mise à jour le 21 octobre 2026) Tj ET
 BT /F2 8 Tf 0.333 0.455 0.522 rg 1 0 0 1 538.28 27.00 Tm (7) Tj ET
 endstream
 endobj
@@ -329,21 +339,21 @@ xref
 0000000259 00000 n 
 0000000361 00000 n 
 0000000456 00000 n 
-0000001904 00000 n 
-0000002056 00000 n 
-0000006283 00000 n 
-0000006435 00000 n 
-0000010668 00000 n 
-0000010822 00000 n 
-0000014744 00000 n 
-0000014898 00000 n 
-0000018607 00000 n 
-0000018761 00000 n 
-0000022368 00000 n 
-0000022522 00000 n 
-0000026299 00000 n 
+0000001891 00000 n 
+0000002043 00000 n 
+0000006848 00000 n 
+0000007000 00000 n 
+0000011485 00000 n 
+0000011639 00000 n 
+0000015466 00000 n 
+0000015620 00000 n 
+0000019938 00000 n 
+0000020092 00000 n 
+0000023702 00000 n 
+0000023856 00000 n 
+0000027677 00000 n 
 trailer
 << /Size 20 /Root 1 0 R >>
 startxref
-26453
+27831
 %%EOF

@@ -130,7 +130,7 @@ function endPage(number) {
     throw new Error(`Page ${number} : le contenu déborde de ${Math.ceil(56 - y)} points sur le pied de page. Raccourcir ou répartir.`);
   }
   line(M, 43, W - M, 43);
-  text('Version 1.1 — mise à jour le 21 octobre 2026', M, 27, 8, 'F1', MUTED);
+  text('Version 1.2 — mise à jour le 21 octobre 2026', M, 27, 8, 'F1', MUTED);
   text(String(number), W - M - 5, 27, 8, 'F2', MUTED);
   pages.push(commands.join('\n'));
 }
@@ -150,21 +150,21 @@ text('Procédure de remise à la cliente, raccordement du domaine,', M, H - 354,
 text('gestion des accès et contrôle avant mise en ligne définitive.', M, H - 371, 11, 'F1', MUTED);
 fillRect(M, H - 525, W - 2 * M, 102, '1 1 1');
 text('ENVIRONNEMENT ACTUEL', M + 18, H - 449, 9, 'F2', CYAN);
-text('Site : https://jocular-licorice-ef0a42.netlify.app/', M + 18, H - 473, 10, 'F3', INK);
-text('Admin : https://jocular-licorice-ef0a42.netlify.app/admin/', M + 18, H - 493, 10, 'F3', INK);
+text('Site : https://azsalphaformations.com/', M + 18, H - 473, 10, 'F3', INK);
+text('Admin : https://azsalphaformations.com/admin/', M + 18, H - 493, 10, 'F3', INK);
 text('Dépôt : github.com/paskalnic/azs_alpha — branche main', M + 18, H - 513, 10, 'F3', INK);
-text('État : site public, administration GitHub opérationnelle', M, 105, 10, 'F2', BLUE);
-text('Version 1.1 — 21 octobre 2026', M, 81, 9, 'F1', MUTED);
+text('État : hébergement Cloudflare Pages, raccordement du domaine en cours', M, 105, 10, 'F2', BLUE);
+text('Version 1.2 — 21 octobre 2026', M, 81, 9, 'F1', MUTED);
 pages.push(commands.join('\n'));
 
 // Page 2
 startPage('1. État du projet avant livraison');
 subheading('Éléments déjà validés');
 [
-  'Le site est publié depuis la branche main et Netlify redéploie automatiquement après chaque commit.',
+  'Le site se construit depuis la branche main ; Cloudflare Pages republie automatiquement après chaque commit.',
   'Les 25 pages du sitemap répondent correctement et les 30 liens ou ressources internes contrôlés sont accessibles.',
-  'La connexion GitHub OAuth fonctionne et le compte paskalnic est autorisé.',
-  'Une modification de texte, sa publication, puis son retrait ont été testés de bout en bout.',
+  'Les 26 adresses de l’ancien site sont conservées : 25 à l’identique, la dernière redirigée en 301 vers /contact/.',
+  'Le back-office (connexion, modification, publication, retrait) a été testé de bout en bout lors de la première mise en ligne.',
   'Le dépôt et l’affichage d’une image JPEG ont été validés sur le site public.',
 ].forEach((item) => bullet(item));
 
@@ -173,7 +173,8 @@ subheading('À terminer avant la remise définitive');
   'Retirer la photographie de test représentant une gendarme si elle ne constitue pas le portrait définitif de la formatrice.',
   'Remplacer les mentions « SIRET à compléter » et « NDA à compléter » par les informations officielles.',
   'Renseigner un texte alternatif pertinent pour chaque image porteuse d’information.',
-  'Rattacher le nom de domaine définitif et vérifier le certificat HTTPS.',
+  'Revalider sur Cloudflare Pages la connexion au back-office et une publication de bout en bout.',
+  'Rattacher le domaine, vérifier le certificat HTTPS, puis lancer scripts/verifier-site.sh : tous les contrôles doivent passer.',
   'Mettre à jour le domaine canonique du site si le domaine fourni diffère de azsalphaformations.com.',
   'Tester la connexion au back-office avec le propre compte GitHub de la cliente.',
 ].forEach((item) => bullet(item));
@@ -197,14 +198,14 @@ subheading('Informations administratives et éditoriales');
 subheading('Comptes à créer');
 paragraph('GitHub — obligatoire pour utiliser le back-office', { font: 'F2', after: 5 });
 paragraph('La cliente crée gratuitement son propre compte GitHub et transmet uniquement son identifiant public. Elle ne transmet jamais son mot de passe.', { color: MUTED });
-paragraph('Netlify — recommandé pour la propriété du projet', { font: 'F2', after: 5 });
-paragraph('La cliente peut créer un compte Netlify avec son adresse professionnelle ; le projet y sera alors transféré. À court terme, il peut rester sur le compte du prestataire, à condition que ce choix soit prévu contractuellement. Elle n’a pas besoin d’accès Netlify pour modifier son site : le back-office passe par GitHub.', { color: MUTED });
+paragraph('Cloudflare — hébergement du site et DNS du domaine', { font: 'F2', after: 5 });
+paragraph('Un compte Cloudflare gratuit héberge le site et la zone DNS du domaine. Le plus simple est de l’ouvrir au nom de la cliente, qui y invite le prestataire comme membre : le plan gratuit le permet. S’il reste au nom du prestataire, ce choix doit être prévu contractuellement. Elle n’a pas besoin de cet accès pour modifier son site : le back-office passe par GitHub.', { color: MUTED });
 paragraph('Compte chez le registrar — doit rester à la cliente', { font: 'F2', after: 5 });
-paragraph('La cliente conserve la propriété du domaine. Chez SiteGround, elle ajoute le prestataire comme collaborateur du site : il accède au DNS Zone Editor, sans voir ses e-mails ni sa facturation. Elle ne transmet jamais son mot de passe.', { color: MUTED });
+paragraph('La cliente conserve la propriété du domaine, enregistré via SiteGround. Le raccordement exige de remplacer ses serveurs de noms par ceux de Cloudflare : l’opération se fait sur le domaine, depuis son propre compte — un collaborateur du site n’y a pas accès. Elle ne transmet jamais son mot de passe.', { color: MUTED });
 endPage(3);
 
 // Page 4
-startPage('3. Accès GitHub et Netlify');
+startPage('3. Accès GitHub et Cloudflare');
 subheading('Autoriser la cliente dans GitHub');
 [
   'Ouvrir le dépôt paskalnic/azs_alpha.',
@@ -214,34 +215,35 @@ subheading('Autoriser la cliente dans GitHub');
 ].forEach((item) => bullet(item));
 
 subheading('Autoriser son compte dans le back-office');
-paragraph('Dans Netlify, ouvrir Project configuration → Environment variables, puis modifier la variable suivante :', { color: MUTED });
+paragraph('Dans le projet Cloudflare Pages, ouvrir Settings → Variables and Secrets, puis modifier la variable suivante :', { color: MUTED });
 codeLine('GITHUB_ALLOWED_USERS=paskalnic,identifiant-de-la-cliente');
-paragraph('Relancer ensuite un déploiement depuis Deploys → Trigger deploy. Ne jamais ajouter le mot de passe GitHub de la cliente.', { color: MUTED });
+paragraph('Relancer ensuite un déploiement depuis l’onglet Deployments. Ne jamais ajouter le mot de passe GitHub de la cliente.', { color: MUTED });
 
-subheading('Propriété Netlify');
-paragraph('Pour une livraison complète, le projet est transféré dans l’équipe Netlify de la cliente : Project configuration → General → Project information → Transfer project. Les plans Free et Personal n’acceptent pas de second membre : le prestataire assure ensuite la maintenance en poussant sur le dépôt, sans accès à l’équipe.', { color: MUTED });
-paragraph('Le dépôt est public. Sur un plan gratuit, c’est ce qui permet aux enregistrements faits avec le compte GitHub de la cliente de se publier sans approbation. Il ne contient aucun secret.', { color: MUTED });
+subheading('Propriété du projet');
+paragraph('Si l’hébergement doit revenir à la cliente, le projet est recréé sur son compte Cloudflare depuis le même dépôt : tout le site vit dans GitHub, rien n’est perdu. Le plus simple reste d’ouvrir le compte à son nom dès le départ et d’y inviter le prestataire.', { color: MUTED });
+paragraph('Le dépôt est public et ne contient aucun secret : ils sont rangés dans les variables Cloudflare. La sécurité du back-office repose sur l’OAuth GitHub et la liste des comptes autorisés, pas sur le secret du code.', { color: MUTED });
 
-callout('À ne pas transmettre', 'Ne jamais communiquer GITHUB_CLIENT_SECRET, un jeton OAuth, une clé SSH, le mot de passe Netlify ou le mot de passe GitHub. La cliente n’a besoin que de ses propres comptes et de l’adresse /admin/.');
+callout('À ne pas transmettre', 'Ne jamais communiquer GITHUB_CLIENT_SECRET, un jeton OAuth, une clé SSH, le mot de passe Cloudflare ou le mot de passe GitHub. La cliente n’a besoin que de ses propres comptes et de l’adresse /admin/.');
 endPage(4);
 
 // Page 5
 startPage('4. Raccorder le nom de domaine');
-subheading('Ajouter le domaine dans Netlify');
+subheading('Déplacer la zone DNS chez Cloudflare');
+paragraph('Pages n’accepte un domaine racine que si sa zone DNS est chez Cloudflare : un simple enregistrement A ne suffit pas.', { color: MUTED });
 [
-  'Ouvrir Domain management dans le projet Netlify.',
-  'Choisir Add a domain → Add a domain you already own.',
-  'Saisir le domaine fourni par la cliente.',
-  'Choisir Netlify DNS ou conserver le fournisseur DNS actuel.',
-  'Appliquer chez le registrar les enregistrements exacts indiqués par Netlify.',
-  'Conserver tous les enregistrements MX, SPF, DKIM et DMARC utiles aux e-mails professionnels.',
-  'Attendre la propagation DNS et vérifier que Netlify a délivré le certificat HTTPS.',
+  'Dans Cloudflare, ajouter le domaine (plan Free) : les enregistrements existants sont importés.',
+  'Comparer l’import à l’inventaire ci-dessous et recréer ce qui manque.',
+  'Passer en « DNS only » mail, ftp, autodiscover, autoconfig et default._domainkey : le proxy ne transporte que le web.',
+  'Dans le projet Pages, Custom domains : ajouter le domaine et www.',
+  'Chez SiteGround, la cliente remplace les serveurs de noms par les deux fournis par Cloudflare.',
+  'Une fois le domaine actif et le certificat délivré, lancer scripts/verifier-site.sh.',
 ].forEach((item) => bullet(item));
+paragraph('Inventaire relevé le 21 octobre 2026 : trois MX vers mailspamprotection.com, TXT SPF, TXT _dmarc, CNAME default._domainkey (signature DKIM), A mail, ftp, autodiscover et autoconfig vers 34.155.80.219.', { size: 9.6, color: MUTED });
 
 subheading('Mettre à jour GitHub OAuth');
-paragraph('Le jour du raccordement, dans l’application OAuth GitHub, remplacer l’URL de rappel par celle du domaine :', { color: MUTED });
-codeLine('https://son-domaine.fr/.netlify/functions/callback');
-paragraph('Une application OAuth n’accepte qu’une URL de rappel : le back-office ne fonctionne plus depuis l’adresse .netlify.app après ce changement. Mettre aussi à jour la Homepage URL. Ne pas activer la correspondance générique des URL, Device Flow ou l’expiration des jetons pour cette version.', { color: MUTED });
+paragraph('Le même jour, dans l’application OAuth GitHub, remplacer l’URL de rappel par celle du domaine :', { color: MUTED });
+codeLine('https://son-domaine.fr/api/callback');
+paragraph('Une application OAuth n’accepte qu’une URL de rappel : le back-office ne répond plus depuis l’adresse .pages.dev après ce changement. Mettre aussi à jour la Homepage URL. Ne pas activer la correspondance générique, Device Flow ni l’expiration des jetons.', { color: MUTED });
 
 subheading('Référencement');
 paragraph('Si le domaine final n’est pas azsalphaformations.com, mettre à jour l’URL du site dans src/site.config.js, reconstruire et vérifier les URL canoniques ainsi que sitemap.xml.', { color: MUTED });
@@ -266,7 +268,7 @@ subheading('Mode d’emploi court');
 
 subheading('Assistance à convenir contractuellement');
 [
-  'Responsable du renouvellement du domaine et des éventuels frais Netlify.',
+  'Responsable du renouvellement du domaine et des éventuels frais Cloudflare.',
   'Responsable des sauvegardes et de la maintenance technique.',
   'Délai d’intervention en cas de panne ou de contenu erroné.',
   'Procédure de restitution ou de transfert en fin de prestation.',
@@ -281,13 +283,13 @@ const checks = [
   'SIRET, NDA, adresse et coordonnées vérifiés.',
   'Pages légales relues et validées par la cliente.',
   'Nom de domaine connecté et HTTPS actif.',
-  'E-mails du domaine toujours opérationnels.',
+  'E-mails du domaine opérationnels après le changement de serveurs de noms.',
   'URL canonique et sitemap alignés sur le domaine final.',
   'Compte GitHub de la cliente ajouté au dépôt.',
   'GITHUB_ALLOWED_USERS mis à jour sans exposer de secret.',
   'Connexion de la cliente à /admin/ testée.',
   'Modification puis restauration d’un contenu testées avec son compte.',
-  'Propriété Netlify décidée et documentée.',
+  'Propriété du compte Cloudflare décidée et documentée.',
   'URL du site et URL d’administration remises à la cliente.',
   'Modalités de maintenance et de restitution confirmées.',
 ];
