@@ -123,8 +123,14 @@ function startPage(title) {
 }
 
 function endPage(number) {
+  // La mise en page est manuelle : rien ne renvoie le texte à la page
+  // suivante. Sans cette garde, un paragraphe allongé passait sous le filet
+  // de pied de page — ou hors de la feuille — sans que rien ne le signale.
+  if (y < 56) {
+    throw new Error(`Page ${number} : le contenu déborde de ${Math.ceil(56 - y)} points sur le pied de page. Raccourcir ou répartir.`);
+  }
   line(M, 43, W - M, 43);
-  text('Document préparé le 2 septembre 2026', M, 27, 8, 'F1', MUTED);
+  text('Version 1.1 — mise à jour le 21 octobre 2026', M, 27, 8, 'F1', MUTED);
   text(String(number), W - M - 5, 27, 8, 'F2', MUTED);
   pages.push(commands.join('\n'));
 }
@@ -148,7 +154,7 @@ text('Site : https://jocular-licorice-ef0a42.netlify.app/', M + 18, H - 473, 10,
 text('Admin : https://jocular-licorice-ef0a42.netlify.app/admin/', M + 18, H - 493, 10, 'F3', INK);
 text('Dépôt : github.com/paskalnic/azs_alpha — branche main', M + 18, H - 513, 10, 'F3', INK);
 text('État : site public, administration GitHub opérationnelle', M, 105, 10, 'F2', BLUE);
-text('Version 1.0 — 2 septembre 2026', M, 81, 9, 'F1', MUTED);
+text('Version 1.1 — 21 octobre 2026', M, 81, 9, 'F1', MUTED);
 pages.push(commands.join('\n'));
 
 // Page 2
@@ -192,9 +198,9 @@ subheading('Comptes à créer');
 paragraph('GitHub — obligatoire pour utiliser le back-office', { font: 'F2', after: 5 });
 paragraph('La cliente crée gratuitement son propre compte GitHub et transmet uniquement son identifiant public. Elle ne transmet jamais son mot de passe.', { color: MUTED });
 paragraph('Netlify — recommandé pour la propriété du projet', { font: 'F2', after: 5 });
-paragraph('La cliente peut créer un compte Netlify avec son adresse professionnelle. Le projet pourra ensuite être transféré dans son équipe. Pour une gestion simple à court terme, le projet peut rester sur le compte du prestataire, à condition que ce choix soit prévu contractuellement.', { color: MUTED });
+paragraph('La cliente peut créer un compte Netlify avec son adresse professionnelle ; le projet y sera alors transféré. À court terme, il peut rester sur le compte du prestataire, à condition que ce choix soit prévu contractuellement. Elle n’a pas besoin d’accès Netlify pour modifier son site : le back-office passe par GitHub.', { color: MUTED });
 paragraph('Compte chez le registrar — doit rester à la cliente', { font: 'F2', after: 5 });
-paragraph('La cliente conserve la propriété du domaine. Elle invite le prestataire comme administrateur DNS si cette fonction existe, ou saisit elle-même les enregistrements communiqués.', { color: MUTED });
+paragraph('La cliente conserve la propriété du domaine. Chez SiteGround, elle ajoute le prestataire comme collaborateur du site : il accède au DNS Zone Editor, sans voir ses e-mails ni sa facturation. Elle ne transmet jamais son mot de passe.', { color: MUTED });
 endPage(3);
 
 // Page 4
@@ -213,7 +219,8 @@ codeLine('GITHUB_ALLOWED_USERS=paskalnic,identifiant-de-la-cliente');
 paragraph('Relancer ensuite un déploiement depuis Deploys → Trigger deploy. Ne jamais ajouter le mot de passe GitHub de la cliente.', { color: MUTED });
 
 subheading('Propriété Netlify');
-paragraph('Option recommandée pour une livraison complète : la cliente crée son équipe Netlify, invite le prestataire, puis le projet est transféré depuis Project configuration → General → Project information → Transfer project.', { color: MUTED });
+paragraph('Pour une livraison complète, le projet est transféré dans l’équipe Netlify de la cliente : Project configuration → General → Project information → Transfer project. Les plans Free et Personal n’acceptent pas de second membre : le prestataire assure ensuite la maintenance en poussant sur le dépôt, sans accès à l’équipe.', { color: MUTED });
+paragraph('Le dépôt est public. Sur un plan gratuit, c’est ce qui permet aux enregistrements faits avec le compte GitHub de la cliente de se publier sans approbation. Il ne contient aucun secret.', { color: MUTED });
 
 callout('À ne pas transmettre', 'Ne jamais communiquer GITHUB_CLIENT_SECRET, un jeton OAuth, une clé SSH, le mot de passe Netlify ou le mot de passe GitHub. La cliente n’a besoin que de ses propres comptes et de l’adresse /admin/.');
 endPage(4);
@@ -232,9 +239,9 @@ subheading('Ajouter le domaine dans Netlify');
 ].forEach((item) => bullet(item));
 
 subheading('Mettre à jour GitHub OAuth');
-paragraph('Dans les paramètres de l’application OAuth GitHub, ajouter une URL de redirection exacte pour le nouveau domaine :', { color: MUTED });
+paragraph('Le jour du raccordement, dans l’application OAuth GitHub, remplacer l’URL de rappel par celle du domaine :', { color: MUTED });
 codeLine('https://son-domaine.fr/.netlify/functions/callback');
-paragraph('Conserver temporairement l’URL Netlify existante comme seconde URL de redirection. Ne pas activer la correspondance générique des URL, Device Flow ou l’expiration des jetons pour cette version.', { color: MUTED });
+paragraph('Une application OAuth n’accepte qu’une URL de rappel : le back-office ne fonctionne plus depuis l’adresse .netlify.app après ce changement. Mettre aussi à jour la Homepage URL. Ne pas activer la correspondance générique des URL, Device Flow ou l’expiration des jetons pour cette version.', { color: MUTED });
 
 subheading('Référencement');
 paragraph('Si le domaine final n’est pas azsalphaformations.com, mettre à jour l’URL du site dans src/site.config.js, reconstruire et vérifier les URL canoniques ainsi que sitemap.xml.', { color: MUTED });
@@ -305,6 +312,11 @@ function encodeWinAnsi(value) {
     [0x201d, 0x94], [0x2022, 0x95], [0x2013, 0x96], [0x2014, 0x97],
     [0x02dc, 0x98], [0x2122, 0x99], [0x0161, 0x9a], [0x203a, 0x9b],
     [0x0153, 0x9c], [0x017e, 0x9e], [0x0178, 0x9f], [0x25a1, 0x6f],
+    // « → » n'existe pas dans WinAnsi, et tout caractère absent de cette
+    // table sort en « ? ». La version 1.0 imprimait ainsi « Deploys ? Trigger
+    // deploy ». « › » est le plus proche disponible, et c'est déjà le signe
+    // des fils d'Ariane d'interface : « Deploys › Trigger deploy ».
+    [0x2192, 0x9b],
   ]);
   const bytes = [];
   for (const character of value) {
