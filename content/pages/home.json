@@ -65,7 +65,7 @@
     "cards": [
       {
         "id": "gendarme",
-        "role": "Hôte·sse d’accueil",
+        "role": "Hôte d’accueil",
         "media": {
           "id": "hero-card-1",
           "kind": "image",
