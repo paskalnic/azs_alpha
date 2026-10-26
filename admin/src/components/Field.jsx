@@ -61,6 +61,23 @@ export default function Field({ field, value, onChange, client, idPath = field.n
         </div>
       );
 
+    case 'toggle':
+      return (
+        <div className="rounded-[14px] border border-rule bg-paper p-4">
+          <label htmlFor={id} className="flex items-center gap-3 text-[.9rem] font-bold text-ink">
+            <input
+              id={id}
+              type="checkbox"
+              className="size-[1.1rem] accent-coral"
+              checked={Boolean(value)}
+              onChange={(e) => set(e.target.checked)}
+            />
+            {field.label}
+          </label>
+          {help}
+        </div>
+      );
+
     case 'select':
       return (
         <div>

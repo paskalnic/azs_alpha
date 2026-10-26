@@ -22,6 +22,10 @@ export function createClient({ token, owner, repo, branch }) {
 
   const request = async (path, options = {}) => {
     const response = await fetch(`${API}${path}`, {
+      // GitHub sert ses réponses avec un cache navigateur d'une minute :
+      // sans ceci, la liste relue juste après une création ou un retrait
+      // montrerait encore l'état d'avant.
+      cache: 'no-store',
       ...options,
       headers: {
         Authorization: `Bearer ${token}`,
@@ -99,6 +103,28 @@ export function createClient({ token, owner, repo, branch }) {
           'Ce fichier a été modifié entre-temps. Rechargez la page avant d’enregistrer.',
           response.status,
         );
+      }
+      return response.json();
+    },
+
+    /**
+     * Supprime un fichier et crée un commit. Comme pour l'écriture, `sha`
+     * doit être celui de la version lue : on ne retire pas une fiche que
+     * quelqu'un vient de modifier sans l'avoir vue.
+     */
+    async remove({ path, sha, message }) {
+      const response = await request(`${repoPath}/contents/${contentPath(path)}`, {
+        method: 'DELETE',
+        body: JSON.stringify({ message, sha, branch }),
+      });
+      if (response.status === 409 || response.status === 422) {
+        throw new GitHubError(
+          'Ce fichier a été modifié entre-temps. Rechargez la page avant de le retirer.',
+          response.status,
+        );
+      }
+      if (response.status === 404) {
+        throw new GitHubError('Ce fichier a déjà été retiré.', 404);
       }
       return response.json();
     },

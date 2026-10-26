@@ -30,8 +30,36 @@ export const COLLECTIONS = [
     path: 'content/formations',
     format: 'json',
     titleField: 'title',
-    description: "Une fiche par formation. Le nom du fichier et le champ « Adresse de la page » ne doivent pas changer : ils déterminent l'URL, déjà référencée par les moteurs de recherche.",
+    description: "Une fiche par formation. Le nom du fichier et le champ « Adresse de la page » ne doivent pas changer : ils déterminent l'URL, déjà référencée par les moteurs de recherche. Une nouvelle formation part d'une copie d'une fiche existante et reste en brouillon, invisible sur le site, jusqu'à ce que vous la publiiez.",
+    create: {
+      label: 'Nouvelle formation',
+      removeLabel: 'Retirer cette formation',
+      /**
+       * Fiche neuve à partir d'une fiche modèle. Tout ce qui identifie la
+       * formation d'origine est remplacé ; le reste (programme, tarifs,
+       * modalités) est recopié pour être réécrit, et c'est pourquoi la fiche
+       * naît en brouillon : publiée telle quelle, elle doublerait la page
+       * du modèle, avec son prix.
+       */
+      fromModel: (model, { slug, title, order }) => {
+        const { seoTitle, ...rest } = model;
+        return {
+          ...rest,
+          id: slug,
+          path: `/${slug}/`,
+          title,
+          shortTitle: title,
+          order,
+          draft: true,
+          ...(model.media && {
+            media: { ...model.media, id: `formation-${slug}`, src: null, alt: '', label: title },
+          }),
+        };
+      },
+    },
     fields: [
+      { name: 'draft', label: 'Brouillon : pas encore visible sur le site', type: 'toggle',
+        help: 'Cochée, la fiche n’apparaît nulle part : ni page, ni catalogue, ni moteurs de recherche. Décochez puis enregistrez pour la publier.' },
       text('title', 'Intitulé'),
       text('shortTitle', 'Intitulé court', { help: 'Utilisé dans les listes et le fil d’Ariane.' }),
       text('seoTitle', 'Titre pour les moteurs de recherche', {

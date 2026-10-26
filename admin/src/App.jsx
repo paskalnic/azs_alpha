@@ -170,6 +170,10 @@ function Workspace({ client }) {
               }
             } : null}
             onDirtyChange={setDirty}
+            onRemoved={collection.create ? () => {
+              setDirty(false);
+              setEntryPath(null);
+            } : null}
           />
         )}
       </section>
@@ -191,7 +195,14 @@ function EntryList({ client, collection, onOpen }) {
           readable.map(async (f) => {
             const file = await client.read(f.path);
             const data = parse(file.text, collection.format);
-            return { path: f.path, name: f.name, title: data[collection.titleField] || f.name, order: data.order ?? 0 };
+            return {
+              path: f.path,
+              name: f.name,
+              title: data[collection.titleField] || f.name,
+              order: data.order ?? 0,
+              draft: Boolean(data.draft),
+              data,
+            };
           }),
         );
         if (!cancelled) setEntries(withTitles.sort((a, b) => a.order - b.order));
@@ -204,25 +215,193 @@ function EntryList({ client, collection, onOpen }) {
   if (!entries) return <Message>Chargement…</Message>;
 
   return (
-    <ul className="grid gap-2 sm:grid-cols-2">
-      {entries.map((e) => (
-        <li key={e.path}>
-          <button
-            onClick={() => onOpen(e.path)}
-            className="w-full rounded-[14px] border border-rule bg-paper p-4 text-left transition-colors hover:border-coral"
-          >
-            <span className="block font-display font-semibold text-ink">{e.title}</span>
-            <span className="mt-1 block text-[.78rem] text-muted">{e.name}</span>
-          </button>
-        </li>
-      ))}
-    </ul>
+    <div>
+      {collection.create && (
+        <NewEntry client={client} collection={collection} entries={entries} onCreated={onOpen} />
+      )}
+      <ul className="grid gap-2 sm:grid-cols-2">
+        {entries.map((e) => (
+          <li key={e.path}>
+            <button
+              onClick={() => onOpen(e.path)}
+              className="w-full rounded-[14px] border border-rule bg-paper p-4 text-left transition-colors hover:border-coral"
+            >
+              <span className="block font-display font-semibold text-ink">
+                {e.title}
+                {e.draft && (
+                  <span className="ml-2 rounded-full bg-cream-2 px-2 py-0.5 align-middle font-sans text-[.7rem] font-bold uppercase tracking-[.06em] text-muted">
+                    Brouillon
+                  </span>
+                )}
+              </span>
+              <span className="mt-1 block text-[.78rem] text-muted">{e.name}</span>
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
-function Editor({ client, collection, path, onBack, onDirtyChange }) {
+/* — Création d'une fiche par copie d'une fiche existante — */
+
+// Adresses déjà prises par le site lui-même. Les familles et les pages
+// légales sont relues dans le dépôt au moment de créer : elles peuvent changer.
+const RESERVED_SLUGS = [
+  'nos-formations', 'nos-prestations', 'nos-engagements-qualite', 'nos-resultats', 'contact',
+  'inscription-formation', 'admin', 'api', 'assets', 'media', 'documents', 'fonts',
+];
+
+/** « Anglais professionnel B2 » → « anglais-professionnel-b2 ». */
+const slugify = (text) =>
+  text
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/['’]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 60)
+    .replace(/-+$/, '');
+
+const SLUG_FORMAT = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+
+function NewEntry({ client, collection, entries, onCreated }) {
+  const [open, setOpen] = useState(false);
+  const [modelPath, setModelPath] = useState(entries[0]?.path ?? '');
+  const [title, setTitle] = useState('');
+  const [slug, setSlug] = useState('');
+  const [slugTouched, setSlugTouched] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState(null);
+
+  const input =
+    'w-full rounded-[12px] border border-rule bg-paper px-3 py-2 text-[.92rem] text-ink ' +
+    'focus:border-coral focus:outline-none focus:ring-2 focus:ring-coral/25';
+
+  const changeTitle = (value) => {
+    setTitle(value);
+    if (!slugTouched) setSlug(slugify(value));
+  };
+
+  /** Retourne la raison du refus, ou null si l'adresse est libre. */
+  const checkSlug = async () => {
+    if (!SLUG_FORMAT.test(slug)) {
+      return 'L’adresse ne peut contenir que des lettres minuscules sans accent, des chiffres et des tirets.';
+    }
+    const [categoriesFile, legalFiles] = await Promise.all([
+      client.read('content/categories.json'),
+      client.list('content/legal'),
+    ]);
+    const categories = categoriesFile ? JSON.parse(categoriesFile.text) : [];
+    const taken = new Set([
+      ...RESERVED_SLUGS,
+      ...categories.map((c) => c.path?.replace(/^\/|\/$/g, '')),
+      ...legalFiles.map((f) => f.name.replace(/\.md$/, '')),
+      ...entries.map((e) => e.data.path?.replace(/^\/|\/$/g, '')),
+      ...entries.map((e) => e.name.replace(/\.json$/, '')),
+    ]);
+    if (taken.has(slug)) return `L’adresse /${slug}/ est déjà utilisée sur le site. Choisissez-en une autre.`;
+    return null;
+  };
+
+  const create = async (event) => {
+    event.preventDefault();
+    setError(null);
+    const model = entries.find((e) => e.path === modelPath);
+    if (!model || !title.trim()) {
+      setError('Choisissez une fiche modèle et donnez un intitulé.');
+      return;
+    }
+    setBusy(true);
+    try {
+      const refusal = await checkSlug();
+      if (refusal) throw new Error(refusal);
+      const path = `${collection.path}/${slug}.${collection.format}`;
+      if (await client.read(path)) throw new Error('Une fiche porte déjà ce nom. Choisissez une autre adresse.');
+      const order = Math.max(0, ...entries.map((e) => e.order)) + 1;
+      const data = collection.create.fromModel(model.data, { slug, title: title.trim(), order });
+      await client.write({
+        path,
+        text: serialize(data, collection.format),
+        message: `Nouvelle formation (brouillon) : ${title.trim()}`,
+      });
+      onCreated(path);
+    } catch (e) {
+      setError(e.message);
+      setBusy(false);
+    }
+  };
+
+  if (!open) {
+    return (
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="mb-5 rounded-full border-2 border-coral px-5 py-2 text-[.9rem] font-bold text-coral-ink hover:border-teal hover:text-teal"
+      >
+        + {collection.create.label}
+      </button>
+    );
+  }
+
+  return (
+    <form onSubmit={create} className="mb-6 flex flex-col gap-4 rounded-[18px] border border-coral bg-paper p-5">
+      <p className="font-display text-[1.05rem] font-bold text-ink">{collection.create.label}</p>
+      <div>
+        <label htmlFor="nouvelle-modele" className="mb-1.5 block text-[.8rem] font-bold text-ink">
+          Partir de la fiche
+        </label>
+        <select id="nouvelle-modele" className={input} value={modelPath} onChange={(e) => setModelPath(e.target.value)}>
+          {entries.map((e) => (
+            <option key={e.path} value={e.path}>{e.title}</option>
+          ))}
+        </select>
+        <p className="mt-1.5 text-[.78rem] text-muted">
+          Tout est recopié (programme, tarif, modalités) : vous n’aurez plus qu’à réécrire ce qui change.
+        </p>
+      </div>
+      <div>
+        <label htmlFor="nouvelle-titre" className="mb-1.5 block text-[.8rem] font-bold text-ink">Intitulé</label>
+        <input id="nouvelle-titre" className={input} value={title} onChange={(e) => changeTitle(e.target.value)} />
+      </div>
+      <div>
+        <label htmlFor="nouvelle-adresse" className="mb-1.5 block text-[.8rem] font-bold text-ink">Adresse de la page</label>
+        <div className="flex items-center gap-1 text-[.92rem] text-muted">
+          <span>/</span>
+          <input
+            id="nouvelle-adresse"
+            className={input}
+            value={slug}
+            onChange={(e) => { setSlugTouched(true); setSlug(e.target.value.toLowerCase()); }}
+          />
+          <span>/</span>
+        </div>
+        <p className="mt-1.5 text-[.78rem] text-muted">
+          Proposée d’après l’intitulé. Elle ne pourra plus changer une fois la fiche créée.
+        </p>
+      </div>
+      <div className="flex flex-wrap items-center gap-4">
+        <button
+          type="submit"
+          disabled={busy}
+          className="rounded-full border-2 border-teal-deep bg-gradient-to-br from-coral to-sun px-6 py-2.5 font-bold text-white disabled:opacity-60"
+        >
+          {busy ? 'Création…' : 'Créer en brouillon'}
+        </button>
+        <button type="button" onClick={() => setOpen(false)} className="text-[.86rem] font-semibold text-teal hover:underline">
+          Annuler
+        </button>
+      </div>
+      {error && <p className="text-[.85rem] font-semibold text-[#c0392b]">{error}</p>}
+    </form>
+  );
+}
+
+function Editor({ client, collection, path, onBack, onDirtyChange, onRemoved }) {
   const [state, setState] = useState({ status: 'loading' });
   const [saving, setSaving] = useState(false);
+  const [removing, setRemoving] = useState(false);
   const [saved, setSaved] = useState(null);
   const [error, setError] = useState(null);
 
@@ -280,6 +459,28 @@ function Editor({ client, collection, path, onBack, onDirtyChange }) {
     }
   };
 
+  const remove = async () => {
+    const title = state.original[collection.titleField] || path;
+    // Un mot à retaper plutôt qu'un simple « OK » : la page disparaît du
+    // site et des moteurs, et la case Brouillon suffit pour la cacher un temps.
+    const answer = window.prompt(
+      `Retirer « ${title} » du site ?\n\n` +
+      'La page disparaîtra du site et, peu à peu, des moteurs de recherche. ' +
+      'Pour la cacher seulement le temps de la retravailler, cochez plutôt « Brouillon ».\n\n' +
+      'Pour confirmer, tapez RETIRER :',
+    );
+    if (answer?.trim().toUpperCase() !== 'RETIRER') return;
+    setRemoving(true);
+    setError(null);
+    try {
+      await client.remove({ path, sha: state.sha, message: `Retire la formation : ${title}` });
+      onRemoved();
+    } catch (e) {
+      setError(e.message);
+      setRemoving(false);
+    }
+  };
+
   return (
     <div>
       {onBack && (
@@ -316,6 +517,16 @@ function Editor({ client, collection, path, onBack, onDirtyChange }) {
             </p>
           )}
           {error && <p className="text-[.85rem] font-semibold text-[#c0392b]">{error}</p>}
+          {onRemoved && (
+            <button
+              type="button"
+              onClick={remove}
+              disabled={saving || removing}
+              className="ml-auto text-[.85rem] font-semibold text-[#c0392b] hover:underline disabled:opacity-60"
+            >
+              {removing ? 'Retrait…' : collection.create.removeLabel}
+            </button>
+          )}
         </div>
       </form>
     </div>

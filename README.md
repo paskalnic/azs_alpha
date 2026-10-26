@@ -12,6 +12,16 @@ utilisé.
 3. « Enregistrer » crée un commit dans la branche de production.
 4. GitHub prévient Cloudflare Pages, qui reconstruit et republie le site.
 
+Une formation se crée depuis « Formations → Nouvelle formation », par copie
+d'une fiche existante. Elle naît en brouillon (`"draft": true`) : le site
+l'ignore entièrement — ni page, ni catalogue, ni sitemap — tant que la case
+n'est pas décochée. L'adresse est choisie à la création et ne change plus ;
+le back-office refuse celles que le site utilise déjà. « Retirer cette
+formation » supprime le fichier : la page répond alors en 404. Retirer une des
+fiches d'origine fait échouer `scripts/verifier-site.sh`, qui surveille les
+adresses de l'ancien site ; il faut alors l'en ôter, ou ajouter une
+redirection dans `public/_redirects` si une autre page la remplace.
+
 Le plan gratuit de Pages autorise 500 builds par mois. Chaque enregistrement en
 consomme un : c'est la limite à surveiller, bien avant la bande passante, qui
 n'est pas plafonnée.

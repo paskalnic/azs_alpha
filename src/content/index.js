@@ -77,7 +77,11 @@ const formationModules = import.meta.glob('../../content/formations/*.json', {
   eager: true,
   import: 'default',
 });
-export const FORMATIONS = resolve(Object.values(formationModules).sort(byOrder));
+// Une fiche en brouillon (créée depuis le back-office et pas encore relue)
+// n'existe pas pour le site : ni page, ni carte au catalogue, ni sitemap.
+export const FORMATIONS = resolve(
+  Object.values(formationModules).filter((f) => !f.draft).sort(byOrder),
+);
 
 const legalModules = import.meta.glob('../../content/legal/*.md', {
   eager: true,
